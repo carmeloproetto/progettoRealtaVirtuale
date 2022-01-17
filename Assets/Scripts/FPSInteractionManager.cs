@@ -1,0 +1,107 @@
+using System.Collections;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FPSInteractionManager : MonoBehaviour
+{
+    public float interactionDistance; 
+    private CharacterController _fpsController;
+    public Camera camera;
+
+    public Image _target;
+
+    private Grabbable _pointingGrabbable;
+    private Interactable _pointingInteractable;
+
+    private Grabbable _grabbedObject; 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _fpsController = GetComponent<CharacterController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    { 
+        if(_grabbedObject == null)
+        {
+            CheckInteraction(); 
+        }
+
+        if( _grabbedObject != null && Input.GetMouseButtonDown(1))
+        {
+            Drop(); 
+        }
+
+        UpdateUITarget();
+    }
+
+    private void CheckInteraction()
+    {
+        Vector3 rayOrigin = camera.transform.position + _fpsController.radius * camera.transform.forward;
+
+        Debug.DrawRay(rayOrigin, camera.transform.forward * interactionDistance, Color.red);
+
+        Ray ray = new Ray(rayOrigin, camera.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, interactionDistance))
+        {
+            _pointingInteractable = hit.transform.GetComponent<Interactable>();
+            if (_pointingInteractable)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    _pointingInteractable.Interact(gameObject);
+                }
+            }
+            _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
+            if (_grabbedObject == null && _pointingGrabbable)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    _pointingGrabbable.Grab(gameObject);
+                    Grab(_pointingGrabbable);
+                }
+            }
+            
+        }
+        else
+        {
+            _pointingGrabbable = null;
+            _pointingInteractable = null;
+        }
+    }
+
+    private void Grab(Grabbable grabbable)
+    {
+        _grabbedObject = grabbable;
+        _grabbedObject.transform.SetParent(camera.transform);
+    }
+
+    private void Drop()
+    {
+        if(_grabbedObject == null)
+        {
+            return; 
+        }
+
+        _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
+        _grabbedObject.Drop();
+        _grabbedObject = null; 
+    }
+
+    private void UpdateUITarget()
+    {
+        if (_pointingInteractable)
+            _target.color = Color.green;
+        else if (_pointingGrabbable)
+            _target.color = Color.yellow;
+        else
+            _target.color = Color.red;
+    }
+
+
+}
