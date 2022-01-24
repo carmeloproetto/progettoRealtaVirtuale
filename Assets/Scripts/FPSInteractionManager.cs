@@ -42,8 +42,6 @@ public class FPSInteractionManager : MonoBehaviour
     {
         Vector3 rayOrigin = camera.transform.position + _fpsController.radius * camera.transform.forward;
 
-        Debug.DrawRay(rayOrigin, camera.transform.forward * interactionDistance, Color.red);
-
         Ray ray = new Ray(rayOrigin, camera.transform.forward);
         RaycastHit hit;
 
@@ -66,7 +64,7 @@ public class FPSInteractionManager : MonoBehaviour
                     Grab(_pointingGrabbable);
                 }
             }
-            
+            Debug.DrawRay(rayOrigin, camera.transform.forward * interactionDistance, Color.red);
         }
         else
         {
