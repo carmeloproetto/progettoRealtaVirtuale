@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587fdc87e4b312c43975a68fead37c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  open: 0
 --- !u!65 &963859676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6138,6 +6139,8 @@ GameObject:
   - component: {fileID: 5155166694523017379}
   - component: {fileID: 7806451681109239674}
   - component: {fileID: 1957277936224154984}
+  - component: {fileID: 4317500411913737113}
+  - component: {fileID: 4317500411913737112}
   m_Layer: 0
   m_Name: Pulsanti_esterni
   m_TagString: Untagged
@@ -6145,6 +6148,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4317500411913737112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317500411913737111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68ad9a61917518479483b91ac9697bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ant: {fileID: 963859672}
+--- !u!65 &4317500411913737113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317500411913737111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021733716, y: 0.00067805394, z: 0.0012410644}
+  m_Center: {x: -0.011159263, y: 0.0059095356, z: 0.010450097}
 --- !u!4 &4338395635318484506
 Transform:
   m_ObjectHideFlags: 0
