@@ -5,20 +5,25 @@ using UnityEngine;
 public class SalitaAscensore : Interactable
 {
     private Animator _animator;
-
+    public bool up;
     public override void Interact(GameObject caller)
     {
-        bool opened = _animator.GetBool("up");
-        if (opened)
-        {
-            _animator.SetBool("up", false);
-        }
-        else _animator.SetBool("up", true);
+       // up = _animator.GetBool("up");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
+        up = true;
+    }
+
+    private void Update()
+    {
+        if (up)
+            _animator.SetBool("up", false);
+        else
+            _animator.SetBool("up", true);
     }
 }
+

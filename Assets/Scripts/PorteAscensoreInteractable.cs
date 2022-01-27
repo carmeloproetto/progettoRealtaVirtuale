@@ -15,7 +15,7 @@ public class PorteAscensoreInteractable : Interactable
     void Start()
     {
         _animator = GetComponent<Animator>();
-        open = false;
+        open = true;
     }
 
     private void Update()
