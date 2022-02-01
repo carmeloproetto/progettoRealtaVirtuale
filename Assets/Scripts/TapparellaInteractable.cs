@@ -14,11 +14,15 @@ public class TapparellaInteractable : Interactable
             _animator.SetBool("Up", false);
         }
         else _animator.SetBool("Up", true);
+
+        FindObjectOfType<AudioManager>().Play("Tapparella");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
+
+        
     }
 }

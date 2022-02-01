@@ -1169,6 +1169,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   up: 0
+--- !u!1 &1890875340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890875342}
+  - component: {fileID: 1890875341}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1890875341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890875340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb97e328597d79b428fea9de5d531706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Tapparella
+    clip: {fileID: 8300000, guid: 0fd7098546bccf741917612621e6b72c, type: 3}
+    volume: 1
+    pitch: 2.02
+    source: {fileID: 0}
+  - name: PortaAscensore
+    clip: {fileID: 8300000, guid: a58cd8b330be98048b6228267728a139, type: 3}
+    volume: 1
+    pitch: 2.02
+    source: {fileID: 0}
+  - name: Passi
+    clip: {fileID: 8300000, guid: 9f58d9f50dca3d14981f597c3e7e5fca, type: 3}
+    volume: 1
+    pitch: 2.02
+    source: {fileID: 0}
+--- !u!4 &1890875342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890875340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6595333, y: 26.318228, z: 43.304035}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &27560255270629460
 GameObject:
   m_ObjectHideFlags: 0
