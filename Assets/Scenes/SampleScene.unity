@@ -2165,6 +2165,7 @@ GameObject:
   - component: {fileID: 7121702926994605422}
   - component: {fileID: 2275577902184777628}
   - component: {fileID: 7883428816063352670}
+  - component: {fileID: 692285591697533888}
   m_Layer: 0
   m_Name: quadro1
   m_TagString: Untagged
@@ -2172,6 +2173,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &692285591697533888
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692285591697533887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1951711741968189995, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &718697782414888258
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,6 +2212,7 @@ GameObject:
   - component: {fileID: 347109081251801175}
   - component: {fileID: 5564905029453229229}
   - component: {fileID: 6018844424950106492}
+  - component: {fileID: 745350975866934437}
   m_Layer: 0
   m_Name: quadri
   m_TagString: Untagged
@@ -2204,6 +2220,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &745350975866934437
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745350975866934436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8387935291493288213, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!23 &789916200919542811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2898,6 +2928,7 @@ GameObject:
   - component: {fileID: 7801173495716074977}
   - component: {fileID: 4894678705212377364}
   - component: {fileID: 277664926586006218}
+  - component: {fileID: 1555196599686254141}
   m_Layer: 0
   m_Name: Vending_machine_01
   m_TagString: Untagged
@@ -2905,6 +2936,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &1555196599686254141
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555196599686254140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4244134954496182787, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &1591617678038921440
 Transform:
   m_ObjectHideFlags: 0
@@ -3953,6 +3998,7 @@ GameObject:
   - component: {fileID: 8064860717934604192}
   - component: {fileID: 203526906274898725}
   - component: {fileID: 8690421187030495480}
+  - component: {fileID: 2589114609376837756}
   m_Layer: 0
   m_Name: Distributori
   m_TagString: Untagged
@@ -3960,6 +4006,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2589114609376837756
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589114609376837755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5359492919789912947, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &2605758025964617828
 Transform:
   m_ObjectHideFlags: 0
@@ -6563,6 +6623,7 @@ GameObject:
   - component: {fileID: 9194070415637357421}
   - component: {fileID: 3938709897921060583}
   - component: {fileID: 5688874782992127981}
+  - component: {fileID: 4765050077305393670}
   m_Layer: 0
   m_Name: tavoloAttesa
   m_TagString: Untagged
@@ -6570,6 +6631,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4765050077305393670
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765050077305393669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2031580986190974375, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!1 &4772874551517617910
 GameObject:
   m_ObjectHideFlags: 0
@@ -7262,6 +7337,7 @@ GameObject:
   - component: {fileID: 8183538210339708199}
   - component: {fileID: 4817168496145789273}
   - component: {fileID: 193336048246926386}
+  - component: {fileID: 5320661723743724205}
   m_Layer: 0
   m_Name: muri
   m_TagString: Untagged
@@ -7269,6 +7345,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5320661723743724205
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320661723743724204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2705719659765021769, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &5403465272418914035
 Transform:
   m_ObjectHideFlags: 0
@@ -7880,6 +7970,7 @@ GameObject:
   - component: {fileID: 4592337441505304558}
   - component: {fileID: 985622681611250935}
   - component: {fileID: 3656464691750470415}
+  - component: {fileID: 5952682458316751559}
   m_Layer: 0
   m_Name: Vending_machine_02
   m_TagString: Untagged
@@ -7887,6 +7978,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5952682458316751559
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5952682458316751558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3317001511776295701, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &5989003875011788391
 Transform:
   m_ObjectHideFlags: 0
@@ -9014,6 +9119,7 @@ GameObject:
   - component: {fileID: 195999923594095545}
   - component: {fileID: 8867037896153329307}
   - component: {fileID: 3288179279859070461}
+  - component: {fileID: 7015849524596264621}
   m_Layer: 0
   m_Name: Vending_machine_03
   m_TagString: Untagged
@@ -9021,6 +9127,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7015849524596264621
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015849524596264620}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1640007551742940473, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!23 &7021387690234625276
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9789,6 +9909,7 @@ GameObject:
   - component: {fileID: 644270648291235715}
   - component: {fileID: 4703284335223624657}
   - component: {fileID: 2609095224897243436}
+  - component: {fileID: 7543507759588012113}
   m_Layer: 0
   m_Name: monet
   m_TagString: Untagged
@@ -9796,6 +9917,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7543507759588012113
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543507759588012112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4263645037305255611, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &7568787407498184603
 Transform:
   m_ObjectHideFlags: 0
@@ -11637,6 +11772,7 @@ GameObject:
   - component: {fileID: 5465642604680831014}
   - component: {fileID: 1599712482075392068}
   - component: {fileID: 2849840690776037206}
+  - component: {fileID: 9171647043789406565}
   m_Layer: 0
   m_Name: Bancone
   m_TagString: Untagged
@@ -11644,6 +11780,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &9171647043789406565
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171647043789406564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7141651977916235001, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!33 &9189094854936468694
 MeshFilter:
   m_ObjectHideFlags: 0
