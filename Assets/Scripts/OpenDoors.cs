@@ -23,6 +23,6 @@ public class OpenDoors : Interactable
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(bool_script.open);
+     //   Debug.Log(bool_script.open);
     }
 }

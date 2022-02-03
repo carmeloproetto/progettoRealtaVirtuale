@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PorteAscensoreInteractable : Interactable
+public class PorteAscensoreInteractable : MonoBehaviour
 {
     private Animator _animator;
     public bool open;
-    public override void Interact(GameObject caller)
-    {
-       // open = _animator.GetBool("open");
-    }
-
+   
+    public bool firstClose;
+    
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
         open = true;
+        firstClose = true;
     }
 
     private void Update()
