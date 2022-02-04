@@ -20,7 +20,7 @@ public class LiftAscent : Interactable
                 close_doors_script.firstClose = false;
             }
             lift_script.up = !lift_script.up;
-            }
+        }
         else{
             Debug.Log("premuto il tasto 7");  
             script_verificaCodice.codice.Add(7);
