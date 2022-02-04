@@ -12,6 +12,7 @@ public class OpenDoors : Interactable
         bool_script.open = !bool_script.open;
         Debug.Log("bool_script " + bool_script);
 
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
         FindObjectOfType<AudioManager>().Play("PortaAscensore");
     }
 

@@ -16,12 +16,16 @@ public class LiftAscent : Interactable
     {
         if(lift_script.chiamaAssistenza == false){
             if(close_doors_script.firstClose == true){
+                FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+                FindObjectOfType<AudioManager>().Play("PortaAscensore");
+                FindObjectOfType<AudioManager>().Play("SalitaAscensore");
                 close_doors_script.open = !close_doors_script.open;
                 close_doors_script.firstClose = false;
             }
             lift_script.up = !lift_script.up;
         }
         else{
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             Debug.Log("premuto il tasto 7");  
             script_verificaCodice.codice.Add(7);
         }

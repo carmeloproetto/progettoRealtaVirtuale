@@ -14,7 +14,8 @@ public class ChiamaAssistenzaAscensore : Interactable
     public override void Interact(GameObject caller)
     {
         if(firstCall == true && lift_script.chiamaAssistenza == true){
-            FindObjectOfType<AudioManager>().Play("PortaAscensore");
+            FindObjectOfType<AudioManager>().Play("AllarmeAscensore");
+            FindObjectOfType<AudioManager>().Play("AscensoreBloccato");
             firstCall = false;
             insert_combo_to_unlock = true;
         }

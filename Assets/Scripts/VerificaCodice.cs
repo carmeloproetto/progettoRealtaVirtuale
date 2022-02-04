@@ -22,10 +22,11 @@ public class VerificaCodice : Interactable
     {
 
         if(script_assistenza.insert_combo_to_unlock == true){
-            FindObjectOfType<AudioManager>().Play("PortaAscensore");  
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");  
        
             if(codice.Count == 3)
                 if(codice[0] == 7 && codice[1] == 1 && codice[2] == 3){
+                    FindObjectOfType<AudioManager>().Play("SalitaAscensore");
                     Debug.Log("codice corretto!");
                     script_unlock.unlock = true;
                     close_doors_script.open = !close_doors_script.open;
@@ -33,8 +34,7 @@ public class VerificaCodice : Interactable
                 else
                     Debug.Log("codice errato 2");
             else
-                Debug.Log("codice errato 3");            
-                 
+                Debug.Log("codice errato 3");
             codiceErrato = false;      
             codice.Clear();
         }

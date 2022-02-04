@@ -22,13 +22,15 @@ public class OtherNumberButton : Interactable
             close_doors_script.firstClose = false;
         }
         if(lift_script.chiamaAssistenza == false){
-            FindObjectOfType<AudioManager>().Play("PortaAscensore");
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+            FindObjectOfType<AudioManager>().Play("PianoSbagliato");
         }
         else{
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             string objectName = gameObject.name;
             Debug.Log(objectName);  
             if(objectName == "tasto8")
-                script_verificaCodice.codice.Add(8);
+                script_verificaCodice.codice.Add(8); 
             else if(objectName == "tasto6")
                 script_verificaCodice.codice.Add(6);
             else if(objectName == "tasto5")
