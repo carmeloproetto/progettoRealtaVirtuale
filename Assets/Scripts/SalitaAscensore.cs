@@ -26,8 +26,6 @@ public class SalitaAscensore : MonoBehaviour
         }
         if(unlock == true)
             _animator.SetBool("unlock", true);
-         
-        
     }
 }
 

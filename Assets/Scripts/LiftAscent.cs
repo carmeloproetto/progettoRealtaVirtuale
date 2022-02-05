@@ -15,10 +15,12 @@ public class LiftAscent : Interactable
     public override void Interact(GameObject caller)
     {
         if(lift_script.chiamaAssistenza == false){
-            if(close_doors_script.firstClose == true){
-                FindObjectOfType<AudioManager>().Play("BottoneAscensore");
-                FindObjectOfType<AudioManager>().Play("PortaAscensore");
-                FindObjectOfType<AudioManager>().Play("SalitaAscensore");
+
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+            FindObjectOfType<AudioManager>().Play("PortaAscensore");
+            FindObjectOfType<AudioManager>().Play("SalitaAscensore");
+
+            if (close_doors_script.firstClose == true){
                 close_doors_script.open = !close_doors_script.open;
                 close_doors_script.firstClose = false;
             }
