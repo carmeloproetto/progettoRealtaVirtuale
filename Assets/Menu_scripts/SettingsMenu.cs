@@ -7,13 +7,16 @@ using TMPro;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
+
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 }
