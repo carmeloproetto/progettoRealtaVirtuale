@@ -30,9 +30,11 @@ public class PauseBehaviour : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         PauseUI.SetActive(false);
         Time.timeScale = 1;
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 
     public void QuitGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 }
