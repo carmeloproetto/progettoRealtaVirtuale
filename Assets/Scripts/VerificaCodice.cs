@@ -7,8 +7,8 @@ public class VerificaCodice : Interactable
    private ChiamaAssistenzaAscensore script_assistenza;
    public GameObject assistenza;
 
-    private PorteAscensoreInteractable close_doors_script;
-    public GameObject doors;
+  //  private PorteAscensoreInteractable close_doors_script;
+  //  public GameObject doors;
 
 
     public List<int> codice;
@@ -29,8 +29,9 @@ public class VerificaCodice : Interactable
                 {
                     FindObjectOfType<AudioManager>().Play("SalitaAscensore2");
                     Debug.Log("codice corretto!");
+                    //parte l'animazione di salita dell'ascensore
                     script_unlock.unlock = true;
-                    close_doors_script.open = !close_doors_script.open;
+                 //   close_doors_script.open = !close_doors_script.open;
                 }
                 else
                 {
@@ -56,7 +57,7 @@ public class VerificaCodice : Interactable
         codice = new List<int>();
         codiceErrato = false;
         script_unlock = unlock.GetComponent<SalitaAscensore>();
-        close_doors_script = doors.GetComponent<PorteAscensoreInteractable>();
+        //close_doors_script = doors.GetComponent<PorteAscensoreInteractable>();
     }
 
     // Update is called once per frame

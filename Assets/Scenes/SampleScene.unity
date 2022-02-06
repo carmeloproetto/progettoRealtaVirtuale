@@ -515,6 +515,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
   m_PrefabInstance: {fileID: 856634736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264554809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6009449445982224977, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
+  m_PrefabInstance: {fileID: 3303952489006530858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273030291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3912471849009104337, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
@@ -1401,7 +1406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assistenza: {fileID: 273030291}
-  doors: {fileID: 963859672}
   codice: 
   codiceErrato: 0
   unlock: {fileID: 1865332917}
@@ -4710,6 +4714,7 @@ GameObject:
   - component: {fileID: 240641466857155089}
   - component: {fileID: 3316478460295412951}
   - component: {fileID: 8681679445941070173}
+  - component: {fileID: 2860600117632222297}
   m_Layer: 0
   m_Name: Pareti
   m_TagString: Untagged
@@ -4717,6 +4722,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &2860600117632222297
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860600117632222296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4129943239560593106, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!4 &2898660333919165543
 Transform:
   m_ObjectHideFlags: 0
@@ -5278,7 +5297,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1738497036925431160, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
       propertyPath: m_Name
-      value: taso1
+      value: tasto1
       objectReference: {fileID: 0}
     - target: {fileID: 3185384084307223378, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
       propertyPath: lift
@@ -5297,9 +5316,21 @@ PrefabInstance:
       value: tasto8
       objectReference: {fileID: 0}
     - target: {fileID: 3303952489165084145, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
+      propertyPath: lift
+      value: 
+      objectReference: {fileID: 1865332917}
+    - target: {fileID: 3303952489165084145, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
       propertyPath: open
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3303952489165084145, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
+      propertyPath: salita
+      value: 
+      objectReference: {fileID: 264554809}
+    - target: {fileID: 3303952490402036112, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
+      propertyPath: doors
+      value: 
+      objectReference: {fileID: 963859672}
     - target: {fileID: 3303952490402036125, guid: 8d6a6cc92ba57ed4c8c3fccc8a6e09df, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7269,6 +7300,7 @@ GameObject:
   - component: {fileID: 978874094021299151}
   - component: {fileID: 7615034620023598640}
   - component: {fileID: 2938988095862481828}
+  - component: {fileID: 5183131753574844890}
   m_Layer: 0
   m_Name: Pavimento
   m_TagString: Untagged
@@ -7276,6 +7308,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5183131753574844890
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183131753574844889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3334363104112770236, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!23 &5217052041498556614
 MeshRenderer:
   m_ObjectHideFlags: 0

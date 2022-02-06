@@ -40,7 +40,7 @@ public class OtherNumberButton : Interactable
             else if(objectName == "tasto3")
                 script_verificaCodice.codice.Add(3);
             else if(objectName == "tasto2")
-                script_verificaCodice.codice.Add(1);
+                script_verificaCodice.codice.Add(2);
             else if(objectName == "tasto1")
                 script_verificaCodice.codice.Add(1);
         }
