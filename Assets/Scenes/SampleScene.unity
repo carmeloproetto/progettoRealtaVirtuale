@@ -3397,6 +3397,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a58cd8b330be98048b6228267728a139, type: 3}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 588f58152424f394097131ee02bf70f8, type: 3}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[0].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[1].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[2].spatialBlend
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[3].spatialBlend
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[4].spatialBlend
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[5].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[6].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[7].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[8].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355309062610642558, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
+      propertyPath: sounds.Array.data[9].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1355309062610642559, guid: 576a1bc6e91e8a04494b0d2917f6b361, type: 3}
       propertyPath: m_Name
       value: AudioManager
