@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CambiaCameraRisonanza : MonoBehaviour
 {
-
+    public GameObject displayGioco;
+   
     private Animator _animator;
     public bool StartAnimation;
 
@@ -12,6 +13,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
     public Camera cameraRisonanza;
     public bool camRisonanzaOn;
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,11 @@ public class CambiaCameraRisonanza : MonoBehaviour
             }
             StartAnimation = true;
         }
+    }
+
+    public void startGameRisonanza(){
+        displayGioco.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
     
 }
