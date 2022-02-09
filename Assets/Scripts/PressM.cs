@@ -28,7 +28,6 @@ public class PressM : MonoBehaviour
     public void PauseGame()
     {
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         MUI.SetActive(true);
         Time.timeScale = 0f;
         AudioListener.pause = true;
