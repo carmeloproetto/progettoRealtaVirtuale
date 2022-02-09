@@ -1471,6 +1471,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1421752089088469375, guid: 92462cb9dcd63d642b4423b1145a0201, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4154483750895415254, guid: 92462cb9dcd63d642b4423b1145a0201, type: 3}
       propertyPath: m_Name
       value: Camera_Risonanza
@@ -1531,7 +1535,8 @@ PrefabInstance:
       propertyPath: field of view
       value: 46
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1421752089088469375, guid: 92462cb9dcd63d642b4423b1145a0201, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92462cb9dcd63d642b4423b1145a0201, type: 3}
 --- !u!1 &702120419 stripped
 GameObject:
@@ -7262,6 +7267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82f49671c69142978ce878f6d1ebe59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionManager: {fileID: 0}
+  schermo: {fileID: 0}
+  warningIcon: {fileID: 0}
+  lockedIcon: {fileID: 0}
+  unlockedIcon: {fileID: 0}
 --- !u!4 &3136119647621038004
 Transform:
   m_ObjectHideFlags: 0
