@@ -21,7 +21,7 @@ public class TorchGrabbable : Grabbable
         _rigidBody.isKinematic = true;
 
         this.transform.SetPositionAndRotation(destination.transform.position, destination.transform.rotation);
-        this.transform.SetParent(destination.transform);
+        this.transform.SetParent(destination.transform); 
     }
 
     protected override void Start ()

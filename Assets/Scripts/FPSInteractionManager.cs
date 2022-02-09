@@ -25,7 +25,10 @@ public class FPSInteractionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        CheckInteraction(); 
+        if(_grabbedObject == null)
+        {
+            CheckInteraction(); 
+        }
 
         if( _grabbedObject != null && Input.GetMouseButtonDown(1))
         {
@@ -98,9 +101,5 @@ public class FPSInteractionManager : MonoBehaviour
             _target.color = Color.red;
     }
 
-    public Grabbable grabbedObject()
-    {
-        return _grabbedObject; 
-    }
 
 }
