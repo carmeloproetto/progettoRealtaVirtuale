@@ -27,7 +27,11 @@ public class TermostatoManager : Interactable
     public Image lockedIcon;
     public Image unlockedIcon;
 
-    private Collider _externCollider; 
+    private bool lightTimerOn = false; 
+
+    private Collider _externCollider;
+
+    public LightOut contatore; 
 
     private bool temperatura_corretta = false; 
 
@@ -112,7 +116,12 @@ public class TermostatoManager : Interactable
             // Display di colore verde
             schermo.SetColor("_Color", Color.green);
             //schermo.SetColor("_EmissionColor", emissionGreen * 0.4f );
-            warningIcon.enabled = false; 
+            warningIcon.enabled = false;
+            if( !lightTimerOn)
+            {
+                contatore.timerOn();
+                lightTimerOn = true;
+            }
         }
         else // temperatura troppo bassa o troppo alta - schermo di colore rosso + beep di allarme 
         {

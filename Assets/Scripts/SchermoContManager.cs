@@ -8,6 +8,8 @@ public class SchermoContManager : MonoBehaviour
     private bool powerOn = true;
     public Material schermo;
 
+    private float time = 0; 
+
     private TMPro.TextMeshProUGUI _contMesh;
     private TMPro.TextMeshProUGUI _superoMesh;
 
@@ -20,11 +22,11 @@ public class SchermoContManager : MonoBehaviour
         for (int i = 0; i < textMeshes.Length; i++)
         {
             TMPro.TextMeshProUGUI m = textMeshes[i];
-            if (m.gameObject.name == "cont_ext")
+            if (m.gameObject.name == "cont_text")
             {
                 _contMesh = m;
             }
-            else if (m.gameObject.name == "supero_ext")
+            else if (m.gameObject.name == "supero_text")
             {
                 _superoMesh = m;
             }
@@ -35,12 +37,15 @@ public class SchermoContManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
         if (!powerOn)
         {
             schermo.SetColor("_Color", Color.red);
             _superoMesh.enabled = true;
             _warningImage.enabled = true;
             _contMesh.enabled = false;
+
         }
         else
         {
@@ -51,7 +56,7 @@ public class SchermoContManager : MonoBehaviour
         }
     }
 
-    public void powerOut()
+    public void Off()
     {
         powerOn = false;
     }

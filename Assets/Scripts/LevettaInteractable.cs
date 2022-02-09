@@ -11,13 +11,11 @@ public class LevettaInteractable : Interactable
     {
         if (_isUp)
         {
-            _animator.SetBool("Up", false);
-            _isUp = false;
+            switchOff(); 
         }
         else
         {
-            _animator.SetBool("Up", true);
-            _isUp = true;
+            switchOn(); 
         }
     }
 
@@ -31,5 +29,17 @@ public class LevettaInteractable : Interactable
     public bool isUp()
     {
         return _isUp; 
+    }
+
+    public void switchOff()
+    {
+        _animator.SetBool("Up", false);
+        _isUp = false; 
+    }
+
+    public void switchOn()
+    {
+        _animator.SetBool("Up", true);
+        _isUp = true;
     }
 }
