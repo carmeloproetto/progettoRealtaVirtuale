@@ -117,6 +117,7 @@ public class NumberSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        numberSequence = showNumbers_script.numberSequence;
         if (Input.GetKeyDown(KeyCode.B))
         {
             show = !show;
