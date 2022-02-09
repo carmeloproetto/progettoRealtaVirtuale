@@ -22,7 +22,5 @@ public class TapparellaInteractable : Interactable
     void Start()
     {
         _animator = GetComponent<Animator>();
-
-        
     }
 }

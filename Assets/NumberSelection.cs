@@ -19,7 +19,6 @@ public class NumberSelection : MonoBehaviour
 
     public bool checkSequence()
     {
-        correctSequence = showNumbers_script.correctSequence;
         int levelSize = showNumbers_script.levelSize;
         Debug.Log("checkSequence().levelSize = "+levelSize);
 
@@ -66,7 +65,7 @@ public class NumberSelection : MonoBehaviour
                         showNumbers_script.level = 2;
                         showNumbers_script.levelSize = 7;
                         correctSequence.Clear();
-                        for (int i = 0; i < showNumbers_script.levelSize; i++)
+                        for (int i = 1; i <= showNumbers_script.levelSize; i++)
                             correctSequence.Add(i.ToString());
                     }
                     else if (showNumbers_script.level == 2)
@@ -74,7 +73,7 @@ public class NumberSelection : MonoBehaviour
                         showNumbers_script.level = 3;
                         showNumbers_script.levelSize = 10;
                         correctSequence.Clear();
-                        for (int i = 0; i < showNumbers_script.levelSize; i++)
+                        for (int i = 1; i <= showNumbers_script.levelSize; i++)
                             correctSequence.Add(i.ToString());
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
@@ -118,23 +117,23 @@ public class NumberSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    show = !show;
-        //    numberSequence.Clear();
-        //    Debug.Log("lista svuotata - size: " + numberSequence.Count);
-        //    if (show)
-        //    {
-        //        ShowPanel(true);
-        //        Cursor.lockState = CursorLockMode.None;
-        //    }
-        //    else
-        //    {
-        //        ShowPanel(false);
-        //        Cursor.lockState = CursorLockMode.Locked;
-        //    }
-        //    Debug.Log("prova");
-        //}
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            show = !show;
+            numberSequence.Clear();
+            Debug.Log("lista svuotata - size: " + numberSequence.Count);
+            if (show)
+            {
+                ShowPanel(true);
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                ShowPanel(false);
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            Debug.Log("prova");
+        }
     }
 
     void ShowPanel(bool x)

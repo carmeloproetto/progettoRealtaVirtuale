@@ -9,7 +9,6 @@ public class ShowNumbers : MonoBehaviour
     public int levelSize;
     public int level;
     public List<string> correctSequence;
-    private bool show;
 
     TMPro.TextMeshProUGUI display;
     // Start is called before the first frame update
@@ -22,7 +21,7 @@ public class ShowNumbers : MonoBehaviour
         level = 1;
 
         
-        for (int i = 0; i < levelSize; i++)
+        for (int i = 1; i <= levelSize; i++)
         {
             correctSequence.Add(i.ToString());
         }
@@ -37,22 +36,6 @@ public class ShowNumbers : MonoBehaviour
         if(numberSequence.Count != 0)
             display.SetText(concat);
         c = 0;
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            show = !show;
-            numberSequence.Clear();
-            Debug.Log("lista svuotata - size: " + numberSequence.Count);
-            if (show)
-            {
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            Debug.Log("prova");
-        }
     }
 
     public void DisplayMessage(string msg)
