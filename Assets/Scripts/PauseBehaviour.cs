@@ -17,6 +17,7 @@ public class PauseBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
+            
         }
     }
 
@@ -24,12 +25,14 @@ public class PauseBehaviour : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         PauseUI.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
     public void ResumeGame() {
         Cursor.lockState = CursorLockMode.Locked;
         PauseUI.SetActive(false);
         Time.timeScale = 1;
+        AudioListener.pause = false;
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 

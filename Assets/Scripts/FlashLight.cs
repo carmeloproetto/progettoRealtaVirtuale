@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FlashLight : MonoBehaviour
 {
-    private Light light;
+    private Light _light;
 
     // Start is called before the first frame update
     void Start()
     {
-        light = this.GetComponent<Light>(); 
+        _light = this.GetComponentInChildren<Light>(); 
     }
 
     // Update is called once per frame
@@ -17,13 +17,13 @@ public class FlashLight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if (light.enabled)
+            if (_light.enabled)
             {
-                light.enabled = false;
+                _light.enabled = false;
             }
             else
             {
-                light.enabled = true; 
+                _light.enabled = true; 
             }
         }
     }

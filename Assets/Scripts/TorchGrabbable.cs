@@ -19,14 +19,9 @@ public class TorchGrabbable : Grabbable
     {
         _collider.enabled = false;
         _rigidBody.isKinematic = true;
-        this.transform.position = destination.transform.position;
-        this.transform.parent = destination.transform;
 
-        Vector3 targetDirection = camera.transform.forward;
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, 1.0f, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDirection);
-
-        Debug.DrawRay(transform.position, transform.forward, Color.green);
+        this.transform.SetPositionAndRotation(destination.transform.position, destination.transform.rotation);
+        this.transform.SetParent(destination.transform);
     }
 
     protected override void Start ()
