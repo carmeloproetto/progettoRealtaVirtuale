@@ -21,7 +21,7 @@ public class ShowNumbers : MonoBehaviour
         level = 1;
 
         
-        for (int i = 1; i <= levelSize; i++)
+        for (int i = 0; i <= levelSize; i++)
         {
             correctSequence.Add(i.ToString());
         }

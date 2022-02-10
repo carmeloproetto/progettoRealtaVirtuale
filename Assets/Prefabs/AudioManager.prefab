@@ -49,58 +49,75 @@ MonoBehaviour:
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: PortaAscensore
     clip: {fileID: 8300000, guid: a58cd8b330be98048b6228267728a139, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: Passi
     clip: {fileID: 8300000, guid: 9f58d9f50dca3d14981f597c3e7e5fca, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: PianoSbagliato
     clip: {fileID: 8300000, guid: 12993f1236f1fd24384ac7447202cc4d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: AscensoreBloccato
     clip: {fileID: 8300000, guid: d04978e94bd8f8947a6b049a17410f43, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: AllarmeAscensore
     clip: {fileID: 8300000, guid: e26adb6d8ffb8c847b8e3c949e453608, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: SalitaAscensore
     clip: {fileID: 8300000, guid: 73cb6a759641c6846b97d542449cda53, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: BottoneAscensore
     clip: {fileID: 8300000, guid: 01afe15e108a02b4ebac929a102ec0cf, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: WrongCode
     clip: {fileID: 8300000, guid: 2cbfb547e6492c64fb700ecb5098fae2, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   - name: SalitaAscensore2
     clip: {fileID: 8300000, guid: 935609104fd8c4743821bcff0bd11b26, type: 3}
     volume: 1
     pitch: 2.02
     loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: IntroduzioneMedico
+    clip: {fileID: 8300000, guid: d5ff424a7286271458e7ff5b03fa0acf, type: 3}
+    volume: 1
+    pitch: 2.02
+    loop: 0
+    spatialBlend: 0
     source: {fileID: 0}

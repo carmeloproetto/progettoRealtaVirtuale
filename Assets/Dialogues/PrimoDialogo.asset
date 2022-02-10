@@ -15,10 +15,9 @@ MonoBehaviour:
   name: Jeff
   dialogue:
   - Dottore
-  - ok te lo spiego
-  - benissimo procediamo
-  - ti chiarisco io i dubbi
+  - "La claustrofobia \xE8 il timore ossessivo di trovarsi in ambienti chiusi, che
+    causa sintomi quali battiti accelerati, nausea e forte ansia."
+  - Bene, allora passiamo alla prossima domanda.
   playerDialogue:
   - No
   - Si
-  - "Pi\xF9 o meno"

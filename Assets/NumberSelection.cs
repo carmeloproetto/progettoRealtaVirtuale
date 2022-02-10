@@ -68,7 +68,7 @@ public class NumberSelection : MonoBehaviour
                         showNumbers_script.level = 2;
                         showNumbers_script.levelSize = 7;
                         correctSequence.Clear();
-                        for (int i = 1; i <= showNumbers_script.levelSize; i++)
+                        for (int i = 0; i <= showNumbers_script.levelSize; i++)
                             correctSequence.Add(i.ToString());
                     }
                     else if (showNumbers_script.level == 2)
@@ -76,7 +76,7 @@ public class NumberSelection : MonoBehaviour
                         showNumbers_script.level = 3;
                         showNumbers_script.levelSize = 10;
                         correctSequence.Clear();
-                        for (int i = 1; i <= showNumbers_script.levelSize; i++)
+                        for (int i = 0; i <= showNumbers_script.levelSize; i++)
                             correctSequence.Add(i.ToString());
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);

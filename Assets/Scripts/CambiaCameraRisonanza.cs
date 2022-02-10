@@ -13,7 +13,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
     public Camera cameraRisonanza;
     public bool camRisonanzaOn;
 
-    
+    public float rotationSpeed = 8f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,9 @@ public class CambiaCameraRisonanza : MonoBehaviour
         }
     }
 
+
+
+    //funzione che scatta al termine dell'animazione che ci porta dentro la risonanza
     public void startGameRisonanza(){
         displayGioco.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
