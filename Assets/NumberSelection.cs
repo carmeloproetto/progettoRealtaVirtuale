@@ -44,9 +44,10 @@ public class NumberSelection : MonoBehaviour
     public void ButtonPressed()
     {
         currentNumber = gameObject.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text;
+        FindObjectOfType<AudioManager>().StopPlaying("BipCard");
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
 
 
-        
         numberSequence = showNumbers_script.numberSequence;
 
         Debug.Log("current number : " + currentNumber);
@@ -57,9 +58,11 @@ public class NumberSelection : MonoBehaviour
                 Debug.Log("dsdsadad");
                 if (checkSequence())
                 {
+                    FindObjectOfType<AudioManager>().Play("Correct");
                     Debug.Log("Sequenza corretta!");
                     showNumbers_script.DisplayMessage("CORRECT!");
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
+
                     if (showNumbers_script.level == 1)
                     {
                         showNumbers_script.level = 2;
@@ -80,6 +83,7 @@ public class NumberSelection : MonoBehaviour
                 }
                 else
                 {
+                    FindObjectOfType<AudioManager>().Play("WrongCode");
                     showNumbers_script.DisplayMessage("WRONG!");
                     Debug.Log("Sequenza sbagliata!");
                 }
@@ -103,6 +107,8 @@ public class NumberSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Rilassati");
+
         showNumbers_script = showNumbers.GetComponent<ShowNumbers>();
         show = false;
         
