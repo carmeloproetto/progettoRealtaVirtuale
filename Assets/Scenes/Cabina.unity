@@ -2877,7 +2877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef4feccc0b6446e98d1a91acd316c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 773995311}
   camera: {fileID: 888808879}
 --- !u!114 &1170493185
 MonoBehaviour:
@@ -2892,6 +2891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  destination: {fileID: 773995311}
 --- !u!1 &1171640675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6491,6 +6491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  destination: {fileID: 0}
 --- !u!33 &8044889576226408116
 MeshFilter:
   m_ObjectHideFlags: 0

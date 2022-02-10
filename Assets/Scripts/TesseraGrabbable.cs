@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TesseraGrabbable : Grabbable
 {
-    public GameObject destination;
     public Camera camera;
     private Collider _collider;
     private SmoothMovement _movement; 
@@ -17,10 +16,7 @@ public class TesseraGrabbable : Grabbable
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;
-
-        // this.transform.position = destination.transform.position; 
-        // this.transform.SetParent(destination.transform);
-        _movement.SetDestination(destination.transform.position);
+        _movement.SetMoving(); 
     }
 
     protected override void Start()
