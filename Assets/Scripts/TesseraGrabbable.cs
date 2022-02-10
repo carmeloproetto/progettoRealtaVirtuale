@@ -6,27 +6,26 @@ public class TesseraGrabbable : Grabbable
 {
     public GameObject destination;
     public Camera camera;
-    private Rigidbody _rigidBody;
     private Collider _collider;
+    private SmoothMovement _movement; 
 
     public override void Drop()
     {
         _collider.enabled = true;
-        _rigidBody.isKinematic = false;
     }
 
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;
-        _rigidBody.isKinematic = true;
 
-        this.transform.position = destination.transform.position; 
-        this.transform.SetParent(destination.transform);
+        // this.transform.position = destination.transform.position; 
+        // this.transform.SetParent(destination.transform);
+        _movement.SetDestination(destination.transform.position);
     }
 
     protected override void Start()
     {
-        _rigidBody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
+        _movement = GetComponent<SmoothMovement>(); 
     }
 }

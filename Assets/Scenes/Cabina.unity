@@ -1613,7 +1613,7 @@ Light:
   m_Color: {r: 0.8867924, g: 0.69234616, b: 0.29699183, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 26.5
+  m_SpotAngle: 110
   m_InnerSpotAngle: 15.1
   m_CookieSize: 10
   m_Shadows:
@@ -1650,7 +1650,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 2
@@ -2780,8 +2780,8 @@ GameObject:
   - component: {fileID: 1170493183}
   - component: {fileID: 1170493182}
   - component: {fileID: 1170493181}
-  - component: {fileID: 1170493180}
   - component: {fileID: 1170493184}
+  - component: {fileID: 1170493185}
   m_Layer: 0
   m_Name: Tessera
   m_TagString: Untagged
@@ -2796,29 +2796,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170493178}
-  m_LocalRotation: {x: 0.14703608, y: -0.88342035, z: -0.19778886, w: -0.39853293}
-  m_LocalPosition: {x: 1.8424516, y: 26.283716, z: 28.87999}
+  m_LocalRotation: {x: 0.3236126, y: -0.6326786, z: -0.62607056, w: -0.32098043}
+  m_LocalPosition: {x: 1.8424516, y: 26.2274, z: 28.87999}
   m_LocalScale: {x: 0.11491833, y: 0.073519886, z: 0.0023213015}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: -27.818, y: 133.081, z: -6.632}
---- !u!54 &1170493180
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170493178}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_LocalEulerAnglesHint: {x: -89.425, y: 174.602, z: -48.835}
 --- !u!65 &1170493181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2895,6 +2879,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 773995311}
   camera: {fileID: 888808879}
+--- !u!114 &1170493185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170493178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c60c2c027ce4d0aa2b102877b04f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &1171640675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,6 +6444,7 @@ GameObject:
   - component: {fileID: 298518781}
   - component: {fileID: 7984776982367862752}
   - component: {fileID: 7984776982367862751}
+  - component: {fileID: 7984776982367862753}
   m_Layer: 0
   m_Name: Torcia
   m_TagString: Untagged
@@ -6480,6 +6478,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5b0eb2c1f2f4a3985e2c5023db0e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7984776982367862753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984776982367862750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c60c2c027ce4d0aa2b102877b04f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!33 &8044889576226408116
 MeshFilter:
   m_ObjectHideFlags: 0

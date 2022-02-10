@@ -6,6 +6,7 @@ using UnityEngine;
 public class LightOut : MonoBehaviour
 {
     public Light light;
+    private GameObject torch; 
 
     private float timer = 0;
     public bool on = false;
@@ -17,7 +18,8 @@ public class LightOut : MonoBehaviour
     void Start()
     {
         levette = GetComponentsInChildren<LevettaInteractable>();
-        schermo = GetComponentInChildren<SchermoContManager>(); 
+        schermo = GetComponentInChildren<SchermoContManager>();
+        torch = FindObjectOfType<TorchGrabbable>().gameObject;
     }
 
     // Update is called once per frame
@@ -30,8 +32,9 @@ public class LightOut : MonoBehaviour
             if( timer >= timeInterval)
             {
                 light.enabled = false; // light off
-                on = false;
-                timer = 0; 
+                on = false; // disabilito il timer 
+                timer = 0;
+                torch.SetActive(true); // abilito l'interazione con la torcia 
                 foreach (LevettaInteractable l in levette)
                 {
                     l.switchOff(); // abbasso le levette

@@ -9,7 +9,9 @@ public class FlashLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _light = this.GetComponentInChildren<Light>(); 
+        _light = this.GetComponentInChildren<Light>();
+        GameObject torch = gameObject;
+        torch.SetActive(false);
     }
 
     // Update is called once per frame
