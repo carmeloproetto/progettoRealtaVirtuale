@@ -18,6 +18,16 @@ MonoBehaviour:
   - "La claustrofobia \xE8 il timore ossessivo di trovarsi in ambienti chiusi, che
     causa sintomi quali battiti accelerati, nausea e forte ansia."
   - Bene, allora passiamo alla prossima domanda.
+  - Attualmente, pensi di soffrire di claustrofobia?
+  - "Va bene, questa simulazione ti sar\xE0 comunque utile per comprendere al meglio
+    questo disturbo. "
+  - Provi qualcuno di questi sintomi quando ti trovi in un ambiente angusto?
+  - Attraverso la simulazione Close to Open, cercheremo di aiutarti ad affrontare
+    questi sintomi in completa sicurezza.
+  - "Forse non soffri di claustrofobia, ma consulta il tuo medico per saperne di
+    pi\xF9."
   playerDialogue:
   - No
   - Si
+  - Non saprei
+  - "Battito accelerato, Brividi, Nausea, Sudorazione eccessiva, Difficolt\xE0 respiratorie."

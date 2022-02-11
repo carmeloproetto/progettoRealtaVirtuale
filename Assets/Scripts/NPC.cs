@@ -10,6 +10,7 @@ public class NPC : ScriptableObject
     public string[] dialogue;
     [TextArea(3, 15)]
     public string[] playerDialogue;
+    
 
 
 

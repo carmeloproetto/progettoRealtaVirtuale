@@ -9,6 +9,29 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    Sound s;
+
+    public bool inPlay;
+
+    void Start(){
+        inPlay = false;
+        s = Array.Find(sounds, sound => sound.name == name);
+    }
+
+    void Update(){
+        //controllo se l'audio è in riproduzione o meno settando un booleano
+        //a true quando l'audio è in riproduzione
+        if(s != null)
+            if(s.source.isPlaying)
+               inPlay = true;
+            else
+                inPlay = false;
+    }
+
+
+  
+
+
     void Awake()
     {
 
@@ -35,13 +58,13 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name) 
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
     }
 
     public void StopPlaying(string sound)
     {
-        Sound s = Array.Find(sounds, item => item.name == sound);
+        s = Array.Find(sounds, item => item.name == sound);
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
@@ -53,5 +76,6 @@ public class AudioManager : MonoBehaviour
 
         s.source.Stop();
     }
+
 
 }
