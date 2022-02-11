@@ -15,6 +15,8 @@ public class LiftAscent : Interactable
     //serve per distringuere l'apertura delle porte da fuori l'ascensore
     public bool chiamataSalita;
 
+    private SchermoAscensore schermo; 
+
 
     public override void Interact(GameObject caller)
     {
@@ -23,6 +25,8 @@ public class LiftAscent : Interactable
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             FindObjectOfType<AudioManager>().Play("PortaAscensore");
             FindObjectOfType<AudioManager>().Play("SalitaAscensore");
+
+            schermo.Salita();
 
             //se il pulsante 7 e' il primo ad essere cliccato chiudo le porte
             if (close_doors_script.firstClose == true){
@@ -57,6 +61,7 @@ public class LiftAscent : Interactable
         close_doors_script = doors.GetComponent<PorteAscensoreInteractable>();
         script_verificaCodice = verificaCodice.GetComponent<VerificaCodice>();
         chiamataSalita = false;
+        schermo = GetComponentInParent<SchermoAscensore>(); 
    }
 
     // Update is called once per frame
