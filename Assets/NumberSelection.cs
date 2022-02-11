@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class NumberSelection : MonoBehaviour
 {
+
+
+    public Button button;
+    AudioSource audioSource;
+
     string currentNumber;
     List<string> numberSequence;
     List<string> correctSequence;
     public GameObject showNumbers;
     public GameObject panel;
+
     //int levelSize;
     private ShowNumbers showNumbers_script;
 
@@ -29,6 +37,7 @@ public class NumberSelection : MonoBehaviour
 
         for (int i=0; i< levelSize; i++)
         {
+            
             Debug.Log("Dentro il for");
 
            //Debug.Log("1Dentro il for - " + showNumbers_script.numberSequence[i]);
@@ -43,6 +52,8 @@ public class NumberSelection : MonoBehaviour
 
     public void ButtonPressed()
     {
+            
+        button.interactable = true;
         currentNumber = gameObject.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text;
         FindObjectOfType<AudioManager>().StopPlaying("BipCard");
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
@@ -52,8 +63,15 @@ public class NumberSelection : MonoBehaviour
 
         Debug.Log("current number : " + currentNumber);
 
+        
+         
+        
+        
+        
+
         if (currentNumber == "OK")
-            if (numberSequence.Count == showNumbers_script.levelSize)
+            
+        if (numberSequence.Count == showNumbers_script.levelSize)
             {
                 Debug.Log("dsdsadad");
                 if (checkSequence())
@@ -107,11 +125,18 @@ public class NumberSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Rilassati");
+
+        button = GetComponent<Button>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        if(audioSource.isPlaying)
+        button.interactable = false;
+        
+
 
         showNumbers_script = showNumbers.GetComponent<ShowNumbers>();
         show = false;
-        
+
         
         ShowPanel(false);
 
@@ -123,6 +148,8 @@ public class NumberSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!audioSource.isPlaying)
+            button.interactable = true;
         numberSequence = showNumbers_script.numberSequence;
         if (Input.GetKeyDown(KeyCode.B))
         {
@@ -133,6 +160,7 @@ public class NumberSelection : MonoBehaviour
             {
                 ShowPanel(true);
                 Cursor.lockState = CursorLockMode.None;
+                
             }
             else
             {
