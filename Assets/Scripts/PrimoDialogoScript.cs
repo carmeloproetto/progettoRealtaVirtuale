@@ -26,6 +26,8 @@ public class PrimoDialogoScript : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
+    
+
     void OnMouseOver(){
         distance = Vector3.Distance(player.transform.position, this.transform.position);
         if(distance <= 2.5f){
@@ -76,6 +78,7 @@ public class PrimoDialogoScript : MonoBehaviour
 
         }
     }
+    
 
     void StartConversation(){
         Debug.Log("Inizio Conversazione");
