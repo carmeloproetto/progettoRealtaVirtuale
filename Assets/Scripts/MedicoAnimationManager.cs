@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MedicoAnimationManager : MonoBehaviour
 {
+
+    private NavMeshAgent navMeshAgent;
+    public GameObject destination;
+
     private Animator _animator;
 
     public GameObject medico;
@@ -14,6 +19,7 @@ public class MedicoAnimationManager : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         script_medico = medico.GetComponent<PrimoDialogoScript>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -30,9 +36,12 @@ public class MedicoAnimationManager : MonoBehaviour
         
         if(script_medico.walking == true){
             _animator.SetBool("Walking", true);
+            navMeshAgent.SetDestination(destination.transform.position);
         }
         else{
             _animator.SetBool("Walking", false);
         }
+        
+       
     }
 }
