@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c64a08be395b27469e186d95643c4a7, type: 3}
-  m_Name: PrimoDialogo
+  m_Name: SecondoDialogo
   m_EditorClassIdentifier: 
   name: Jeff
   dialogue:
-  - Dottore
-  - "La claustrofobia \xE8 il timore ossessivo di trovarsi in ambienti chiusi, che
-    causa sintomi quali battiti accelerati, nausea e forte ansia."
-  - Bene, allora passiamo alla prossima domanda.
+  - Attualmente, pensi di soffrire di claustrofobia?
+  - Provi qualcuno di questi sintomi quando ti trovi in un ambiente angusto?
+  - "Va bene, questa simulazione ti sar\xE0 comunque utile per comprendere al meglio
+    questo disturbo. "
   playerDialogue:
-  - No
   - Si
+  - No
+  - Non Saprei

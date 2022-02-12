@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c64a08be395b27469e186d95643c4a7, type: 3}
-  m_Name: PrimoDialogo
+  m_Name: TerzoDialogo
   m_EditorClassIdentifier: 
-  name: Jeff
+  name: 
   dialogue:
-  - Dottore
-  - "La claustrofobia \xE8 il timore ossessivo di trovarsi in ambienti chiusi, che
-    causa sintomi quali battiti accelerati, nausea e forte ansia."
-  - Bene, allora passiamo alla prossima domanda.
+  - Attraverso la simulazione Close to Open, cercheremo di aiutarti ad affrontare
+    questi sintomi in completa sicurezza.
+  - "Forse non soffri di claustrofobia, ma consulta il tuo medico per saperne di
+    pi\xF9. "
   playerDialogue:
-  - No
-  - Si
+  - "Battito accelerato, Brividi, Nausea, Sudorazione eccessiva, Difficolt\xE0 respiratorie"
+  - Nessuno di questi sintomi
