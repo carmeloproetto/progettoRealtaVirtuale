@@ -7,6 +7,7 @@ public class SchermoAscensore : MonoBehaviour
 {
     private float _timer = 0f;
     private bool _timerOn = false;
+    private bool _bloccato = false; 
     private int _numPiano = 0;
 
     public Image arrow_up;
@@ -36,6 +37,10 @@ public class SchermoAscensore : MonoBehaviour
                 _numPiano++;
                 piano.text = _numPiano.ToString();
                 _timer = 0;
+                if( _numPiano == 4 && !_bloccato )
+                {
+                    Blocca(); 
+                }
             }
         }
     }
@@ -44,7 +49,7 @@ public class SchermoAscensore : MonoBehaviour
     {
         arrow_up.color = arrowOnColor;
         arrow_down.color = arrowOffColor; 
-        _timerOn = true; 
+        _timerOn = true;
     }
 
     public void Blocca()
@@ -52,5 +57,6 @@ public class SchermoAscensore : MonoBehaviour
         arrow_up.color = arrowOffColor;
         arrow_down.color = arrowOffColor;
         _timerOn = false;
+        _bloccato = true; 
     }
 }

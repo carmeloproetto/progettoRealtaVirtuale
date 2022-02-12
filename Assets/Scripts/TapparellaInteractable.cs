@@ -5,6 +5,7 @@ using UnityEngine;
 public class TapparellaInteractable : Interactable
 {
     private Animator _animator;
+    public AudioManager audioManager; 
 
     public override void Interact(GameObject caller)
     {
@@ -15,7 +16,7 @@ public class TapparellaInteractable : Interactable
         }
         else _animator.SetBool("Up", true);
 
-        FindObjectOfType<AudioManager>().Play("Tapparella");
+        audioManager.Play("Tapparella");
     }
 
     // Start is called before the first frame update

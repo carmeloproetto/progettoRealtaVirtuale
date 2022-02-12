@@ -2,34 +2,32 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioMedicoManager : MonoBehaviour
 {
-
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    public static AudioMedicoManager instance;
 
     Sound s;
 
     public bool inPlay;
 
-    void Start(){
+    void Start()
+    {
         inPlay = false;
         s = Array.Find(sounds, sound => sound.name == name);
     }
 
-    void Update(){
+    void Update()
+    {
         //controllo se l'audio è in riproduzione o meno settando un booleano
         //a true quando l'audio è in riproduzione
-        if(s != null)
-            if(s.source.isPlaying)
-               inPlay = true;
+        if (s != null)
+            if (s.source.isPlaying)
+                inPlay = true;
             else
                 inPlay = false;
     }
-
-
-  
 
 
     void Awake()
@@ -37,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
         if (instance == null)
             instance = this;
-        else 
+        else
         {
             Destroy(gameObject);
             return;
@@ -45,7 +43,8 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound s in sounds) {
+        foreach (Sound s in sounds)
+        {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
@@ -56,7 +55,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name) 
+    public void Play(string name)
     {
         s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
@@ -79,8 +78,6 @@ public class AudioManager : MonoBehaviour
 
     public bool isPlaying()
     {
-        return inPlay; 
+        return inPlay;
     }
-
-
 }

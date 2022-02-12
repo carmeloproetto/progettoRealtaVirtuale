@@ -6,6 +6,7 @@ public class OpenDoors : Interactable
 {
     private PorteAscensoreInteractable bool_script;
     public GameObject ant;
+
     public override void Interact(GameObject caller)
     {
         Debug.Log("ant" + ant);

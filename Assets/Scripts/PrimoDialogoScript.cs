@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System.IO.Pipes;
 
 public class PrimoDialogoScript : MonoBehaviour
+
+     
 {
     public NPC npc;
     bool isTalking = false;
@@ -28,6 +30,8 @@ public class PrimoDialogoScript : MonoBehaviour
 
     private VHS.FirstPersonController fpc_script;
 
+    private Animator _animator; 
+
 
 
     // Start is called before the first frame update
@@ -40,6 +44,7 @@ public class PrimoDialogoScript : MonoBehaviour
         firstSecondDialogue = true;
         firstThirdDialogue = true;
         finsihedDialogue = false;
+        _animator = GetComponent<Animator>(); 
     }
 
 
@@ -74,9 +79,9 @@ public class PrimoDialogoScript : MonoBehaviour
             if(numberOfQuestion == 1){
                 if(curResponseTracker == 0 && npc.playerDialogue.Length >= 0){
                     playerResponse.text = npc.playerDialogue[0];
-                    //se premio invio do conferma
-                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioManager>().inPlay == false){
-                        FindObjectOfType<AudioManager>().Play("PrimoDialogoNo");
+                    //se premo invio do conferma
+                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("PrimoDialogoNo");
                         npcDialogueBox.text = npc.dialogue[1];
                         //passo alla seconda domanda
                         numberOfQuestion = 2;
@@ -84,8 +89,8 @@ public class PrimoDialogoScript : MonoBehaviour
                 }
                 else if(curResponseTracker == 1 && npc.playerDialogue.Length >= 1){
                     playerResponse.text = npc.playerDialogue[1];
-                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioManager>().inPlay == false){
-                        FindObjectOfType<AudioManager>().Play("PrimoDialogoSi");
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("PrimoDialogoSi");
                         npcDialogueBox.text = npc.dialogue[2];
                         //passo alla seconda domanda         
                         numberOfQuestion = 2;
@@ -93,27 +98,27 @@ public class PrimoDialogoScript : MonoBehaviour
                 }
             }
             //secondo dialogo
-            else if(numberOfQuestion == 2 && FindObjectOfType<AudioManager>().inPlay == false){
+            else if(numberOfQuestion == 2 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                 if(firstSecondDialogue == true){
-                    npcDialogueBox.text = npc.dialogue[3]; 
-                    FindObjectOfType<AudioManager>().Play("SecondaDomandaMedico");
+                    npcDialogueBox.text = npc.dialogue[3];
+                    FindObjectOfType<AudioMedicoManager>().Play("SecondaDomandaMedico");
                     firstSecondDialogue = false;
                     curResponseTracker = 0;
                 }
 
                 if(curResponseTracker == 0 && npc.playerDialogue.Length >= 0){
                     playerResponse.text = npc.playerDialogue[0];
-                    //se premio invio do conferma
-                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioManager>().inPlay == false){
-                        FindObjectOfType<AudioManager>().Play("SecondoDialogoNo");
+                    //se premo invio do conferma
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("SecondoDialogoNo");
                         npcDialogueBox.text = npc.dialogue[4];
                         numberOfQuestion = 4;
                     }
                 }
                 else if(curResponseTracker == 1 && npc.playerDialogue.Length >= 1){
                     playerResponse.text = npc.playerDialogue[1];
-                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioManager>().inPlay == false){
-                        //FindObjectOfType<AudioManager>().Play("SecondoDialogoSiForse");
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("SecondoDialogoSiForse");
                         npcDialogueBox.text = npc.dialogue[5];
                         //passo alla terza domanda         
                         numberOfQuestion = 3;
@@ -121,35 +126,35 @@ public class PrimoDialogoScript : MonoBehaviour
                 }
                 else if(curResponseTracker == 2 && npc.playerDialogue.Length >= 2){
                     playerResponse.text = npc.playerDialogue[2];
-                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioManager>().inPlay == false){
-                        //FindObjectOfType<AudioManager>().Play("SecondoDialogoSiForse");
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("SecondoDialogoSiForse");
                         npcDialogueBox.text = npc.dialogue[5];
                         //passo alla terza domanda         
                         numberOfQuestion = 3;
                     }
                 }        
             }
-            else if(numberOfQuestion == 3 && FindObjectOfType<AudioManager>().inPlay == false){
+            else if(numberOfQuestion == 3 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                 if(firstThirdDialogue == true){
                     //npcDialogueBox.text = npc.dialogue[3]; 
-                    FindObjectOfType<AudioManager>().Play("SecondoDialogoSiForse");
+                    FindObjectOfType<AudioMedicoManager>().Play("SecondoDialogoSiForse");
                     firstThirdDialogue = false;
                     curResponseTracker = 0;
                 }
 
                 if(curResponseTracker == 0 && npc.playerDialogue.Length >= 0){
                     playerResponse.text = npc.playerDialogue[3];
-                    //se premio invio do conferma
-                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioManager>().inPlay == false){
-                        FindObjectOfType<AudioManager>().Play("TerzoDialogoSi");
+                    //se premo invio do conferma
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoSi");
                         npcDialogueBox.text = npc.dialogue[6];
                         numberOfQuestion = 4;
                     }
                 }
                 else if(curResponseTracker == 1 && npc.playerDialogue.Length >= 1){
                     playerResponse.text = npc.playerDialogue[0];
-                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioManager>().inPlay == false){
-                        FindObjectOfType<AudioManager>().Play("TerzoDialogoNo");
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
                         npcDialogueBox.text = npc.dialogue[7];
                         numberOfQuestion = 4;
                         
@@ -157,10 +162,10 @@ public class PrimoDialogoScript : MonoBehaviour
                 }
 
             }
-            else if(numberOfQuestion == 4 && FindObjectOfType<AudioManager>().inPlay == false){
+            else if(numberOfQuestion == 4 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                 if(finsihedDialogue == false){
                     //npcDialogueBox.text = npc.dialogue[3]; 
-                    FindObjectOfType<AudioManager>().Play("FineConversazioneCentroMedico");
+                    FindObjectOfType<AudioMedicoManager>().Play("FineConversazioneCentroMedico");
                     finsihedDialogue = true;
                     curResponseTracker = 0;
                     fpc_script.enabled = true;
@@ -177,7 +182,7 @@ public class PrimoDialogoScript : MonoBehaviour
 
     void StartConversation(){
         Debug.Log("Inizio Conversazione");
-        FindObjectOfType<AudioManager>().Play("IntroMedico");
+        FindObjectOfType<AudioMedicoManager>().Play("IntroMedico");
         isTalking = true;
         curResponseTracker = 0;
         dialogueUI.SetActive(true);
