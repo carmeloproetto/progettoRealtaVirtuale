@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &136322864092367072
+--- !u!1 &7799261566894757436
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4551609409826327821}
-  - component: {fileID: 5283485623853478174}
-  - component: {fileID: 8760529185773960860}
-  - component: {fileID: -6492273598766402204}
+  - component: {fileID: 5809479937666506671}
+  - component: {fileID: 549905122713428242}
+  - component: {fileID: 7419385230862667598}
   m_Layer: 0
-  m_Name: sediaAttesa
+  m_Name: LampadaLED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4551609409826327821
+--- !u!4 &5809479937666506671
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136322864092367072}
-  m_LocalRotation: {x: 0.50000006, y: 0.49999994, z: 0.5, w: -0.49999997}
-  m_LocalPosition: {x: -4.3480144, y: -0.9995982, z: 16.377459}
+  m_GameObject: {fileID: 7799261566894757436}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -15.869252, y: 7.1087546, z: 2.1468964}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
-  - {fileID: 6593556542136453844}
+  - {fileID: 3115300098790520578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5283485623853478174
+--- !u!33 &549905122713428242
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136322864092367072}
-  m_Mesh: {fileID: 3855883985823926908, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!23 &8760529185773960860
+  m_GameObject: {fileID: 7799261566894757436}
+  m_Mesh: {fileID: 7270039376016528936, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
+--- !u!23 &7419385230862667598
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136322864092367072}
+  m_GameObject: {fileID: 7799261566894757436}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 29b1a77c6bd644646aa9388b95ddf2f8, type: 2}
+  - {fileID: 2100000, guid: 50a7be281c05ac543a4d011137028fe9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,21 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-6492273598766402204
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136322864092367072}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3855883985823926908, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!1 &7907680909171912424
+--- !u!1 &8499703072154469047
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,45 +90,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6593556542136453844}
-  - component: {fileID: 2453033627909925862}
-  - component: {fileID: 7195570472209590201}
+  - component: {fileID: 3115300098790520578}
+  - component: {fileID: 3041402817825484442}
+  - component: {fileID: 8025598746630735837}
   m_Layer: 0
-  m_Name: base_sedia
+  m_Name: NeonLampada.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6593556542136453844
+--- !u!4 &3115300098790520578
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7907680909171912424}
+  m_GameObject: {fileID: 8499703072154469047}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000001335144, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000009536743, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4551609409826327821}
+  m_Father: {fileID: 5809479937666506671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2453033627909925862
+--- !u!33 &3041402817825484442
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7907680909171912424}
-  m_Mesh: {fileID: 5949686315142540439, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!23 &7195570472209590201
+  m_GameObject: {fileID: 8499703072154469047}
+  m_Mesh: {fileID: 6286999198073552772, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
+--- !u!23 &8025598746630735837
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7907680909171912424}
+  m_GameObject: {fileID: 8499703072154469047}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -156,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9f97f3521a578fc449949e66c95947a5, type: 2}
+  - {fileID: 2100000, guid: 7b22f60dd58524d45a0d5d035539109c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

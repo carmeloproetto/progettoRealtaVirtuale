@@ -14,12 +14,17 @@ public class MedicoAnimationManager : MonoBehaviour
     public GameObject medico;
     private PrimoDialogoScript script_medico;
 
+    //script per sblocco porta
+    public GameObject door;
+    private PortaInteractable script_door;
+
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
         script_medico = medico.GetComponent<PrimoDialogoScript>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+         script_door = door.GetComponent<PortaInteractable>();
     }
 
     // Update is called once per frame
@@ -35,12 +40,19 @@ public class MedicoAnimationManager : MonoBehaviour
         }
         
         if(script_medico.walking == true){
-            _animator.SetBool("Walking", true);
+            //_animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination.transform.position);
         }
         else{
             _animator.SetBool("Walking", false);
         }
+
+        if(!navMeshAgent.pathPending)
+            if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                if(!navMeshAgent || navMeshAgent.velocity.sqrMagnitude <= 0f){
+                     Debug.Log("sono arrivato");
+                    script_door.doorLockedInTheMedicalCenter = false;   
+                }
         
        
     }
