@@ -39,6 +39,7 @@ public class PrimoDialogoScript : MonoBehaviour
     public GameObject door;
     private PortaInteractable script_door;
 
+    public bool walking;
 
 
     // Start is called before the first frame update
@@ -53,6 +54,7 @@ public class PrimoDialogoScript : MonoBehaviour
         finsihedDialogue = false;
         _animator = GetComponent<Animator>(); 
         script_door = door.GetComponent<PortaInteractable>();
+        walking = false;
     }
 
 
@@ -190,6 +192,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     fpc_script.enabled = true;
                     dialogueUI.SetActive(false);
                     script_door.doorLockedInTheMedicalCenter = false;
+                    walking = true;
                 }
             }
 

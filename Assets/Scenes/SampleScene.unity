@@ -1471,6 +1471,11 @@ MonoBehaviour:
   lift: {fileID: 1865332917}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+--- !u!1 &656975743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178912405487495511, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+  m_PrefabInstance: {fileID: 913200587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &694424518
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2990,6 +2995,8 @@ MonoBehaviour:
   npcName: {fileID: 1374114342}
   npcDialogueBox: {fileID: 1633364067}
   playerResponse: {fileID: 1656190866}
+  door: {fileID: 656975743}
+  walking: 0
 --- !u!65 &1485344922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3015,6 +3022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1117356ced1cd4bad9a8935b4bd26e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  medico: {fileID: 1485344918}
 --- !u!1 &1633364065
 GameObject:
   m_ObjectHideFlags: 0
