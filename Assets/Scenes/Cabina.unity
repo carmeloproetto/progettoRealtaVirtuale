@@ -1853,7 +1853,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888808878}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &888808882
 Transform:
   m_ObjectHideFlags: 0
@@ -6644,6 +6644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3562b7bf6c57c4bb6a4509060753a1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
 --- !u!65 &8264028032385975653
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -12,8 +12,12 @@ public class PortaInteractable : Interactable
         if (opened)
         {
             _animator.SetBool("Open", false);
+
+            FindObjectOfType<AudioManager>().Play("Porta");
         }
         else _animator.SetBool("Open", true);
+
+        FindObjectOfType<AudioManager>().Play("Porta");
     }
 
     // Start is called before the first frame update

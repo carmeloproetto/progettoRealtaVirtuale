@@ -8,7 +8,9 @@ public class PortaChiusaInteractable : Interactable
 
     public override void Interact(GameObject caller)
     {
-        _animator.SetTrigger("Apri"); 
+        _animator.SetTrigger("Apri");
+
+        FindObjectOfType<AudioManager>().Play("PortaBloccata");
     }
 
     // Start is called before the first frame update

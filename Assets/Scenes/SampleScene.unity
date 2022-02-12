@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3587,7 +3587,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
-    spatialBlend: 1
+    spatialBlend: 0
     source: {fileID: 0}
   - name: Cassetto
     clip: {fileID: 8300000, guid: 77060eeb7d8192b4793fe531ea1eefdf, type: 3}
@@ -3597,7 +3597,7 @@ MonoBehaviour:
     spatialBlend: 1
     source: {fileID: 0}
   - name: Grab
-    clip: {fileID: 8300000, guid: 915430b72220eb24781cb3193ba6e10d, type: 3}
+    clip: {fileID: 8300000, guid: 2bfd6a4af51be764791b91c1607e65bf, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -3632,35 +3632,21 @@ MonoBehaviour:
     spatialBlend: 1
     source: {fileID: 0}
   - name: Freddo
-    clip: {fileID: 8300000, guid: 9605145c9658d404e8e752840894636c, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    spatialBlend: 0
-    source: {fileID: 0}
-  - name: UsaTessera
-    clip: {fileID: 8300000, guid: 30b49f23e27f8dd499a969c3811e115e, type: 3}
+    clip: {fileID: 8300000, guid: cd6e0119718f6e543bdcbe09332ed796, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     spatialBlend: 0
     source: {fileID: 0}
   - name: LuceSaltata
-    clip: {fileID: 8300000, guid: 64122eb7a8ce1b744b1a0e9e9827c4e2, type: 3}
+    clip: {fileID: 8300000, guid: ff759f9b58bd96f44979663731ddd26c, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     spatialBlend: 0
     source: {fileID: 0}
   - name: CabinaCompletata
-    clip: {fileID: 8300000, guid: 7fc103231be02f84aa391c617392e36f, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    spatialBlend: 0
-    source: {fileID: 0}
-  - name: PuoiProseguire
-    clip: {fileID: 8300000, guid: 9a1eb1d2af1fdc44d91ed09ae21db02b, type: 3}
+    clip: {fileID: 8300000, guid: d51b622543b63a14c9d0bad8b2b6efbc, type: 3}
     volume: 1
     pitch: 1
     loop: 0

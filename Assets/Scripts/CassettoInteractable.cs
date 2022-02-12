@@ -11,8 +11,12 @@ public class CassettoInteractable : Interactable
         if (opened)
         {
             _animator.SetBool("Open", false);
+
+            FindObjectOfType<AudioManager>().Play("Cassetto");
         }
         else _animator.SetBool("Open", true);
+
+        FindObjectOfType<AudioManager>().Play("Cassetto");
     }
 
     // Start is called before the first frame update

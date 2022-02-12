@@ -12,7 +12,8 @@ public class ContatoreManager : MonoBehaviour
     void Start()
     {
         levette = GetComponentsInChildren<LevettaInteractable>();
-        schermoManager = GetComponentInChildren<SchermoContManager>(); 
+        schermoManager = GetComponentInChildren<SchermoContManager>();
+
     }
 
     // Update is called once per frame
@@ -21,7 +22,9 @@ public class ContatoreManager : MonoBehaviour
         if( !levette[0].isUp() && levette[1].isUp() && levette[2].isUp() && !levette[3].isUp())
         {
             light.enabled = true;
-            schermoManager.On(); 
+            schermoManager.On();
+
+            
         }
     }
 }

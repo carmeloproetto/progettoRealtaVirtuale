@@ -16,7 +16,9 @@ public class TesseraGrabbable : Grabbable
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;
-        _movement.SetMoving(); 
+        _movement.SetMoving();
+
+        FindObjectOfType<AudioManager>().Play("Grab");
     }
 
     protected override void Start()

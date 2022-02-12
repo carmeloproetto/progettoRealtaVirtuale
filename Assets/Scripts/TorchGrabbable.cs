@@ -11,13 +11,14 @@ public class TorchGrabbable : Grabbable
 
     public override void Drop()
     {
-        _collider.enabled = true;
+        _collider.enabled = true; 
     }
 
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;
-        _movement.SetMoving(); 
+        _movement.SetMoving();
+        FindObjectOfType<AudioManager>().Play("Grab");
 
         //this.transform.SetPositionAndRotation(destination.transform.position, destination.transform.rotation);
     }

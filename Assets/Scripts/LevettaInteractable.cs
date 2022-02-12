@@ -11,11 +11,13 @@ public class LevettaInteractable : Interactable
     {
         if (_isUp)
         {
-            switchOff(); 
+            switchOff();
+            FindObjectOfType<AudioManager>().Play("Levetta");
         }
         else
         {
-            switchOn(); 
+            switchOn();
+            FindObjectOfType<AudioManager>().Play("Levetta");
         }
     }
 

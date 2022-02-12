@@ -22,10 +22,12 @@ public class FlashLight : MonoBehaviour
             if (_light.enabled)
             {
                 _light.enabled = false;
+                FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             }
             else
             {
-                _light.enabled = true; 
+                _light.enabled = true;
+                FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             }
         }
     }

@@ -43,6 +43,7 @@ public class TermostatoManager : Interactable
         }
 
         temperatura_corretta = tempInRange();
+        FindObjectOfType<AudioManager>().Play("BipCard");
     }
 
     public void diminuisci()
@@ -52,7 +53,9 @@ public class TermostatoManager : Interactable
             temperatura--;
         }
 
-        temperatura_corretta = tempInRange(); 
+        temperatura_corretta = tempInRange();
+
+        FindObjectOfType<AudioManager>().Play("BipCard");
     }
 
     public void unlockTerm()
