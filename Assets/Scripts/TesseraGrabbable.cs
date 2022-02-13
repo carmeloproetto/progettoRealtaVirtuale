@@ -10,7 +10,7 @@ public class TesseraGrabbable : Grabbable
 
     public override void Drop()
     {
-        _collider.enabled = true;
+        Destroy(gameObject); 
     }
 
     public override void Grab(GameObject grabber)

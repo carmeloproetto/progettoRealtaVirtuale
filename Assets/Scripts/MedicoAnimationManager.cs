@@ -39,8 +39,8 @@ public class MedicoAnimationManager : MonoBehaviour
             _animator.SetBool("Talking", false); 
         }
         
-        if(script_medico.walking == true){
-            //_animator.SetBool("Walking", true);
+        if(script_medico.walking == true && !FindObjectOfType<AudioMedicoManager>().isPlaying()){
+            _animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination.transform.position);
         }
         else{
@@ -51,7 +51,8 @@ public class MedicoAnimationManager : MonoBehaviour
             if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
                 if(!navMeshAgent || navMeshAgent.velocity.sqrMagnitude <= 0f){
                      Debug.Log("sono arrivato");
-                    script_door.doorLockedInTheMedicalCenter = false;   
+                    script_door.doorLockedInTheMedicalCenter = false;
+                    _animator.SetBool("Walking", false); 
                 }
         
        
