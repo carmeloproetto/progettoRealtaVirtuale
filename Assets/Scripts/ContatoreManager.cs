@@ -7,12 +7,15 @@ public class ContatoreManager : MonoBehaviour
     private LevettaInteractable[] levette;
     private SchermoContManager schermoManager; 
     public Light light; 
+    
+    public bool completedRoom;
 
     // Start is called before the first frame update
     void Start()
     {
         levette = GetComponentsInChildren<LevettaInteractable>();
         schermoManager = GetComponentInChildren<SchermoContManager>();
+        completedRoom = false;
 
     }
 
@@ -23,8 +26,7 @@ public class ContatoreManager : MonoBehaviour
         {
             light.enabled = true;
             schermoManager.On();
-
-            
+            completedRoom = true;
         }
     }
 }

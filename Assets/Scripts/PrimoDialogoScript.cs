@@ -11,7 +11,8 @@ public class PrimoDialogoScript : MonoBehaviour
     public NPC npc;
     public NPC secondQuestion;
     public NPC thirdQuestion;
-    bool isTalking = false;
+    public NPC liftQuestion;
+    public bool isTalking = false;
 
     float distance;
     float curResponseTracker = 0;
@@ -159,8 +160,6 @@ public class PrimoDialogoScript : MonoBehaviour
             //terzo dialogo
             else if(numberOfQuestion == 3 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                 if(firstThirdDialogue == true){
-                    //npcDialogueBox.text = npc.dialogue[3]; 
-                    //FindObjectOfType<AudioMedicoManager>().Play("SecondoDialogoSiForse");
                     firstThirdDialogue = false;
                     curResponseTracker = 0;
                 }
@@ -191,10 +190,39 @@ public class PrimoDialogoScript : MonoBehaviour
                     curResponseTracker = 0;
                     fpc_script.enabled = true;
                     dialogueUI.SetActive(false);
-                    script_door.doorLockedInTheMedicalCenter = false;
+                    //script_door.doorLocked = false;
                     walking = true;
+                    numberOfQuestion = 5;
                 }
             }
+
+
+
+
+           //DIALOGO ASCENSORE
+           else if(numberOfQuestion == 5 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+               if(curResponseTracker == 0 && liftQuestion.playerDialogue.Length >= 0){
+                    playerResponse.text = liftQuestion.playerDialogue[0];
+                    //se premo invio do conferma
+                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("AscensoreSi");
+                        npcDialogueBox.text = liftQuestion.dialogue[1];
+                    }
+                }
+                else if(curResponseTracker == 1 && liftQuestion.playerDialogue.Length >= 1){
+                    playerResponse.text = liftQuestion.playerDialogue[1];
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("AscensoreNo");
+                        npcDialogueBox.text = liftQuestion.dialogue[2];
+                        
+                    }
+                }   
+           }
+
+
+
+
+
 
         }
     }
@@ -205,7 +233,12 @@ public class PrimoDialogoScript : MonoBehaviour
 
     void StartConversation(){
         Debug.Log("Inizio Conversazione");
-        FindObjectOfType<AudioMedicoManager>().Play("IntroMedico");
+        if(numberOfQuestion == 5){
+           npcDialogueBox.text = liftQuestion.dialogue[0];
+            FindObjectOfType<AudioMedicoManager>().Play("TeLaSentiDiProseguire");
+        }
+        else
+            FindObjectOfType<AudioMedicoManager>().Play("IntroMedico");
         isTalking = true;
         curResponseTracker = 0;
         dialogueUI.SetActive(true);

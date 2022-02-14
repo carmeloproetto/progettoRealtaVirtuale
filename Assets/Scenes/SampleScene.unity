@@ -293,6 +293,11 @@ Transform:
   m_Father: {fileID: 1766926072}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &66612581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178912406143340597, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+  m_PrefabInstance: {fileID: 8178912405170639409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &78737265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1840,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FineConversazioneCentroMedico
     clip: {fileID: 8300000, guid: e224d300ad7f07e4f98f4295c2a09596, type: 3}
+    volume: 0.025
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: InizioSimulazione
+    clip: {fileID: 8300000, guid: 528869fffacea154a8d17969ed94ce40, type: 3}
     volume: 0.025
     pitch: 1
     loop: 0
@@ -5655,6 +5667,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1277503422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178912405487495511, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+  m_PrefabInstance: {fileID: 8178912405170639409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312219151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6301,6 +6318,8 @@ MonoBehaviour:
   destination2: {fileID: 345793266}
   door: {fileID: 656975743}
   doorMain: {fileID: 1112093929}
+  doorCabina: {fileID: 1277503422}
+  doorCabinaMain: {fileID: 66612581}
 --- !u!195 &1485344924
 NavMeshAgent:
   m_ObjectHideFlags: 0

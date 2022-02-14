@@ -7,19 +7,23 @@ public class OpenDoors : Interactable
     private PorteAscensoreInteractable bool_script;
     public GameObject ant;
 
+    public bool locked;
+
     public override void Interact(GameObject caller)
     {
-        Debug.Log("ant" + ant);
-        bool_script.open = !bool_script.open;
-        Debug.Log("bool_script " + bool_script);
+        if(!locked){
+         bool_script.open = !bool_script.open;
+         Debug.Log("bool_script " + bool_script);
 
-        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
-        FindObjectOfType<AudioManager>().Play("PortaAscensore");
+         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+         FindObjectOfType<AudioManager>().Play("PortaAscensore");
+        }
     }
 
     public void Start()
     {
         bool_script = ant.GetComponent<PorteAscensoreInteractable>();
+        locked = true;
     }
 
     // Update is called once per frame
