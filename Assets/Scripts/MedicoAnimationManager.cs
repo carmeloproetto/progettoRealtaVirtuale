@@ -22,6 +22,9 @@ public class MedicoAnimationManager : MonoBehaviour
     public GameObject doorMain;
     private PortaInteractable script_doorMain;
 
+    bool firstDestination;
+    bool secondDestination;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,8 @@ public class MedicoAnimationManager : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         script_door = door.GetComponent<PortaInteractable>();
         script_doorMain = doorMain.GetComponent<PortaInteractable>();
+        firstDestination = false;
+        secondDestination = false;
     }
 
     // Update is called once per frame
@@ -44,29 +49,48 @@ public class MedicoAnimationManager : MonoBehaviour
             _animator.SetBool("Talking", false); 
         }
         
-        if(script_medico.walking == true && !FindObjectOfType<AudioMedicoManager>().isPlaying()){
-            //_animator.SetBool("Walking", true);
+      
+        
+        if(!FindObjectOfType<AudioMedicoManager>().isPlaying() && script_medico.walking == true){
+            _animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination.transform.position);
-        }
-        else{
-            //_animator.SetBool("Walking", false);
+            firstDestination = true;
         }
 
-        if (!navMeshAgent.pathPending)
+
+        if (!navMeshAgent.pathPending && firstDestination == true)
         {
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
                 if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
                 {
                     Debug.Log("Sono arrivato");
-                    //script_door.doorLockedInTheMedicalCenter = false;
-                    //_animator.SetBool("Walking", false);
+
+                    _animator.SetBool("Walking", false);
+                    script_medico.walking = false;
+                    firstDestination = false;
+                    //firstDestination = true;
                 }
         }
-         
 
+   
         if(script_door.doorLockedInTheMedicalCenter == false && script_doorMain.isTotalOpen == true){
-            Debug.Log("Gioco iniziato");
+            _animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination2.transform.position);
+            secondDestination = true;
         }
+
+                if(!navMeshAgent.pathPending && secondDestination == true){
+             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
+                {
+                    Debug.Log("Sono arrivato alla seconda destinazione");
+
+                    _animator.SetBool("Walking", false);
+                    script_medico.walking = false;
+                    secondDestination = false;
+                }
+
+        }
+
     }
 }
