@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.26
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.086666666
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -713,6 +713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sediaAttesa (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -756,6 +760,10 @@ PrefabInstance:
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
@@ -841,6 +849,10 @@ PrefabInstance:
     - target: {fileID: 8884666587828064648, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
       propertyPath: m_Name
       value: poltroneAttesa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884666587828064648, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
@@ -963,7 +975,6 @@ GameObject:
   - component: {fileID: 345793270}
   - component: {fileID: 345793269}
   - component: {fileID: 345793268}
-  - component: {fileID: 345793267}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -971,19 +982,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &345793267
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345793266}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &345793268
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1041,7 +1039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345793266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.566, y: 25.5, z: 32.905}
+  m_LocalPosition: {x: 3.74, y: 25.5, z: 32.905}
   m_LocalScale: {x: 0.43992, y: 0.43992, z: 0.43992}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1773,22 +1771,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8178912405487495511, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
   m_PrefabInstance: {fileID: 913200587}
   m_PrefabAsset: {fileID: 0}
---- !u!208 &656975749
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656975743}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!64 &694424518
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1873,6 +1855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: poltroneAttesa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8884666587828064648, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
 --- !u!1001 &710886818
@@ -1885,6 +1871,10 @@ PrefabInstance:
     - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_Name
       value: sediaAttesa (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1935,6 +1925,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -1951,7 +1945,6 @@ GameObject:
   - component: {fileID: 819429749}
   - component: {fileID: 819429748}
   - component: {fileID: 819429747}
-  - component: {fileID: 819429746}
   m_Layer: 0
   m_Name: PosizioneDaRaggiungereCentroMedico
   m_TagString: Untagged
@@ -1959,19 +1952,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &819429746
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819429745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &819429747
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2029,7 +2009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819429745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.62, y: 25.22, z: 45.03}
+  m_LocalPosition: {x: 2.69, y: 25.22, z: 45.09}
   m_LocalScale: {x: 0.4093535, y: 1.0363379, z: 0.27127182}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2144,7 +2124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1737837806947735788, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2521637099077675711, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2312,22 +2292,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7161618074222305125, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!208 &979088369
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979088365}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.0050000004, y: 0.001, z: 0.010000001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 0
-  m_Center: {x: 0, y: 0, z: 0.010000001}
-  m_TimeToStationary: 0.5
 --- !u!1 &1018164150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,22 +2744,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8178912406143340597, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
   m_PrefabInstance: {fileID: 913200587}
   m_PrefabAsset: {fileID: 0}
---- !u!208 &1112093933
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112093929}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.0005, y: 0.005, z: 0.02}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1139914881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sediaAttesa (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3418,6 +3370,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
 --- !u!1 &1407387731 stripped
@@ -3439,22 +3395,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2311319811777171226, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!208 &1407387736
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407387731}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.00001, y: 0.00001, z: 0.008}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0.007}
-  m_TimeToStationary: 0.5
 --- !u!1 &1437634274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,6 +3617,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4713437587039703792, guid: 3468a4801e616904593a849d9f672378, type: 3}
   m_PrefabInstance: {fileID: 5595748180444151377}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1485344919
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485344918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19
+  m_Height: 1.65
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!114 &1485344921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3699,19 +3653,6 @@ MonoBehaviour:
   playerResponse: {fileID: 1656190866}
   door: {fileID: 656975743}
   walking: 0
---- !u!65 &1485344922
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485344918}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32963338, y: 1.7840595, z: 0.22838822}
-  m_Center: {x: 0.117670394, y: 0.94731236, z: 0.311392}
 --- !u!114 &1485344923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,7 +3667,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 819429745}
   destination2: {fileID: 345793266}
-  medico: {fileID: 1485344918}
   door: {fileID: 656975743}
   doorMain: {fileID: 1112093929}
 --- !u!195 &1485344924
@@ -3738,11 +3678,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 1485344918}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.5
-  m_Acceleration: 8
+  m_Radius: 0.32
+  m_Speed: 2
+  m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 1000
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -3751,41 +3691,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!1 &1591004296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4582852050653237142, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
-  m_PrefabInstance: {fileID: 913200587}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1591004300
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591004296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -344665764297980943, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
---- !u!208 &1591004301
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591004296}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.002, y: 0.004, z: 0.009000001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1633364065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +3910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sediaAttesa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -4048,6 +3957,10 @@ PrefabInstance:
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
@@ -4716,6 +4629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sediaAttesa
       objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4759,6 +4676,10 @@ PrefabInstance:
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
@@ -5683,7 +5604,7 @@ GameObject:
   m_Name: piantina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &446837263892260959
@@ -6119,6 +6040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sediaAttesa
       objectReference: {fileID: 0}
+    - target: {fileID: 136322864092367072, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -6162,6 +6087,10 @@ PrefabInstance:
     - target: {fileID: 4551609409826327821, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907680909171912424, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc16403d2ecb7b4a96125f9b19d1037, type: 3}
@@ -6513,7 +6442,7 @@ GameObject:
   m_Name: Vending_machine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1555196599686254141
@@ -7426,7 +7355,7 @@ GameObject:
   m_Name: Distributori
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &2589114609376837756
@@ -8268,6 +8197,10 @@ PrefabInstance:
     - target: {fileID: 8884666587828064648, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
       propertyPath: m_Name
       value: poltroneAttesa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884666587828064648, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364605f73c4dd65428d11f9c5e7a6a60, type: 3}
@@ -9777,7 +9710,7 @@ GameObject:
   m_Name: tavoloAttesa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &4765050077305393670
@@ -11878,7 +11811,7 @@ GameObject:
   m_Name: Vending_machine_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &5952682458316751559
@@ -12184,7 +12117,7 @@ GameObject:
   m_Name: vaso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &6500668897017955515
@@ -12382,7 +12315,7 @@ GameObject:
   m_Name: Vending_machine_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &7015849524596264621
@@ -12812,7 +12745,7 @@ GameObject:
   m_Name: terra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &7758777675432259877
@@ -13818,7 +13751,7 @@ GameObject:
   m_Name: Bancone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &9171647043789406565

@@ -7,12 +7,12 @@ public class MedicoAnimationManager : MonoBehaviour
 {
 
     private NavMeshAgent navMeshAgent;
+
     public GameObject destination;
     public GameObject destination2;
 
     private Animator _animator;
 
-    public GameObject medico;
     private PrimoDialogoScript script_medico;
 
     //script per sblocco porta
@@ -26,10 +26,10 @@ public class MedicoAnimationManager : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        script_medico = medico.GetComponent<PrimoDialogoScript>();
+        script_medico = GetComponent<PrimoDialogoScript>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-         script_door = door.GetComponent<PortaInteractable>();
-         script_doorMain = doorMain.GetComponent<PortaInteractable>();
+        script_door = door.GetComponent<PortaInteractable>();
+        script_doorMain = doorMain.GetComponent<PortaInteractable>();
     }
 
     // Update is called once per frame
@@ -52,13 +52,16 @@ public class MedicoAnimationManager : MonoBehaviour
             _animator.SetBool("Walking", false);
         }
 
-        if(!navMeshAgent.pathPending)
-            if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-                if(!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f){
-                     Debug.Log("Sono arrivato");
+        if (!navMeshAgent.pathPending)
+        {
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
+                {
+                    Debug.Log("Sono arrivato");
                     //script_door.doorLockedInTheMedicalCenter = false;
-                    _animator.SetBool("Walking", false); 
+                    _animator.SetBool("Walking", false);
                 }
+        }
 
         if(script_door.doorLockedInTheMedicalCenter == false && script_doorMain.isTotalOpen == true){
             Debug.Log("Gioco iniziato");
