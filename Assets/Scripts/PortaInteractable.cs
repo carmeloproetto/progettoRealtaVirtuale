@@ -8,20 +8,22 @@ public class PortaInteractable : Interactable
 
     public bool doorLockedInTheMedicalCenter;
 
+    public bool opened;
 
     public override void Interact(GameObject caller)
     {
-        bool opened = _animator.GetBool("Open");
+        
         if (opened == true && doorLockedInTheMedicalCenter == false)
         {           
-                _animator.SetBool("Open", false);
-            Debug.Log(doorLockedInTheMedicalCenter);
+            //chiusura porta
+            _animator.SetBool("Open", false);
+            Debug.Log("Door Lock in portaInteractable: FALSE" + doorLockedInTheMedicalCenter);
             //FindObjectOfType<AudioManager>().Play("Porta");
         }
         else if(opened == false && doorLockedInTheMedicalCenter == false)
-                _animator.SetBool("Open", true);
-
-         Debug.Log(doorLockedInTheMedicalCenter);
+             _animator.SetBool("Open", true);
+        opened = _animator.GetBool("Open");
+        Debug.Log("Door Lock in portaInteractable: " +  doorLockedInTheMedicalCenter);
         FindObjectOfType<AudioManager>().Play("Porta");
     }
 
@@ -30,5 +32,6 @@ public class PortaInteractable : Interactable
     {
         _animator = GetComponentInParent<Animator>();
         doorLockedInTheMedicalCenter = true;
+        opened = _animator.GetBool("Open");
     }
 }

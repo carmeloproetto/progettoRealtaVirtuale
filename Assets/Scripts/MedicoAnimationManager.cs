@@ -8,6 +8,7 @@ public class MedicoAnimationManager : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
     public GameObject destination;
+    public GameObject destination2;
 
     private Animator _animator;
 
@@ -49,12 +50,15 @@ public class MedicoAnimationManager : MonoBehaviour
 
         if(!navMeshAgent.pathPending)
             if(navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-                if(!navMeshAgent || navMeshAgent.velocity.sqrMagnitude <= 0f){
-                     Debug.Log("sono arrivato");
-                    script_door.doorLockedInTheMedicalCenter = false;
+                if(!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f){
+                     Debug.Log("Sono arrivato");
+                    //script_door.doorLockedInTheMedicalCenter = false;
                     _animator.SetBool("Walking", false); 
                 }
-        
-       
+
+        if(script_door.doorLockedInTheMedicalCenter == false && script_door.opened == true){
+            Debug.Log("Gioco iniziato");
+            navMeshAgent.SetDestination(destination2.transform.position);
+        }
     }
 }

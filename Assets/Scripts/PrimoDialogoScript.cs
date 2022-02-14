@@ -192,6 +192,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     fpc_script.enabled = true;
                     dialogueUI.SetActive(false);
                     script_door.doorLockedInTheMedicalCenter = false;
+                    Debug.Log("SETTO DOOR LOCK A FALSE" + script_door.doorLockedInTheMedicalCenter);
                     walking = true;
                 }
             }
