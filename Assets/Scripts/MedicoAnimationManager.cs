@@ -45,11 +45,11 @@ public class MedicoAnimationManager : MonoBehaviour
         }
         
         if(script_medico.walking == true && !FindObjectOfType<AudioMedicoManager>().isPlaying()){
-            _animator.SetBool("Walking", true);
+            //_animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination.transform.position);
         }
         else{
-            _animator.SetBool("Walking", false);
+            //_animator.SetBool("Walking", false);
         }
 
         if (!navMeshAgent.pathPending)
@@ -59,9 +59,10 @@ public class MedicoAnimationManager : MonoBehaviour
                 {
                     Debug.Log("Sono arrivato");
                     //script_door.doorLockedInTheMedicalCenter = false;
-                    _animator.SetBool("Walking", false);
+                    //_animator.SetBool("Walking", false);
                 }
         }
+         
 
         if(script_door.doorLockedInTheMedicalCenter == false && script_doorMain.isTotalOpen == true){
             Debug.Log("Gioco iniziato");
