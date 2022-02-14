@@ -10,6 +10,8 @@ public class PortaInteractable : Interactable
 
     public bool opened;
 
+    public bool isTotalOpen;
+
     public override void Interact(GameObject caller)
     {
         
@@ -33,5 +35,13 @@ public class PortaInteractable : Interactable
         _animator = GetComponentInParent<Animator>();
         doorLockedInTheMedicalCenter = true;
         opened = _animator.GetBool("Open");
+        isTotalOpen = false;
     }
+
+
+    public void startWalkingNPC(){
+      isTotalOpen = true;
+      Debug.Log("porta aperta");
+    }
+
 }

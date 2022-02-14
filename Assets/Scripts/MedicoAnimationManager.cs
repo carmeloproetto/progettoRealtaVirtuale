@@ -19,6 +19,9 @@ public class MedicoAnimationManager : MonoBehaviour
     public GameObject door;
     private PortaInteractable script_door;
 
+    public GameObject doorMain;
+    private PortaInteractable script_doorMain;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class MedicoAnimationManager : MonoBehaviour
         script_medico = medico.GetComponent<PrimoDialogoScript>();
         navMeshAgent = GetComponent<NavMeshAgent>();
          script_door = door.GetComponent<PortaInteractable>();
+         script_doorMain = doorMain.GetComponent<PortaInteractable>();
     }
 
     // Update is called once per frame
@@ -56,7 +60,7 @@ public class MedicoAnimationManager : MonoBehaviour
                     _animator.SetBool("Walking", false); 
                 }
 
-        if(script_door.doorLockedInTheMedicalCenter == false && script_door.opened == true){
+        if(script_door.doorLockedInTheMedicalCenter == false && script_doorMain.isTotalOpen == true){
             Debug.Log("Gioco iniziato");
             navMeshAgent.SetDestination(destination2.transform.position);
         }
