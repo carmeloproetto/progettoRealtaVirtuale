@@ -1846,7 +1846,28 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
   - name: InizioSimulazione
-    clip: {fileID: 8300000, guid: 528869fffacea154a8d17969ed94ce40, type: 3}
+    clip: {fileID: 8300000, guid: 79d4ae3fe087ef34da3d979716ab0ccb, type: 3}
+    volume: 0.025
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: TeLaSentiDiProseguire
+    clip: {fileID: 8300000, guid: b8b2f2a496404f44bb49e9260b727dee, type: 3}
+    volume: 0.025
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: AscensoreSi
+    clip: {fileID: 8300000, guid: 87ccf2ae31bbd5e49a4f5c93a54e656b, type: 3}
+    volume: 0.025
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: AscensoreNo
+    clip: {fileID: 8300000, guid: 09fb0ece411210446ae3a6bbf35e5c32, type: 3}
     volume: 0.025
     pitch: 1
     loop: 0
@@ -6295,6 +6316,8 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: 9cc5cd07f8fc1164abea97e6af9286e6, type: 2}
   secondQuestion: {fileID: 11400000, guid: 7433f03e3aba71340a55a0681ab01b12, type: 2}
   thirdQuestion: {fileID: 11400000, guid: 1dcd929ea5c631e44bc48e5007ffac13, type: 2}
+  liftQuestion: {fileID: 11400000, guid: 6ae953ba68b304d42a6a5dff3821b645, type: 2}
+  isTalking: 0
   player: {fileID: 3843716869521723596}
   dialogueUI: {fileID: 4274342}
   npcName: {fileID: 1374114342}
@@ -12090,6 +12113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 217630577}
+  completedRoom: 0
 --- !u!114 &3257675319866785257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14019,6 +14043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ant: {fileID: 963859672}
+  locked: 0
 --- !u!65 &4317500411913737113
 BoxCollider:
   m_ObjectHideFlags: 0
