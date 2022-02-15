@@ -193,7 +193,7 @@ public class NumberSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!audioSource.isPlaying)
+        //if (!audioSource.isPlaying)
             button.interactable = true;
         numberSequence = showNumbers_script.numberSequence;
         if (Input.GetKeyDown(KeyCode.B))

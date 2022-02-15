@@ -3082,6 +3082,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131129929154206, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131129929154206, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3097,6 +3101,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 848724192}
+    - target: {fileID: 5621131130062120646, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
     - target: {fileID: 5621131130062120646, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
@@ -3118,6 +3126,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131130120028131, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131130120028131, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3134,6 +3146,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131130333342183, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131130333342183, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3149,6 +3165,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 848724192}
+    - target: {fileID: 5621131130475534531, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
     - target: {fileID: 5621131130475534531, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
@@ -3226,6 +3246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131130621363141, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131130621363141, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3242,6 +3266,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131131075733617, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131131075733617, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3257,6 +3285,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 848724192}
+    - target: {fileID: 5621131131085398881, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
     - target: {fileID: 5621131131085398881, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
@@ -3378,6 +3410,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131131729436674, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131131729436674, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
@@ -3393,6 +3429,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 848724192}
+    - target: {fileID: 5621131131867824569, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
     - target: {fileID: 5621131131867824569, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
@@ -19696,6 +19736,7 @@ GameObject:
   - component: {fileID: 3807453182214725315}
   - component: {fileID: 7922837956398576227}
   - component: {fileID: 384178241345063865}
+  - component: {fileID: 5802139683148182875}
   m_Layer: 0
   m_Name: Struttura
   m_TagString: Untagged
@@ -19703,6 +19744,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &5802139683148182875
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802139683148182874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5082055962157835663, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!23 &5882367519133309604
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20442,6 +20497,7 @@ GameObject:
   - component: {fileID: 8080864385750008076}
   - component: {fileID: 2058506366148105209}
   - component: {fileID: 5882367519133309604}
+  - component: {fileID: 6742161947614160462}
   m_Layer: 0
   m_Name: Base letto
   m_TagString: Untagged
@@ -20449,6 +20505,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6742161947614160462
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742161947614160461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2810205829701830345, guid: f0c37dca25a91ec488497a054db80d05, type: 3}
 --- !u!23 &6802303832102813739
 MeshRenderer:
   m_ObjectHideFlags: 0
