@@ -39,8 +39,6 @@ public class LightOut : MonoBehaviour
                 {
                     l.switchOff(); // abbasso le levette
                     schermo.Off(); // schermo in warning
-                    Collider collider = l.gameObject.GetComponent<Collider>(); // abilito l'interazione con le levette
-                    collider.enabled = true; 
                 }
                 Debug.Log("Timer out -> Light switched off");
                 FindObjectOfType<AudioManager>().Play("Blackout");
@@ -52,5 +50,14 @@ public class LightOut : MonoBehaviour
     public void timerOn()
     {
         on = true; 
+    }
+
+    public void UnlockInteraction()
+    {
+        foreach (LevettaInteractable l in levette)
+        {
+            Collider collider = l.gameObject.GetComponent<Collider>(); // abilito l'interazione con le levette
+            collider.enabled = true;
+        }
     }
 }

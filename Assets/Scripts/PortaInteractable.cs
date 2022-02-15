@@ -14,19 +14,18 @@ public class PortaInteractable : Interactable
 
     public override void Interact(GameObject caller)
     {
-        
-        if (opened == true && doorLocked == false)
-        {           
+
+        if (opened && !doorLocked)
+        {
             //chiusura porta
-            _animator.SetBool("Open", false);
+            Close();
             Debug.Log("Door Lock in portaInteractable: FALSE" + doorLocked);
-            //FindObjectOfType<AudioManager>().Play("Porta");
+
         }
-        else if(opened == false && doorLocked == false)
-             _animator.SetBool("Open", true);
-        opened = _animator.GetBool("Open");
-        Debug.Log("Door Lock in portaInteractable: " +  doorLocked);
-        FindObjectOfType<AudioManager>().Play("Porta");
+        else if (!opened && !doorLocked)
+            Open();
+
+        Debug.Log("Door Lock in portaInteractable: " + doorLocked);
     }
 
     // Start is called before the first frame update
@@ -42,6 +41,30 @@ public class PortaInteractable : Interactable
     public void startWalkingNPC(){
       isTotalOpen = true;
       Debug.Log("porta aperta");
+    }
+
+    public void Open()
+    {
+        _animator.SetBool("Open", true);
+        opened = true;
+        FindObjectOfType<AudioManager>().Play("Porta");
+    }
+
+    public void Close()
+    {
+        _animator.SetBool("Open", false);
+        opened = false;
+        FindObjectOfType<AudioManager>().Play("Porta");
+    }
+
+    public void Lock()
+    {
+        doorLocked = true; 
+    }
+
+    public void Unlock()
+    {
+        doorLocked = false; 
     }
 
 }

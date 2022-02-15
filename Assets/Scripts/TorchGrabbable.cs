@@ -7,7 +7,8 @@ public class TorchGrabbable : Grabbable
     public GameObject destination;
     public Camera camera; 
     private Collider _collider;
-    private SmoothMovement _movement; 
+    private SmoothMovement _movement;
+    [SerializeField] private LightOut contatore; 
 
     public override void Drop()
     {
@@ -18,9 +19,8 @@ public class TorchGrabbable : Grabbable
     {
         _collider.enabled = false;
         _movement.SetMoving();
+        contatore.UnlockInteraction(); 
         FindObjectOfType<AudioManager>().Play("Grab");
-
-        //this.transform.SetPositionAndRotation(destination.transform.position, destination.transform.rotation);
     }
 
     protected override void Start ()

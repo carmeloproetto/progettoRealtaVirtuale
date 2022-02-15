@@ -6,7 +6,10 @@ public class ContatoreManager : MonoBehaviour
 {
     private LevettaInteractable[] levette;
     private SchermoContManager schermoManager; 
-    public Light light; 
+    public Light light;
+    [SerializeField] private PrimoDialogoScript scriptDialogo; 
+
+    [SerializeField] private PortaInteractable porta; 
     
     public bool completedRoom;
 
@@ -27,6 +30,8 @@ public class ContatoreManager : MonoBehaviour
             light.enabled = true;
             schermoManager.On();
             completedRoom = true;
+            porta.Unlock();
+            scriptDialogo.isTalking = false; 
         }
     }
 }

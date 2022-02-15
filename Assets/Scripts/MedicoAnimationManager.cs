@@ -32,6 +32,8 @@ public class MedicoAnimationManager : MonoBehaviour
 
     bool firstDestination;
     bool secondDestination;
+    bool firstWalkCompleted = false;
+    bool secondWalkCompleted = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -61,14 +63,14 @@ public class MedicoAnimationManager : MonoBehaviour
         
       
         
-        if(!FindObjectOfType<AudioMedicoManager>().isPlaying() && script_medico.walking == true){
+        if(!FindObjectOfType<AudioMedicoManager>().isPlaying() && script_medico.walking == true && !firstWalkCompleted ){
             _animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination.transform.position);
             firstDestination = true;
         }
 
         //verifioc l'arrivo alla prima destinazione
-        if (!navMeshAgent.pathPending && firstDestination == true)
+        if (!navMeshAgent.pathPending && firstDestination == true && !firstWalkCompleted)
         {
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
                 if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
@@ -78,11 +80,12 @@ public class MedicoAnimationManager : MonoBehaviour
                     _animator.SetBool("Walking", false);
                     script_medico.walking = false;
                     firstDestination = false;
+                    firstWalkCompleted = true; 
                 }
         }
 
    
-        if(script_doorCM.doorLocked == false && script_doorMainCM.isTotalOpen == true){
+        if(script_doorCM.doorLocked == false && script_doorMainCM.isTotalOpen == true && !secondWalkCompleted){
             //FindObjectOfType<AudioMedicoManager>().Play("InizioSimulazione");
             _animator.SetBool("Walking", true);
             navMeshAgent.SetDestination(destination2.transform.position);
@@ -90,7 +93,7 @@ public class MedicoAnimationManager : MonoBehaviour
         }
 
         ////verifico l'arrivo alla seconda destinazione
-        if(!navMeshAgent.pathPending && secondDestination == true){
+        if(!navMeshAgent.pathPending && secondDestination == true && !secondWalkCompleted){
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
                 if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
                 {
@@ -100,6 +103,7 @@ public class MedicoAnimationManager : MonoBehaviour
                     secondDestination = false;
                     //sblocco la porta della cabina
                     script_doorCabina.doorLocked = false;
+                    secondWalkCompleted = true; 
 
                     //l'utente può tornare a parlare con il medico!
                     script_medico.isTalking = false;
