@@ -76,6 +76,7 @@ public class MedicoAnimationManager : MonoBehaviour
                 if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude <= 0f)
                 {
                     Debug.Log("Sono arrivato");
+                    navMeshAgent.enabled = false;
                     script_doorCM.doorLocked = false;
                     _animator.SetBool("Walking", false);
                     script_medico.walking = false;
@@ -88,6 +89,7 @@ public class MedicoAnimationManager : MonoBehaviour
         if(script_doorCM.doorLocked == false && script_doorMainCM.isTotalOpen == true && !secondWalkCompleted){
             //FindObjectOfType<AudioMedicoManager>().Play("InizioSimulazione");
             _animator.SetBool("Walking", true);
+            navMeshAgent.enabled = true;
             navMeshAgent.SetDestination(destination2.transform.position);
             secondDestination = true;
         }
@@ -99,18 +101,15 @@ public class MedicoAnimationManager : MonoBehaviour
                 {
                     Debug.Log("Sono arrivato alla seconda destinazione");
                     _animator.SetBool("Walking", false);
+                    navMeshAgent.enabled = false;
                     script_medico.walking = false;
                     secondDestination = false;
                     //sblocco la porta della cabina
                     script_doorCabina.doorLocked = false;
                     secondWalkCompleted = true; 
-
-                    //l'utente può tornare a parlare con il medico!
-                    script_medico.isTalking = false;
                 }
         }
 
-        
         
 
     }

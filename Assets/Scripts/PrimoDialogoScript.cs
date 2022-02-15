@@ -25,7 +25,7 @@ public class PrimoDialogoScript : MonoBehaviour
     public Text playerResponse;
 
     //indica la domanda alla quale siamo
-    int numberOfQuestion;
+    public int numberOfQuestion;
     //far partire l'audio della seconda domanda una sola volta
     bool firstSecondDialogue;
     bool firstThirdDialogue;
@@ -42,6 +42,13 @@ public class PrimoDialogoScript : MonoBehaviour
 
     public bool walking;
 
+    //script per sblocco ascensore
+    public GameObject liftDoors;
+    private OpenDoors script_liftDoors;
+
+    //script per sblocco porta risonanza
+    public GameObject risonanzaDoor;
+    private PortaInteractable script_risonanzaDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +63,8 @@ public class PrimoDialogoScript : MonoBehaviour
         _animator = GetComponent<Animator>(); 
         script_door = door.GetComponent<PortaInteractable>();
         walking = false;
+        script_liftDoors = liftDoors.GetComponent<OpenDoors>();
+        script_risonanzaDoor = risonanzaDoor.GetComponent<PortaInteractable>();
     }
 
 
@@ -64,7 +73,7 @@ public class PrimoDialogoScript : MonoBehaviour
         if(distance <= 2.5f){
             if(Input.GetAxis("Mouse ScrollWheel") < 0f){
                 curResponseTracker++;
-                if(numberOfQuestion == 1){
+                if(numberOfQuestion == 1 || numberOfQuestion == 5 || numberOfQuestion == 8){
                     if(curResponseTracker >= npc.playerDialogue.Length - 1){
                         curResponseTracker = npc.playerDialogue.Length -1;
                     }
@@ -178,7 +187,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                         FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
                         npcDialogueBox.text = thirdQuestion.dialogue[1];
-                        numberOfQuestion = 4;                   
+                        numberOfQuestion = 4;                
                     }
                 }
 
@@ -192,14 +201,10 @@ public class PrimoDialogoScript : MonoBehaviour
                     dialogueUI.SetActive(false);
                     //script_door.doorLocked = false;
                     walking = true;
-                    numberOfQuestion = 5;
+                    numberOfQuestion = 5; 
                 }
             }
-
-
-
-
-           //DIALOGO ASCENSORE
+           //DIALOGO PRE ASCENSORE
            else if(numberOfQuestion == 5 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
                if(curResponseTracker == 0 && liftQuestion.playerDialogue.Length >= 0){
                     playerResponse.text = liftQuestion.playerDialogue[0];
@@ -207,6 +212,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
                         FindObjectOfType<AudioMedicoManager>().Play("AscensoreSi");
                         npcDialogueBox.text = liftQuestion.dialogue[1];
+                        numberOfQuestion = 6;
                     }
                 }
                 else if(curResponseTracker == 1 && liftQuestion.playerDialogue.Length >= 1){
@@ -215,14 +221,61 @@ public class PrimoDialogoScript : MonoBehaviour
                         FindObjectOfType<AudioMedicoManager>().Play("AscensoreNo");
                         npcDialogueBox.text = liftQuestion.dialogue[2];
                         
+                        numberOfQuestion = 7;
                     }
                 }   
            }
+           //sblocca l'ascensore
+            else if(numberOfQuestion == 6 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                dialogueUI.SetActive(false);
+                fpc_script.enabled = true;
+               // numberOfQuestion = 8;
+                script_liftDoors.locked = false;
+                Debug.Log("Ascensore sbloccato" + numberOfQuestion);
+            }
+            //si vuole uscire dalla simulazione
+             else if(numberOfQuestion == 7 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                dialogueUI.SetActive(false);
+                fpc_script.enabled = true;
+               // numberOfQuestion = 8;
+            }
 
-
-
-
-
+            //DIALOGO POST ASCENSORE
+           else if(numberOfQuestion == 8 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+               if(curResponseTracker == 0 && liftQuestion.playerDialogue.Length >= 0){
+                    playerResponse.text = liftQuestion.playerDialogue[0];
+                    //se premo invio do conferma
+                    if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
+                        npcDialogueBox.text = liftQuestion.dialogue[1];
+                        numberOfQuestion = 9;
+                        script_risonanzaDoor.doorLocked = false;
+                        Debug.Log("Ho detto si");
+                    }
+                }
+                else if(curResponseTracker == 1 && liftQuestion.playerDialogue.Length >= 1){
+                    playerResponse.text = liftQuestion.playerDialogue[1];
+                    if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
+                        npcDialogueBox.text = liftQuestion.dialogue[2];
+                        numberOfQuestion = 10;
+                    }
+                }   
+           }
+           //sblocca la porta della risonanza
+            else if(numberOfQuestion == 9 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                dialogueUI.SetActive(false);
+                fpc_script.enabled = true;
+                //numberOfQuestion = 11;
+                
+                Debug.Log("Sblocco porta risonanza " + script_risonanzaDoor.doorLocked);
+            }
+            //si vuole uscire dalla simulazione
+             else if(numberOfQuestion == 10 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+                dialogueUI.SetActive(false);
+                fpc_script.enabled = true;
+                //numberOfQuestion = 11;
+            }
 
         }
     }
@@ -233,7 +286,8 @@ public class PrimoDialogoScript : MonoBehaviour
 
     void StartConversation(){
         Debug.Log("Inizio Conversazione");
-        if(numberOfQuestion == 5){
+        //per domande negli ascensori
+        if(numberOfQuestion == 5 || numberOfQuestion == 8){
            npcDialogueBox.text = liftQuestion.dialogue[0];
             FindObjectOfType<AudioMedicoManager>().Play("TeLaSentiDiProseguire");
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1993,7 +1993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345793266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.74, y: 25.77, z: 32.905}
+  m_LocalPosition: {x: 3.74, y: 25.77, z: 34.2}
   m_LocalScale: {x: 0.43992, y: 0.43992, z: 0.43992}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2241,6 +2241,36 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &439127801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439127802}
+  m_Layer: 0
+  m_Name: PosizioneMedicoSecondoPiano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439127802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439127801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.91, y: 31.692, z: 36.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &462824169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
@@ -3071,6 +3101,11 @@ Light:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8178912405487495511, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
   m_PrefabInstance: {fileID: 913200587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &681318601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8178912405487495511, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+  m_PrefabInstance: {fileID: 1902936529}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &694424518
 MeshCollider:
@@ -4672,6 +4707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assistenza: {fileID: 1986680220612543739}
+  medico: {fileID: 1485344918}
+  posMedSecondoPiano: {fileID: 439127802}
   codice: 
   codiceErrato: 0
   unlock: {fileID: 1865332917}
@@ -6472,8 +6509,11 @@ MonoBehaviour:
   npcName: {fileID: 1374114342}
   npcDialogueBox: {fileID: 1633364067}
   playerResponse: {fileID: 1656190866}
+  numberOfQuestion: 0
   door: {fileID: 656975743}
   walking: 0
+  liftDoors: {fileID: 4317500411913737111}
+  risonanzaDoor: {fileID: 681318601}
 --- !u!114 &1485344923
 MonoBehaviour:
   m_ObjectHideFlags: 0

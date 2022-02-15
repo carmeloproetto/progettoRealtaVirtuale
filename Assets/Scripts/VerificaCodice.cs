@@ -8,9 +8,10 @@ public class VerificaCodice : Interactable
    public GameObject assistenza;
    private SchermoAscensore schermo; 
 
-  //  private PorteAscensoreInteractable close_doors_script;
-  //  public GameObject doors;
-
+    //script per medico
+    public GameObject medico;
+    private PrimoDialogoScript script_medico;
+    public Transform posMedSecondoPiano;
 
    public List<int> codice;
    public bool codiceErrato;
@@ -28,12 +29,21 @@ public class VerificaCodice : Interactable
             if (codice.Count == 3)
                 if (codice[0] == 7 && codice[1] == 1 && codice[2] == 3)
                 {
+                    //sblocco il dialogo con il medico e lo teletrasporto al secodno piano
+                    Debug.Log("Posizione medico"+ medico.transform.position);
+                    Debug.Log("Posizione secondo piano"+ posMedSecondoPiano.transform.position);
+                    script_medico.isTalking = false;
+                    script_medico.numberOfQuestion = 8;
+                    medico.transform.position = posMedSecondoPiano.transform.position;
+                    Debug.Log("Posizione medico dopo asseganzione"+ medico.transform.position);
+                    
                     FindObjectOfType<AudioManager>().Play("SalitaAscensore2");
                     Debug.Log("codice corretto!");
                     //parte l'animazione di salita dell'ascensore
+                    
                     script_unlock.unlock = true;
-                    schermo.Salita(); 
-                 //   close_doors_script.open = !close_doors_script.open;
+                    schermo.Salita();
+                   
                 }
                 else
                 {
@@ -60,11 +70,12 @@ public class VerificaCodice : Interactable
         codiceErrato = false;
         script_unlock = unlock.GetComponent<SalitaAscensore>();
         schermo = GetComponentInParent<SchermoAscensore>(); 
-        //close_doors_script = doors.GetComponent<PorteAscensoreInteractable>();
+        script_medico = medico.GetComponent<PrimoDialogoScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
     }
+
 }
