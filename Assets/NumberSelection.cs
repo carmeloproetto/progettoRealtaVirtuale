@@ -83,6 +83,8 @@ public class NumberSelection : MonoBehaviour
 
                     if (showNumbers_script.level == 1)
                     {
+                        FindObjectOfType<AudioMedicoManager>().Play("Due");
+                        
                         showNumbers_script.level = 2;
                         showNumbers_script.levelSize = 7;
                         correctSequence.Clear();
@@ -91,11 +93,18 @@ public class NumberSelection : MonoBehaviour
                     }
                     else if (showNumbers_script.level == 2)
                     {
+                        FindObjectOfType<AudioMedicoManager>().Play("Tre");
                         showNumbers_script.level = 3;
                         showNumbers_script.levelSize = 10;
                         correctSequence.Clear();
                         for (int i = 0; i <= showNumbers_script.levelSize; i++)
                             correctSequence.Add(i.ToString());
+                    }
+                    else if (showNumbers_script.level == 3)
+                    {
+                        FindObjectOfType<AudioManager>().Play("ComplimentiRisonanza");
+                    
+                      
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
                 }
@@ -175,4 +184,6 @@ public class NumberSelection : MonoBehaviour
     {
         //panel.SetActive(x);
     }
+
+    
 }

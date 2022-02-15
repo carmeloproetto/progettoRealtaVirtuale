@@ -246,7 +246,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     playerResponse.text = liftQuestion.playerDialogue[0];
                     //se premo invio do conferma
                     if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
-                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
+                        FindObjectOfType<AudioMedicoManager>().Play("RisonanzaSi");
                         npcDialogueBox.text = liftQuestion.dialogue[1];
                         numberOfQuestion = 9;
                         script_risonanzaDoor.doorLocked = false;
@@ -256,7 +256,7 @@ public class PrimoDialogoScript : MonoBehaviour
                 else if(curResponseTracker == 1 && liftQuestion.playerDialogue.Length >= 1){
                     playerResponse.text = liftQuestion.playerDialogue[1];
                     if(Input.GetKeyDown(KeyCode.Return) && FindObjectOfType<AudioMedicoManager>().inPlay == false){
-                        FindObjectOfType<AudioMedicoManager>().Play("TerzoDialogoNo");
+                        FindObjectOfType<AudioMedicoManager>().Play("RisonanzaNo");
                         npcDialogueBox.text = liftQuestion.dialogue[2];
                         numberOfQuestion = 10;
                     }
