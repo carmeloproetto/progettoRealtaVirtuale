@@ -25,6 +25,19 @@ public class NumberSelection : MonoBehaviour
 
     bool show;
 
+    //booleano per indicare la fine della risonanza
+    bool finished;
+
+    public GameObject medico;
+    public GameObject fpc;
+    public Transform posMedico;
+    public Transform posFpc;
+
+    private CambiaCameraRisonanza ScriptCambiaCamera;
+    public GameObject cameraRisonanza;
+
+    public GameObject displayGioco;
+
     public bool checkSequence()
     {
         int levelSize = showNumbers_script.levelSize;
@@ -73,7 +86,6 @@ public class NumberSelection : MonoBehaviour
             
         if (numberSequence.Count == showNumbers_script.levelSize)
             {
-                Debug.Log("dsdsadad");
                 if (checkSequence())
                 {
                     FindObjectOfType<AudioManager>().Play("Correct");
@@ -88,22 +100,42 @@ public class NumberSelection : MonoBehaviour
                         showNumbers_script.level = 2;
                         showNumbers_script.levelSize = 7;
                         correctSequence.Clear();
-                        for (int i = 0; i <= showNumbers_script.levelSize; i++)
-                            correctSequence.Add(i.ToString());
+                        
+                        correctSequence.Add("8");
+                        correctSequence.Add("6");
+                        correctSequence.Add("3");
+                        correctSequence.Add("1");
+                        correctSequence.Add("4");
+                        correctSequence.Add("2");
+                        correctSequence.Add("7");
+                        /*for (int i = 0; i <= showNumbers_script.levelSize; i++)
+                            correctSequence.Add(i.ToString());*/
                     }
                     else if (showNumbers_script.level == 2)
                     {
                         FindObjectOfType<AudioMedicoManager>().Play("Tre");
                         showNumbers_script.level = 3;
-                        showNumbers_script.levelSize = 10;
+                        showNumbers_script.levelSize = 9;
                         correctSequence.Clear();
-                        for (int i = 0; i <= showNumbers_script.levelSize; i++)
-                            correctSequence.Add(i.ToString());
+
+                        correctSequence.Add("9");
+                        correctSequence.Add("5");
+                        correctSequence.Add("3");
+                        correctSequence.Add("8");
+                        correctSequence.Add("4");
+                        correctSequence.Add("1");
+                        correctSequence.Add("6");
+                        correctSequence.Add("2");
+                        correctSequence.Add("7");
+                        //correctSequence.Add(7);
+
+                        /*for (int i = 0; i <= showNumbers_script.levelSize; i++)
+                            correctSequence.Add(i.ToString());*/
                     }
                     else if (showNumbers_script.level == 3)
                     {
                         FindObjectOfType<AudioManager>().Play("ComplimentiRisonanza");
-                    
+                        finished = true;
                       
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
@@ -152,6 +184,10 @@ public class NumberSelection : MonoBehaviour
         correctSequence = showNumbers_script.correctSequence;
 
         Debug.Log(gameObject.name + "correctSeq size " + correctSequence.Count);
+
+        finished = false;
+        ScriptCambiaCamera = cameraRisonanza.GetComponent<CambiaCameraRisonanza>();
+
     }
 
     // Update is called once per frame
@@ -178,6 +214,15 @@ public class NumberSelection : MonoBehaviour
             }
             Debug.Log("prova");
         }
+
+        if(finished == true && FindObjectOfType<AudioManager>().inPlay == false){
+            fpc.transform.position = posFpc.transform.position;
+            medico.transform.position = posMedico.transform.position;
+            ScriptCambiaCamera.camRisonanzaOn = false;
+            displayGioco.SetActive(false);
+
+        }
+
     }
 
     void ShowPanel(bool x)

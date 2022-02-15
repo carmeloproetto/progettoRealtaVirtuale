@@ -20,11 +20,16 @@ public class ShowNumbers : MonoBehaviour
         levelSize = 5;
         level = 1;
 
-        
-        for (int i = 0; i <= levelSize; i++)
+        correctSequence.Add("1");
+        correctSequence.Add("5");
+        correctSequence.Add("9");
+        correctSequence.Add("7");
+        correctSequence.Add("2");
+
+        /*for (int i = 0; i <= levelSize; i++)
         {
             correctSequence.Add(i.ToString());
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -42,6 +47,7 @@ public class ShowNumbers : MonoBehaviour
     {
         display.SetText(msg);
     }
+
 
 
 }

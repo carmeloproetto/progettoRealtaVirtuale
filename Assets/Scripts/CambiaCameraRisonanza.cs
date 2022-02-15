@@ -34,6 +34,10 @@ public class CambiaCameraRisonanza : MonoBehaviour
             }
             StartAnimation = true;
         }
+        else{
+            cameraPersonaggio.enabled = true;
+            cameraRisonanza.enabled = false;
+        }
     }
 
 

@@ -3154,6 +3154,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1197221387}
     - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: fpc
+      value: 
+      objectReference: {fileID: 3843716869521723596}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: medico
+      value: 
+      objectReference: {fileID: 1485344918}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: posFpc
+      value: 
+      objectReference: {fileID: 848724192}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: posMedico
+      value: 
+      objectReference: {fileID: 1197221387}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: thePlayer
       value: 
       objectReference: {fileID: 3843716869521723596}
@@ -3162,13 +3178,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1485344918}
     - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: displayGioco
+      value: 
+      objectReference: {fileID: 2145930065}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 848724192}
     - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: cameraRisonanza
+      value: 
+      objectReference: {fileID: 473986871}
+    - target: {fileID: 5621131130482892081, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: teleportTarget2
       value: 
       objectReference: {fileID: 1197221387}
+    - target: {fileID: 5621131130482892083, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5621131130596174467, guid: 7b92c3f20de61bc46b2ed5f88ebc96c5, type: 3}
       propertyPath: thePlayer
       value: 
@@ -15697,7 +15725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843716869521723596}
   m_LocalRotation: {x: -0, y: -0.29065716, z: -0, w: -0.95682734}
-  m_LocalPosition: {x: 2.7, y: 25.41, z: 48.7}
+  m_LocalPosition: {x: -9.685, y: 32.368, z: 37.387}
   m_LocalScale: {x: 0.80508, y: 0.80508, z: 0.80508}
   m_Children:
   - {fileID: 3843716868563002077}
