@@ -35,6 +35,7 @@ public class LightOut : MonoBehaviour
                 on = false; // disabilito il timer 
                 timer = 0;
                 torch.SetActive(true); // abilito l'interazione con la torcia 
+                RenderSettings.ambientIntensity = -2f; 
                 foreach (LevettaInteractable l in levette)
                 {
                     l.switchOff(); // abbasso le levette
