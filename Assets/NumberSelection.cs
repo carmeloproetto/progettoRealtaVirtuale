@@ -136,7 +136,8 @@ public class NumberSelection : MonoBehaviour
                     {
                         FindObjectOfType<AudioManager>().Play("ComplimentiRisonanza");
                         finished = true;
-                      
+                        FindObjectOfType<AudioMedicoManager>().StopPlaying("Risonanza");
+
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
                 }
@@ -166,7 +167,7 @@ public class NumberSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        FindObjectOfType<AudioMedicoManager>().Play("Risonanza");
         button = GetComponent<Button>();
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
