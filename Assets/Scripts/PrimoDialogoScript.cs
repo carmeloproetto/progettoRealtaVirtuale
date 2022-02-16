@@ -12,6 +12,7 @@ public class PrimoDialogoScript : MonoBehaviour
     public NPC secondQuestion;
     public NPC thirdQuestion;
     public NPC liftQuestion;
+    public NPC postLiftQuestion;
     public bool isTalking = false;
 
     float distance;
@@ -247,7 +248,7 @@ public class PrimoDialogoScript : MonoBehaviour
                     //se premo invio do conferma
                     if(Input.GetKeyDown(KeyCode.Return) &&  FindObjectOfType<AudioMedicoManager>().inPlay == false){
                         FindObjectOfType<AudioMedicoManager>().Play("RisonanzaSi");
-                        npcDialogueBox.text = liftQuestion.dialogue[1];
+                        npcDialogueBox.text = postLiftQuestion.dialogue[0];
                         numberOfQuestion = 9;
                         script_risonanzaDoor.doorLocked = false;
                         Debug.Log("Ho detto si");
