@@ -28,7 +28,7 @@ public class ContatoreManager : MonoBehaviour
         if( !levette[0].isUp() && levette[1].isUp() && levette[2].isUp() && !levette[3].isUp())
         {
             light.enabled = true;
-            RenderSettings.ambientIntensity = 0f;
+            RenderSettings.ambientLight = new Color32(235, 235, 235, 0);
             schermoManager.On();
             completedRoom = true;
             porta.Unlock();
