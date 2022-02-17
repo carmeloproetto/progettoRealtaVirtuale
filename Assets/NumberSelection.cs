@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 
 public class NumberSelection : MonoBehaviour
 {
-
-
-    public Button button;
-    AudioSource audioSource;
 
     string currentNumber;
     List<string> numberSequence;
@@ -66,7 +61,6 @@ public class NumberSelection : MonoBehaviour
     public void ButtonPressed()
     {
             
-        button.interactable = true;
         currentNumber = gameObject.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text;
         FindObjectOfType<AudioManager>().StopPlaying("BipCard");
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
@@ -134,9 +128,9 @@ public class NumberSelection : MonoBehaviour
                     }
                     else if (showNumbers_script.level == 3)
                     {
-                        FindObjectOfType<AudioManager>().Play("ComplimentiRisonanza");
+                        FindObjectOfType<AudioMedicoManager>().Play("ComplimentiRisonanza");
                         finished = true;
-                        FindObjectOfType<AudioMedicoManager>().StopPlaying("Risonanza");
+                        FindObjectOfType<AudioManager>().StopPlaying("Risonanza");
 
                     }
                     Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
@@ -167,13 +161,11 @@ public class NumberSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioMedicoManager>().Play("Risonanza");
-        button = GetComponent<Button>();
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
-        if(audioSource.isPlaying)
-        button.interactable = false;
-        
+        FindObjectOfType<AudioManager>().Play("Risonanza");
+        FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
+
+
+
 
 
         showNumbers_script = showNumbers.GetComponent<ShowNumbers>();
@@ -195,7 +187,7 @@ public class NumberSelection : MonoBehaviour
     void Update()
     {
         //if (!audioSource.isPlaying)
-            button.interactable = true;
+            
         numberSequence = showNumbers_script.numberSequence;
         if (Input.GetKeyDown(KeyCode.B))
         {

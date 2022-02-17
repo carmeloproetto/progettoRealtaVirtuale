@@ -23,7 +23,7 @@ public class OtherNumberButton : Interactable
         }
         if(lift_script.chiamaAssistenza == false){
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
-            FindObjectOfType<AudioManager>().Play("PianoSbagliato");
+            FindObjectOfType<AudioMedicoManager>().Play("PianoSbagliato");
         }
         else{
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");

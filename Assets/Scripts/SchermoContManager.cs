@@ -46,7 +46,7 @@ public class SchermoContManager : MonoBehaviour
             _warningImage.enabled = true;
             _contMesh.enabled = false;
 
-            FindObjectOfType<AudioManager>().Play("CabinaCompletata");
+            FindObjectOfType<AudioMedicoManager>().Play("CabinaCompletata");
         }
         else
         {

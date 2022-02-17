@@ -23,7 +23,8 @@ public class VerificaCodice : Interactable
     public override void Interact(GameObject caller)
     {
 
-        if(script_assistenza.insert_combo_to_unlock == true){
+        if(script_assistenza.insert_combo_to_unlock == true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
+        {
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
 
             if (codice.Count == 3)
@@ -36,6 +37,8 @@ public class VerificaCodice : Interactable
                     script_medico.numberOfQuestion = 8;
                     medico.transform.position = posMedSecondoPiano.transform.position;
                     Debug.Log("Posizione medico dopo asseganzione"+ medico.transform.position);
+
+                    
                     
                     FindObjectOfType<AudioManager>().Play("SalitaAscensore2");
                     Debug.Log("codice corretto!");

@@ -21,7 +21,7 @@ public class LiftAscent : Interactable
     public override void Interact(GameObject caller)
     {
         if(lift_script.chiamaAssistenza == false){
-            FindObjectOfType<AudioManager>().StopPlaying("PianoSbagliato");
+            FindObjectOfType<AudioMedicoManager>().StopPlaying("PianoSbagliato");
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             FindObjectOfType<AudioManager>().Play("PortaAscensore");
             FindObjectOfType<AudioManager>().Play("SalitaAscensore");

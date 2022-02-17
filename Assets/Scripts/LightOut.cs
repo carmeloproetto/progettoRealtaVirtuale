@@ -43,7 +43,7 @@ public class LightOut : MonoBehaviour
                 }
                 Debug.Log("Timer out -> Light switched off");
                 FindObjectOfType<AudioManager>().Play("Blackout");
-                FindObjectOfType<AudioManager>().Play("LuceSaltata");
+                FindObjectOfType<AudioMedicoManager>().Play("LuceSaltata");
             }
         }
     }

@@ -11,13 +11,21 @@ public class ChiamaAssistenzaAscensore : Interactable
 
     bool firstCall;
 
+
     public override void Interact(GameObject caller)
     {
-        if(firstCall == true && lift_script.chiamaAssistenza == true){
-            FindObjectOfType<AudioManager>().Play("AllarmeAscensore");
-            FindObjectOfType<AudioManager>().Play("AscensoreBloccato");
-            firstCall = false;
-            insert_combo_to_unlock = true;
+        if (FindObjectOfType<AudioManager>().inPlay == false)
+        {
+            if (firstCall == true && lift_script.chiamaAssistenza == true)
+            {
+
+
+                FindObjectOfType<AudioManager>().Play("AllarmeAscensore");
+                FindObjectOfType<AudioMedicoManager>().Play("AscensoreBloccato");
+
+                firstCall = false;
+                insert_combo_to_unlock = true;
+            }
         }
     }
 

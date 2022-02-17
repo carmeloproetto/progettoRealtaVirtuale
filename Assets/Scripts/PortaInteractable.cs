@@ -22,7 +22,7 @@ public class PortaInteractable : Interactable
             Debug.Log("Door Lock in portaInteractable: FALSE" + doorLocked);
 
         }
-        else if (!opened && !doorLocked)
+        else if (!opened && !doorLocked && FindObjectOfType<AudioMedicoManager>().inPlay == false)
             Open();
 
         Debug.Log("Door Lock in portaInteractable: " + doorLocked);
