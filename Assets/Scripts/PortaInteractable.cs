@@ -19,7 +19,7 @@ public class PortaInteractable : Interactable
         {
             //chiusura porta
             Close();
-            Debug.Log("Door Lock in portaInteractable: FALSE" + doorLocked);
+            Debug.Log("Door Lock in portaInteractable: FALSE" + doorLocked + " " + opened);
 
         }
         else if (!opened && !doorLocked && FindObjectOfType<AudioMedicoManager>().inPlay == false)

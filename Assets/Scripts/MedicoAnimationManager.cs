@@ -104,6 +104,7 @@ public class MedicoAnimationManager : MonoBehaviour
                     navMeshAgent.enabled = false;
                     script_medico.walking = false;
                     secondDestination = false;
+                    script_doorCM.doorLocked = true;
                     //sblocco la porta della cabina
                     script_doorCabina.doorLocked = false;
                     secondWalkCompleted = true; 
