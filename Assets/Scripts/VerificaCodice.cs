@@ -31,22 +31,16 @@ public class VerificaCodice : Interactable
                 if (codice[0] == 7 && codice[1] == 1 && codice[2] == 3)
                 {
                     //sblocco il dialogo con il medico e lo teletrasporto al secodno piano
-                    Debug.Log("Posizione medico"+ medico.transform.position);
-                    Debug.Log("Posizione secondo piano"+ posMedSecondoPiano.transform.position);
                     script_medico.isTalking = false;
                     script_medico.numberOfQuestion = 8;
                     medico.transform.position = posMedSecondoPiano.transform.position;
-                    Debug.Log("Posizione medico dopo asseganzione"+ medico.transform.position);
-
-                    
-                    
+                    medico.transform.eulerAngles = new Vector3(0f, 90f, 0f);
                     FindObjectOfType<AudioManager>().Play("SalitaAscensore2");
                     Debug.Log("codice corretto!");
                     //parte l'animazione di salita dell'ascensore
                     
                     script_unlock.unlock = true;
-                    schermo.Salita();
-                   
+                    schermo.Salita();                  
                 }
                 else
                 {

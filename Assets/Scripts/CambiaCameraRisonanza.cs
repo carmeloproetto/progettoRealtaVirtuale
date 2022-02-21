@@ -15,12 +15,19 @@ public class CambiaCameraRisonanza : MonoBehaviour
 
     public float rotationSpeed = 8f;
 
+
+     private float x;
+     private float y;
+     private Vector3 rotateValue;
+     public bool animtionEnd;
+
     // Start is called before the first frame update
     void Start()
     {
          _animator = GetComponent<Animator>();
         camRisonanzaOn = false;
         StartAnimation = false;
+        animtionEnd = true;
     }
 
     // Update is called once per frame
@@ -38,6 +45,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
             cameraPersonaggio.enabled = true;
             cameraRisonanza.enabled = false;
         }
+
     }
 
 

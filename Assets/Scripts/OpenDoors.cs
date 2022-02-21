@@ -11,12 +11,9 @@ public class OpenDoors : Interactable
 
     public override void Interact(GameObject caller)
     {
-
-        if(!locked || FindObjectOfType<AudioMedicoManager>().inPlay == false)
+        if(locked && FindObjectOfType<AudioMedicoManager>().inPlay == false)
         {
          bool_script.open = !bool_script.open;
-         Debug.Log("bool_script " + bool_script);
-
          FindObjectOfType<AudioManager>().Play("BottoneAscensore");
          FindObjectOfType<AudioManager>().Play("PortaAscensore");
         }
@@ -31,6 +28,6 @@ public class OpenDoors : Interactable
     // Update is called once per frame
     void Update()
     {
-     //   Debug.Log(bool_script.open);
+        
     }
 }

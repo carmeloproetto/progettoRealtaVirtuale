@@ -16,7 +16,7 @@ public class TriggerDoorController : MonoBehaviour
                 door.Close();
                 door.doorLocked = true; 
                 gameObject.SetActive(false);
-                FindObjectOfType<AudioMedicoManager>().Play("Freddo");
+                //FindObjectOfType<AudioMedicoManager>().Play("Freddo");
             }
         }
     }

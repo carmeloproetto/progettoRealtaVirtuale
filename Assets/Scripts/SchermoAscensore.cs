@@ -17,6 +17,13 @@ public class SchermoAscensore : MonoBehaviour
     private Color arrowOnColor = new Color32(255, 255, 255, 255);
     private Color arrowOffColor = new Color32(255, 255, 255, 100);
 
+    public Material displayColor;
+    private Color disCol = new Color32(255, 0, 0, 255);
+    public TMPro.TextMeshProUGUI pianoBase;
+    public GameObject upDisplay;
+    public GameObject downDisplay;
+
+
     private float _interval = 2f; 
 
 
@@ -47,6 +54,11 @@ public class SchermoAscensore : MonoBehaviour
 
     public void Salita()
     {
+        piano.text = "4";
+        displayColor.SetColor("_Color", disCol);
+        pianoBase.enabled = true;
+        upDisplay.SetActive(true);
+        downDisplay.SetActive(true);
         arrow_up.color = arrowOnColor;
         arrow_down.color = arrowOffColor; 
         _timerOn = true;
@@ -59,4 +71,5 @@ public class SchermoAscensore : MonoBehaviour
         _timerOn = false;
         _bloccato = true; 
     }
+
 }
