@@ -23,9 +23,9 @@ public class RotateCameraCentroMedico : MonoBehaviour
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch -= speedV * Input.GetAxis("Mouse Y");
 
-        yaw = Mathf.Clamp(yaw, -90f, 90f);
+        yaw = Mathf.Clamp(yaw, 20f, 160f);
         //the rotation range
-        pitch = Mathf.Clamp(pitch, -60f, 90f);
+        pitch = Mathf.Clamp(pitch, -30f, 60f);
         //the rotation range
 
         transform.localEulerAngles = new Vector3(pitch, yaw, 0.0f);

@@ -11,7 +11,7 @@ public class OpenDoors : Interactable
 
     public override void Interact(GameObject caller)
     {
-        if(locked && FindObjectOfType<AudioMedicoManager>().inPlay == false)
+        if(!locked && FindObjectOfType<AudioMedicoManager>().inPlay == false)
         {
          bool_script.open = !bool_script.open;
          FindObjectOfType<AudioManager>().Play("BottoneAscensore");
