@@ -166,7 +166,6 @@ public class NumberSelection : MonoBehaviour
         show = false;
 
         
-        ShowPanel(false);
 
         correctSequence = showNumbers_script.correctSequence;
 
@@ -190,13 +189,11 @@ public class NumberSelection : MonoBehaviour
             Debug.Log("lista svuotata - size: " + numberSequence.Count);
             if (show)
             {
-                ShowPanel(true);
                 Cursor.lockState = CursorLockMode.None;
                 
             }
             else
             {
-                ShowPanel(false);
                 Cursor.lockState = CursorLockMode.Locked;
             }
             Debug.Log("prova");
@@ -211,11 +208,4 @@ public class NumberSelection : MonoBehaviour
         }
 
     }
-
-    void ShowPanel(bool x)
-    {
-        //panel.SetActive(x);
-    }
-
-    
 }

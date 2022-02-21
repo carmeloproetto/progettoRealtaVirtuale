@@ -52,7 +52,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
 
     //funzione che scatta al termine dell'animazione che ci porta dentro la risonanza
     public void startGameRisonanza(){
-        displayGioco.SetActive(true);
+        //displayGioco.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         _animator.enabled = false;
     }

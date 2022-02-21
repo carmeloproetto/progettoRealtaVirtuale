@@ -35,12 +35,10 @@ public class ShowNumbers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int c = 0;
         string concat = "";
         numberSequence.ForEach(x => { concat += x; });  //Debug.Log(c + "-" + x); c++; });
         if(numberSequence.Count != 0)
             display.SetText(concat);
-        c = 0;
     }
 
     public void DisplayMessage(string msg)
