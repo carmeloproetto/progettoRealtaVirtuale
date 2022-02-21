@@ -11,6 +11,8 @@ public class ChiamaAssistenzaAscensore : Interactable
 
     bool firstCall;
 
+    public bool unlockBtn;
+    public bool btn;
 
     public override void Interact(GameObject caller)
     {
@@ -18,13 +20,11 @@ public class ChiamaAssistenzaAscensore : Interactable
         {
             if (firstCall == true && lift_script.chiamaAssistenza == true)
             {
-
-
                 FindObjectOfType<AudioManager>().Play("AllarmeAscensore");
                 FindObjectOfType<AudioMedicoManager>().Play("AscensoreBloccato");
-
                 firstCall = false;
                 insert_combo_to_unlock = true;
+                unlockBtn = true;
             }
         }
     }
@@ -34,11 +34,14 @@ public class ChiamaAssistenzaAscensore : Interactable
        lift_script = lift.GetComponent<SalitaAscensore>();
        firstCall = true;
        insert_combo_to_unlock = false;
+       unlockBtn = false;
+       btn = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+        if(FindObjectOfType<AudioMedicoManager>().inPlay == false && unlockBtn == true)
+            btn = true;
     }
 }

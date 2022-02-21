@@ -30,7 +30,7 @@ public class SchermoAscensore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        displayColor.SetColor("_Color", disCol);
     }
 
     // Update is called once per frame
@@ -54,7 +54,14 @@ public class SchermoAscensore : MonoBehaviour
 
     public void Salita()
     {
+        arrow_up.color = arrowOnColor;
+        arrow_down.color = arrowOffColor; 
+        _timerOn = true;
+    }
+
+    public void Salita2(){
         piano.text = "4";
+        _numPiano = 4;
         displayColor.SetColor("_Color", disCol);
         pianoBase.enabled = true;
         upDisplay.SetActive(true);

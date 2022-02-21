@@ -68,13 +68,7 @@ public class NumberSelection : MonoBehaviour
 
         numberSequence = showNumbers_script.numberSequence;
 
-        Debug.Log("current number : " + currentNumber);
-
-        
-         
-        
-        
-        
+        Debug.Log("current number : " + currentNumber);  
 
         if (currentNumber == "OK")
             

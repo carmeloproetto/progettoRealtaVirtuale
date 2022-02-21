@@ -54,6 +54,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
     public void startGameRisonanza(){
         displayGioco.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        _animator.enabled = false;
     }
     
 }

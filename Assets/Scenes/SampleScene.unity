@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2351,6 +2351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
   insert_combo_to_unlock: 0
+  unlockBtn: 0
+  btn: 0
 --- !u!64 &273030296
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4023,8 +4025,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1001 &387532361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4454,8 +4459,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1 &415647805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,11 +4975,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 473986871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d74cad4aeb5f940a5968949f5c229f, type: 3}
+  m_Script: {fileID: 11500000, guid: aa9992ae0cc38be4da8f5aec6adf474f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 473986875}
-  rotationSpeed: 8
+  speedH: 2
+  speedV: 2
 --- !u!1 &474309865
 GameObject:
   m_ObjectHideFlags: 0
@@ -6059,8 +6067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1 &552857622
 GameObject:
   m_ObjectHideFlags: 0
@@ -6757,8 +6768,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1001 &617148023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7736,8 +7750,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1001 &697219621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10996,6 +11013,8 @@ MonoBehaviour:
   posMedSecondoPiano: {fileID: 439127802}
   codice: 
   codiceErrato: 0
+  correctCode: 0
+  textOfDisplay: {fileID: 402248746}
   unlock: {fileID: 1865332917}
 --- !u!1 &1066852482
 GameObject:
@@ -12338,8 +12357,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!1 &1229333352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7125412773867411039, guid: e6f7d9905d0b9410ca908d644518e3be, type: 3}
@@ -19893,8 +19915,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
+  number7: {fileID: 9132214990033437563}
   doors: {fileID: 963859672}
   verificaCodice: {fileID: 7415471011102789391}
+  assistenza: {fileID: 1986680220612543739}
+  textOfDisplay: {fileID: 402248746}
 --- !u!64 &138836133115077241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21322,9 +21347,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2790956851810166306, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3060677677481773899, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
       propertyPath: m_Name
       value: CameraRisonanza
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060677677481773899, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6222824288148881067, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
       propertyPath: m_Enabled
@@ -21332,7 +21365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6222824288148881067, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
       propertyPath: field of view
-      value: 45
+      value: 26.991467
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222824288148881067, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4183201957015732765, guid: d849a2a25386a74408d57438e7bea69d, type: 3}
@@ -24045,7 +24082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843716869521723596}
   m_LocalRotation: {x: -0, y: -0.29065716, z: -0, w: -0.95682734}
-  m_LocalPosition: {x: 1.76, y: 26, z: 38.1}
+  m_LocalPosition: {x: -0.4, y: 25.858, z: 46.94}
   m_LocalScale: {x: 0.80508, y: 0.80508, z: 0.80508}
   m_Children:
   - {fileID: 3843716868563002077}
@@ -31713,8 +31750,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lift: {fileID: 1865332917}
   doors: {fileID: 963859672}
+  assistenza: {fileID: 1986680220612543739}
   verificaCodice: {fileID: 7415471011102789391}
   chiamataSalita: 0
+  blockOtherButton: 0
+  textOfDisplay: {fileID: 402248746}
 --- !u!64 &9132214990033437565
 MeshCollider:
   m_ObjectHideFlags: 0

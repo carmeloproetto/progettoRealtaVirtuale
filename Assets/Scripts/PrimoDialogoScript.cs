@@ -207,6 +207,7 @@ public class PrimoDialogoScript : MonoBehaviour
             }
            //DIALOGO PRE ASCENSORE
            else if(numberOfQuestion == 5 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+            
                if(curResponseTracker == 0 && liftQuestion.playerDialogue.Length >= 0){
                     playerResponse.text = liftQuestion.playerDialogue[0];
                     //se premo invio do conferma
@@ -243,6 +244,7 @@ public class PrimoDialogoScript : MonoBehaviour
 
             //DIALOGO POST ASCENSORE
            else if(numberOfQuestion == 8 && FindObjectOfType<AudioMedicoManager>().inPlay == false){
+            
                if(curResponseTracker == 0 && liftQuestion.playerDialogue.Length >= 0){
                     playerResponse.text = liftQuestion.playerDialogue[0];
                     //se premo invio do conferma

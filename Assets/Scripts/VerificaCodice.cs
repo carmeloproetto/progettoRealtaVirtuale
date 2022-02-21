@@ -15,6 +15,9 @@ public class VerificaCodice : Interactable
 
    public List<int> codice;
    public bool codiceErrato;
+   public bool correctCode;
+
+   public TMPro.TextMeshProUGUI textOfDisplay;
 
    //script che fa partire l'animazione dell'ascensore una volta sbloccato
    private SalitaAscensore script_unlock;
@@ -38,19 +41,23 @@ public class VerificaCodice : Interactable
                     FindObjectOfType<AudioManager>().Play("SalitaAscensore2");
                     Debug.Log("codice corretto!");
                     //parte l'animazione di salita dell'ascensore
-                    
                     script_unlock.unlock = true;
-                    schermo.Salita();                  
+                    schermo.Salita2();
+                    correctCode = true;
+                    RenderSettings.ambientLight = new Color32(235, 235, 235, 0);
+                    //schermo.Salita();                  
                 }
                 else
                 {
                     Debug.Log("codice errato 2");
                     FindObjectOfType<AudioManager>().Play("WrongCode");
+                    textOfDisplay.text = "err";
                 }
 
 
             else { 
                 Debug.Log("codice errato 3");
+                textOfDisplay.text = "err";
                 FindObjectOfType<AudioManager>().Play("WrongCode");
             }
                 

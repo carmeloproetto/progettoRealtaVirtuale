@@ -20,6 +20,7 @@ public class SalitaAscensore : MonoBehaviour
     public TMPro.TextMeshProUGUI pianoBase;
     public GameObject upDisplay;
     public GameObject downDisplay;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +36,11 @@ public class SalitaAscensore : MonoBehaviour
     {
          if (up == true){
             _animator.SetBool("up", true);
-            chiamaAssistenza = true;
+            
         }
-        if(unlock == true)
+        if(unlock == true){
             _animator.SetBool("unlock", true);
+        }
     }
 
     //scatta quando l'ascensore arriva al piano corretto
@@ -56,7 +58,8 @@ public class SalitaAscensore : MonoBehaviour
         pianoBase.enabled = false;
         upDisplay.SetActive(false);
         downDisplay.SetActive(false);
-
+        chiamaAssistenza = true;
+        RenderSettings.ambientLight = new Color32(37, 38, 61, 0); 
     }
 }
 
