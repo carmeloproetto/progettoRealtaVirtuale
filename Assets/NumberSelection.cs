@@ -155,12 +155,8 @@ public class NumberSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Risonanza");
-        FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
-
-
-
-
+        //FindObjectOfType<AudioManager>().Play("Risonanza");
+        //FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
 
         showNumbers_script = showNumbers.GetComponent<ShowNumbers>();
         show = false;

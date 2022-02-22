@@ -5,7 +5,9 @@ using UnityEngine;
 public class CambiaCameraRisonanza : MonoBehaviour
 {
     public GameObject displayGioco;
-   
+    public GameObject lettino;
+    public GameObject posLetto;
+
     private Animator _animator;
     public bool StartAnimation;
 
@@ -52,9 +54,12 @@ public class CambiaCameraRisonanza : MonoBehaviour
 
     //funzione che scatta al termine dell'animazione che ci porta dentro la risonanza
     public void startGameRisonanza(){
-        //displayGioco.SetActive(true);
+        displayGioco.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         _animator.enabled = false;
+        FindObjectOfType<AudioManager>().Play("Risonanza");
+        FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
+        lettino.transform.position = posLetto.transform.position;
     }
     
 }
