@@ -13,9 +13,11 @@ public class CambiaCameraRisonanza : MonoBehaviour
 
     public Camera cameraPersonaggio;
     public Camera cameraRisonanza;
+    
     public bool camRisonanzaOn;
 
     public float rotationSpeed = 8f;
+
 
 
      private float x;
@@ -23,6 +25,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
      private Vector3 rotateValue;
      public bool animtionEnd;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,7 @@ public class CambiaCameraRisonanza : MonoBehaviour
         if(camRisonanzaOn){
             cameraPersonaggio.enabled = false;
             cameraRisonanza.enabled = true;
+            
             if(StartAnimation = true){
                  _animator.SetBool("StartAnimation", true);
             }
@@ -47,18 +51,18 @@ public class CambiaCameraRisonanza : MonoBehaviour
             cameraPersonaggio.enabled = true;
             cameraRisonanza.enabled = false;
         }
-
     }
 
 
 
     //funzione che scatta al termine dell'animazione che ci porta dentro la risonanza
     public void startGameRisonanza(){
+
         displayGioco.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
         _animator.enabled = false;
-        FindObjectOfType<AudioManager>().Play("Risonanza");
-        FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
+        //FindObjectOfType<AudioManager>().Play("Risonanza");
+        //FindObjectOfType<AudioMedicoManager>().Play("Rilassati");
         lettino.transform.position = posLetto.transform.position;
     }
     

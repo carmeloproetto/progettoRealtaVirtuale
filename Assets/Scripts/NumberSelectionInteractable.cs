@@ -32,20 +32,10 @@ public class NumberSelectionInteractable : Interactable
     public bool checkSequence()
     {
         int levelSize = showNumbers_script.levelSize;
-        Debug.Log("checkSequence().levelSize = " + levelSize);
-
-        //for (int i = 0; i < levelSize; i++)
-        //{
-        //    Debug.Log("Corretta: " + correctSequence[i] + " - Non corretta:" + numberSequence[i]);
-        //}
+       
 
         for (int i = 0; i < levelSize; i++)
         {
-
-            Debug.Log("Dentro il for");
-
-            //Debug.Log("1Dentro il for - " + showNumbers_script.numberSequence[i]);
-            Debug.Log("2Dentro il for - " + correctSequence.Count);
 
             if (correctSequence[i] != showNumbers_script.numberSequence[i])
                 return false;
@@ -58,7 +48,7 @@ public class NumberSelectionInteractable : Interactable
     {
         currentNumber = gameObject.name;
 
-        Debug.Log("premuto " + currentNumber);
+       
         FindObjectOfType<AudioManager>().StopPlaying("BipCard");
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
 
@@ -72,9 +62,9 @@ public class NumberSelectionInteractable : Interactable
                 if (checkSequence())
                 {
                     FindObjectOfType<AudioManager>().Play("Correct");
-                    Debug.Log("Sequenza corretta!");
+                   
                     showNumbers_script.DisplayMessage("CORRECT!");
-                    Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
+                  
 
                     if (showNumbers_script.level == 1)
                     {
@@ -118,32 +108,27 @@ public class NumberSelectionInteractable : Interactable
                     else if (showNumbers_script.level == 3)
                     {
                         FindObjectOfType<AudioMedicoManager>().Play("ComplimentiRisonanza");
-                        finished = true;
                         FindObjectOfType<AudioManager>().StopPlaying("Risonanza");
 
+                        finished = true;
                     }
-                    Debug.Log("Sequenza corretta! - Level:" + showNumbers_script.level);
+                   
                 }
                 else
                 {
                     FindObjectOfType<AudioManager>().Play("WrongCode");
-                    showNumbers_script.DisplayMessage("WRONG!");
-                    Debug.Log("Sequenza sbagliata!");
+                    showNumbers_script.DisplayMessage("WRONG!");      
                 }
                 numberSequence.Clear();
-
-                Debug.Log("dopo - level size: " + showNumbers_script.levelSize);
-                Debug.Log("dopo - numberseq size: " + numberSequence.Count);
             }
 
-        Debug.Log("3level size: " + showNumbers_script.levelSize);
 
         if (currentNumber == "CANC")
             numberSequence.RemoveAt(numberSequence.Count - 1);
         else if (numberSequence.Count < showNumbers_script.levelSize && currentNumber != "OK")
             numberSequence.Add(currentNumber);
 
-        Debug.Log("2level size: " + showNumbers_script.levelSize);
+  
     }
 
     void Start()
@@ -156,8 +141,6 @@ public class NumberSelectionInteractable : Interactable
 
 
         correctSequence = showNumbers_script.correctSequence;
-
-        Debug.Log(gameObject.name + "correctSeq size " + correctSequence.Count);
 
         finished = false;
         ScriptCambiaCamera = cameraRisonanza.GetComponent<CambiaCameraRisonanza>();
@@ -174,7 +157,7 @@ public class NumberSelectionInteractable : Interactable
         {
             show = !show;
             numberSequence.Clear();
-            Debug.Log("lista svuotata - size: " + numberSequence.Count);
+         
             if (show)
             {
                 Cursor.lockState = CursorLockMode.None;
@@ -184,17 +167,17 @@ public class NumberSelectionInteractable : Interactable
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-            Debug.Log("prova");
+           
         }
 
-        if (finished == true && FindObjectOfType<AudioManager>().inPlay == false)
+        if (finished == true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
         {
             fpc.transform.position = posFpc.transform.position;
             medico.transform.position = posMedico.transform.position;
             ScriptCambiaCamera.camRisonanzaOn = false;
             displayGioco.SetActive(false);
-
         }
 
     }
+
 }

@@ -64,24 +64,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.5333333
         value: {x: -10.03, y: 32.719, z: 37.03}
-        inSlope: {x: 0, y: -0.061249733, z: 0}
-        outSlope: {x: 0, y: -0.061249733, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 8
-        value: {x: -12.84, y: 32.510002, z: 36.890003}
-        inSlope: {x: 0, y: -0.0000027830756, z: -0.000002783398}
-        outSlope: {x: 0, y: -0.0000027830756, z: -0.000002783398}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 8.016666
-        value: {x: -12.69, y: 32.51, z: 36.89}
+        time: 7.983333
+        value: {x: -12.723, y: 32.759, z: 36.925}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -122,7 +113,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 8.033334
+    m_StopTime: 7.983333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -271,17 +262,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 8
-        value: -12.84
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 8.016666
-        value: -12.69
+        time: 7.983333
+        value: -12.723
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -310,24 +292,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.5333333
         value: 32.719
-        inSlope: -0.061249733
-        outSlope: -0.061249733
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 8
-        value: 32.510002
-        inSlope: -0.0000027830756
-        outSlope: -0.0000027830756
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 8.016666
-        value: 32.51
+        time: 7.983333
+        value: 32.759
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -363,17 +336,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 8
-        value: 36.890003
-        inSlope: -0.000002783398
-        outSlope: -0.000002783398
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 8.016666
-        value: 36.89
+        time: 7.983333
+        value: 36.925
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -421,7 +385,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 8.033334
+  - time: 7.9666667
     functionName: startGameRisonanza
     data: 
     objectReferenceParameter: {fileID: 0}
