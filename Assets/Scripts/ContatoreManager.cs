@@ -16,6 +16,8 @@ public class ContatoreManager : MonoBehaviour
     
     public bool completedRoom;
 
+    public GameObject uiInteraction; 
+
     bool aux;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class ContatoreManager : MonoBehaviour
         if( !levette[0].isUp() && levette[1].isUp() && levette[2].isUp() && !levette[3].isUp() && aux == true)
         {
             interactionManager.setDuringTask(false);
+            uiInteraction.SetActive(true); 
 
             //Material materiale = luceSoffittoMesh.GetComponent<Renderer>().material; 
             //materiale.EnableKeyword("_EMISSION");
@@ -48,6 +51,11 @@ public class ContatoreManager : MonoBehaviour
             porta.Unlock();
             scriptDialogo.isTalking = false; 
             aux = false;
+
+            foreach( LevettaInteractable levetta in levette)
+            {
+                levetta.GetComponent<Collider>().enabled = false; 
+            }
         }
     }
 }
