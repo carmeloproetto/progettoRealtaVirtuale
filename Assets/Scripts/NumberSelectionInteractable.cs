@@ -177,10 +177,9 @@ public class NumberSelectionInteractable : Interactable
 
         if (finished == true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
         {
-            /*fpc.transform.position = posFpc.transform.position;
-            medico.transform.position = posMedico.transform.position;
-            ScriptCambiaCamera.camRisonanzaOn = false;
-            displayGioco.SetActive(false);*/
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             AudioListener.pause = false;

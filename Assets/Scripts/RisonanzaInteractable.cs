@@ -35,7 +35,13 @@ public class RisonanzaInteractable : Interactable
 
     public override string GetDescription()
     {
-        uiInteraction.SetActive(true);
-        return "PER INIZIARE IL TASK";
+        if(ScriptCambiaCamera.camRisonanzaOn == false){
+            uiInteraction.SetActive(true);
+            return "PER INIZIARE IL TASK";
+        }
+        else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

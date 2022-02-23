@@ -86,7 +86,7 @@ public class VerificaCodice : Interactable
 
     public override string GetDescription()
     {
-        if(script_assistenza.insert_combo_to_unlock == true){
+        if(script_assistenza.insert_combo_to_unlock == true && correctCode != true){
             uiInteraction.SetActive(true);
             return "PER VERIFICARE IL CODICE INSERITO";
         }else{

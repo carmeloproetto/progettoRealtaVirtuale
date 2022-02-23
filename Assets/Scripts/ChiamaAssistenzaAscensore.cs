@@ -49,7 +49,7 @@ public class ChiamaAssistenzaAscensore : Interactable
 
     public override string GetDescription()
     {
-        if(lift_script.chiamaAssistenza == true){
+        if(lift_script.chiamaAssistenza == true && unlockBtn == false){
             uiInteraction.SetActive(true);
             return "PER CHIAMARE ASSISTENZA";
         }else{
