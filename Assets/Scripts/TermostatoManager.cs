@@ -27,6 +27,9 @@ public class TermostatoManager : Interactable
     public Image lockedIcon;
     public Image unlockedIcon;
 
+    public GameObject interactionUiRilascio;
+    private bool taskFinito = false; 
+
     public TesseraGrabbable tessera;
 
     private bool lightTimerOn = false; 
@@ -122,6 +125,11 @@ public class TermostatoManager : Interactable
         _temperaturaMesh.text = temperatura.ToString();
         if ( temperatura_corretta ) // temperatura ottimale - schermo di colore verde 
         {
+            if (!taskFinito)
+            {
+                interactionUiRilascio.SetActive(true);
+                taskFinito = true; 
+            }
             // Display di colore verde
             schermo.SetColor("_Color", Color.green);
             if (!taskCompletato)

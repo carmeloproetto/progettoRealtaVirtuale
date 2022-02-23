@@ -9,7 +9,8 @@ public class TorchGrabbable : Grabbable
     private Collider _collider;
     private SmoothMovement _movement;
     public FPSInteractionManager interactionManager;
-    public GameObject interactionUI; 
+    public GameObject interactionUI;
+    public GameObject interactionUiRilascio;
 
     [SerializeField] private LightOut contatore; 
 
@@ -17,7 +18,8 @@ public class TorchGrabbable : Grabbable
 
     public override void Drop()
     {
-       Destroy(gameObject);
+        Destroy(gameObject);
+        interactionUiRilascio.SetActive(false); 
     }
 
     public override void Grab(GameObject grabber)

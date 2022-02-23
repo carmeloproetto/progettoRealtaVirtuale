@@ -6,13 +6,19 @@ public class TesseraGrabbable : Grabbable
 {
     private Collider _collider;
     private SmoothMovement _movement;
-    public FPSInteractionManager interactionManager; 
+    public FPSInteractionManager interactionManager;
+    public PulsanteTermostatoInteractable più;
+    public PulsanteTermostatoInteractable meno; 
 
     public GameObject uiInteraction;
+    public GameObject uiInteractionRilascio; 
 
     public override void Drop()
     {
         Destroy(gameObject);
+        più.GetComponent<Collider>().enabled = false;
+        meno.GetComponent<Collider>().enabled = false;
+        uiInteractionRilascio.SetActive(false); 
     }
 
     public override void Grab(GameObject grabber)
