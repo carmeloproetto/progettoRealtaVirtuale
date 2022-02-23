@@ -32,7 +32,8 @@ public class OtherNumberButton : Interactable
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             FindObjectOfType<AudioMedicoManager>().Play("PianoSbagliato");
         }
-        else if(lift_script.chiamaAssistenza == true && script_assistenza.btn == true && script_verificaCodice.correctCode != true){
+        else if(lift_script.chiamaAssistenza == true && script_assistenza.btn == true && script_verificaCodice.correctCode != true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
+        {
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             string objectName = gameObject.name;
             Debug.Log(objectName);  

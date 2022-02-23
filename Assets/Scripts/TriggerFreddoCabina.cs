@@ -10,6 +10,7 @@ public class TriggerFreddoCabina : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             FindObjectOfType<AudioMedicoManager>().Play("Freddo");
+            FindObjectOfType<AudioManager>().Play("Mare");
             Collider collider = GetComponent<Collider>();
             collider.enabled = false; 
         }

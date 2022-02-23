@@ -55,7 +55,8 @@ public class LiftAscent : Interactable
            
             blockOtherButton = true;
         }
-        else if(script_assistenza.btn == true && script_verificaCodice.correctCode != true){
+        else if(script_assistenza.btn == true && script_verificaCodice.correctCode != true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
+        {
             FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             Debug.Log("premuto il tasto 7");  
             script_verificaCodice.codice.Add(7);

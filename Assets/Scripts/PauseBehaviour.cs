@@ -26,6 +26,7 @@ public class PauseBehaviour : MonoBehaviour
         PauseUI.SetActive(true);
         Time.timeScale = 0f;
         AudioListener.pause = true;
+        Cursor.visible = true;
     }
 
     public void ResumeGame() {
@@ -34,6 +35,7 @@ public class PauseBehaviour : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+        Cursor.visible = true;
     }
 
     public void QuitGame() {
