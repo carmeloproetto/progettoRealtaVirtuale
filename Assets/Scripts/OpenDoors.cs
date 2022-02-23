@@ -30,4 +30,9 @@ public class OpenDoors : Interactable
     {
         
     }
+
+    public override string GetDescription()
+    {
+        return "PER APRIRE LE PORTE DELL'ASCENSORE";
+    }
 }

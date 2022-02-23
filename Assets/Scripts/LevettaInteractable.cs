@@ -44,4 +44,9 @@ public class LevettaInteractable : Interactable
         _animator.SetBool("Up", true);
         _isUp = true;
     }
+
+    public override string GetDescription()
+    {
+        return "PER SOLLEVARE O ABBASSARE LA LEVETTA";
+    }
 }

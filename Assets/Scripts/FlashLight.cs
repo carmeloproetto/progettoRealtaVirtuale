@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlashLight : MonoBehaviour
 {
     private Light _light;
+    public GameObject interactionUI;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class FlashLight : MonoBehaviour
             else
             {
                 _light.enabled = true;
+                interactionUI.SetActive(false); 
                 FindObjectOfType<AudioManager>().Play("BottoneAscensore");
             }
         }

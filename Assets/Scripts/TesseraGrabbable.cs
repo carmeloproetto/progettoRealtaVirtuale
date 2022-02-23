@@ -27,4 +27,9 @@ public class TesseraGrabbable : Grabbable
         _collider = GetComponent<Collider>();
         _movement = GetComponent<SmoothMovement>();
     }
+
+    public override string GetDescription()
+    {
+        return "PER AFFERRARE LA TESSERA";
+    }
 }

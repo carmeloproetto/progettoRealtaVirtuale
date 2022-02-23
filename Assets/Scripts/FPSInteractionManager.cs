@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FPSInteractionManager : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class FPSInteractionManager : MonoBehaviour
 
     private Grabbable _grabbedObject;
     public bool duringTask;
+
+    public GameObject interactionUI;
+    public TextMeshProUGUI interactionText;
+    public Image icon;
+
+
+    private bool hitSomething; 
 
 
     // Start is called before the first frame update
@@ -39,6 +47,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     private void CheckInteraction()
     {
+        hitSomething = false;
+
         Vector3 rayOrigin = camera.transform.position + _fpsController.radius * camera.transform.forward;
 
         Ray ray = new Ray(rayOrigin, camera.transform.forward);
@@ -49,6 +59,9 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
             if (_pointingInteractable)
             {
+                hitSomething = true; 
+                interactionText.text = _pointingInteractable.GetDescription();
+                icon.overrideSprite = _pointingInteractable.getImageIcon(); 
                 if (Input.GetMouseButtonDown(0))
                 {
                     _pointingInteractable.Interact(gameObject);
@@ -57,6 +70,9 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
             if (_grabbedObject == null && _pointingGrabbable)
             {
+                hitSomething = true;
+                interactionText.text = _pointingGrabbable.GetDescription();
+                icon.overrideSprite = _pointingGrabbable.getImageIcon();
                 if (Input.GetMouseButtonDown(0))
                 {
                     _pointingGrabbable.Grab(gameObject);
@@ -70,6 +86,7 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingGrabbable = null;
             _pointingInteractable = null;
         }
+        interactionUI.SetActive(hitSomething); 
     }
 
     private void Grab(Grabbable grabbable)

@@ -6,6 +6,11 @@ public class TapparellaInteractable : Interactable
 {
     private Animator _animator;
 
+    public override string GetDescription()
+    {
+        return "PER APRIRE E CHIUDERE LA TAPPARELLA";
+    }
+
     public override void Interact(GameObject caller)
     {
         bool up = _animator.GetBool("Up");

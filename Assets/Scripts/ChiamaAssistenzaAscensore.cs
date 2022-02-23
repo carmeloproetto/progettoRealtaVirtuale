@@ -44,4 +44,9 @@ public class ChiamaAssistenzaAscensore : Interactable
         if(FindObjectOfType<AudioMedicoManager>().inPlay == false && unlockBtn == true)
             btn = true;
     }
+
+    public override string GetDescription()
+    {
+        return "PER CHIAMARE ASSISTENZA";
+    }
 }

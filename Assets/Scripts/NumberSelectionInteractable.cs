@@ -180,4 +180,8 @@ public class NumberSelectionInteractable : Interactable
 
     }
 
+    public override string GetDescription()
+    {
+        return "PER SCEGLIERE IL NUMERO";
+    }
 }

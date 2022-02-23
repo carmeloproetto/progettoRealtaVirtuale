@@ -82,4 +82,8 @@ public class VerificaCodice : Interactable
     {
     }
 
+    public override string GetDescription()
+    {
+        return "PER VERIFICARE IL CODICE INSERITO";
+    }
 }

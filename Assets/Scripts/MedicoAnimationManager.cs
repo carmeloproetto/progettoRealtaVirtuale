@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
-public class MedicoAnimationManager : MonoBehaviour
+public class MedicoAnimationManager : Interactable
 {
 
     private NavMeshAgent navMeshAgent;
@@ -27,7 +28,6 @@ public class MedicoAnimationManager : MonoBehaviour
     public GameObject doorCabinaMain;
     private PortaInteractable script_doorCabina;
     private PortaInteractable script_doorCabinaMain;
-
 
 
     bool firstDestination;
@@ -113,5 +113,15 @@ public class MedicoAnimationManager : MonoBehaviour
 
         
 
+    }
+
+    public override void Interact(GameObject caller)
+    {
+    
+    }
+
+    public override string GetDescription()
+    {
+        return "PER PARLARE CON IL MEDICO"; 
     }
 }

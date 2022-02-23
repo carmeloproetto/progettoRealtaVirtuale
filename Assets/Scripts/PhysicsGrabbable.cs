@@ -13,6 +13,11 @@ public class PhysicsGrabbable : Grabbable
         _rigidbody.isKinematic = false;
     }
 
+    public override string GetDescription()
+    {
+        return "PER AFFERRARE L'OGGETTO";
+    }
+
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;

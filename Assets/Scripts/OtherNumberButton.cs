@@ -123,4 +123,9 @@ public class OtherNumberButton : Interactable
     {
       //  Debug.Log(lift_script.insert_combo_to_unlock);
     }
+
+    public override string GetDescription()
+    {
+        return "PER INTERAGIRE";
+    }
 }

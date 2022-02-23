@@ -165,4 +165,9 @@ public class TermostatoManager : Interactable
         }
         return; 
     }
+
+    public override string GetDescription()
+    {
+        return "PER SBLOCCARE IL TERMOSTATO";
+    }
 }

@@ -87,4 +87,9 @@ public class LiftAscent : Interactable
     {
       //  Debug.Log(lift_script.up);
     }
+
+    public override string GetDescription()
+    {
+        return "PER SCEGLIERE IL PIANO";
+    }
 }

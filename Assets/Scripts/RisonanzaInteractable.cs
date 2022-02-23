@@ -32,4 +32,9 @@ public class RisonanzaInteractable : Interactable
     {
      //   Debug.Log(bool_script.open);
     }
+
+    public override string GetDescription()
+    {
+        return "PER INIZIARE IL TASK";
+    }
 }

@@ -6,6 +6,11 @@ public class PortaChiusaInteractable : Interactable
 {
     private Animator _animator;
 
+    public override string GetDescription()
+    {
+        return "PER INTERAGIRE";
+    }
+
     public override void Interact(GameObject caller)
     {
         _animator.SetTrigger("Apri");

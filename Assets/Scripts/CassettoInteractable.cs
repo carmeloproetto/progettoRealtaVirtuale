@@ -5,6 +5,11 @@ public class CassettoInteractable : Interactable
 {
     private Animator _animator;
 
+    public override string GetDescription()
+    {
+        return "PER INTERAGIRE CON IL CASSETTO";
+    }
+
     public override void Interact(GameObject caller)
     {
         bool opened = _animator.GetBool("Open");

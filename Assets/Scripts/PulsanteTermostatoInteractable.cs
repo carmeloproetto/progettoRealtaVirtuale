@@ -6,7 +6,19 @@ public class PulsanteTermostatoInteractable : Interactable
 {
     public bool pulsante_piu = true;
 
-    private TermostatoManager termostato; 
+    private TermostatoManager termostato;
+
+    public override string GetDescription()
+    {
+        if (pulsante_piu)
+        {
+            return "PER ALZARE LA TEMPERATURA"; 
+        }
+        else
+        {
+            return "PER ABBASSARE LA TEMPERATURA"; 
+        }
+    }
 
     public override void Interact(GameObject caller)
     {
@@ -25,4 +37,6 @@ public class PulsanteTermostatoInteractable : Interactable
     {
         termostato = gameObject.GetComponentInParent<TermostatoManager>();
     }
+
+
 }

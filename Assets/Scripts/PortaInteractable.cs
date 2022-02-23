@@ -67,4 +67,8 @@ public class PortaInteractable : Interactable
         doorLocked = false; 
     }
 
+    public override string GetDescription()
+    {
+        return "PER APRIRE LA PORTA";
+    }
 }

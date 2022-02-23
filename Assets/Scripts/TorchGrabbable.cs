@@ -9,6 +9,7 @@ public class TorchGrabbable : Grabbable
     private Collider _collider;
     private SmoothMovement _movement;
     public FPSInteractionManager interactionManager;
+    public GameObject interactionUI; 
 
     [SerializeField] private LightOut contatore; 
 
@@ -20,6 +21,7 @@ public class TorchGrabbable : Grabbable
     public override void Grab(GameObject grabber)
     {
         interactionManager.setDuringTask(true);
+        interactionUI.SetActive(true); 
         _collider.enabled = false;
         _movement.SetMoving();
         contatore.UnlockInteraction();
@@ -30,5 +32,10 @@ public class TorchGrabbable : Grabbable
     {
         _collider = GetComponent<Collider>();
         _movement = GetComponent<SmoothMovement>();
+    }
+
+    public override string GetDescription()
+    {
+        return "PER AFFERRARE LA TORCIA";
     }
 }

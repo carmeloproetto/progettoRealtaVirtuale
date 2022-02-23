@@ -10,6 +10,11 @@ public class SlideBed : Interactable
 
     private bool slide = false;
 
+    public override string GetDescription()
+    {
+        return "PER INTERAGIRE";
+    }
+
     public override void Interact(GameObject caller)
     {
         slide = !slide;
