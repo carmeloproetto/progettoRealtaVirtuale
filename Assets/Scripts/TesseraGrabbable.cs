@@ -11,7 +11,8 @@ public class TesseraGrabbable : Grabbable
     public PulsanteTermostatoInteractable meno; 
 
     public GameObject uiInteraction;
-    public GameObject uiInteractionRilascio; 
+    public GameObject uiInteractionRilascio;
+    public GameObject termostato; 
 
     public override void Drop()
     {
@@ -25,6 +26,10 @@ public class TesseraGrabbable : Grabbable
     {
         _collider.enabled = false;
         _movement.SetMoving();
+        Collider termostatoCollider = termostato.GetComponent<Collider>();
+        meno.GetComponent<Collider>().enabled = true;
+        più.GetComponent<Collider>().enabled = true;
+        termostatoCollider.enabled = true;
         interactionManager.setDuringTask(true);
 
         FindObjectOfType<AudioManager>().Play("Grab");

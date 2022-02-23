@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17753,7 +17753,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1118959719}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.67432445
   m_Height: 3.2930822
   m_Direction: 1
@@ -18324,6 +18324,7 @@ MonoBehaviour:
   meno: {fileID: 1815788999}
   uiInteraction: {fileID: 200153625}
   uiInteractionRilascio: {fileID: 1650798503}
+  termostato: {fileID: 3132412903951668297}
 --- !u!114 &1170493185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26570,7 +26571,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1815788997}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.6809845
   m_Height: 3.4566002
   m_Direction: 1
@@ -37022,7 +37023,7 @@ BoxCollider:
   m_GameObject: {fileID: 3132412903951668297}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.0031313184, y: 0.0006586397, z: 0.0015656591}
   m_Center: {x: 0.000000003682867, y: 0.00015529554, z: 1.4184045e-18}

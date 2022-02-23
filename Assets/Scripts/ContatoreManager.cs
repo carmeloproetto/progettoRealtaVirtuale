@@ -42,6 +42,7 @@ public class ContatoreManager : MonoBehaviour
             //materiale.SetColor("_EmissionColor", Color.white);
 
             luceEmergenza.enabled = false;
+            luceSoffitto.enabled = true; 
             luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
             luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.white);
 
