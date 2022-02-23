@@ -1540,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.size
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[39].clip
@@ -1579,6 +1579,18 @@ PrefabInstance:
       value: Mare
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ff30e8237c8719428c90029daadecae, type: 3}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].name
+      value: MusicaCM
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[39].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -1588,6 +1600,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[41].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
@@ -1601,6 +1617,14 @@ PrefabInstance:
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[41].volume
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[42].spatialBlend
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882074, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: m_RootOrder
