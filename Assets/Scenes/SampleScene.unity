@@ -5682,7 +5682,7 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
   - name: ComplimentiRisonanza
-    clip: {fileID: 8300000, guid: 052a9c33ca3fc504486e0100eb67508c, type: 3}
+    clip: {fileID: 8300000, guid: 2c2f1809bb3fea84fa02710ad393aaef, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -36821,7 +36821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843716869521723596}
   m_LocalRotation: {x: -0, y: -0.29065716, z: -0, w: -0.95682734}
-  m_LocalPosition: {x: 2.705, y: 27.038, z: 46.71}
+  m_LocalPosition: {x: 3.52, y: 25.89, z: 27.929}
   m_LocalScale: {x: 0.80508, y: 0.80508, z: 0.80508}
   m_Children:
   - {fileID: 3843716868563002077}

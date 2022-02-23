@@ -50,6 +50,7 @@ public class PauseBehaviour : MonoBehaviour
     public void QuitGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+        FindObjectOfType<AudioManager>().StopPlaying("Mare");
         AudioListener.pause = false;
     }
 }

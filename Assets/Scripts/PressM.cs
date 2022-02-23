@@ -48,6 +48,7 @@ public class PressM : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+        FindObjectOfType<AudioManager>().StopPlaying("Mare");
         /*thePlayer.transform.position = teleportTarget.transform.position;
         thePlayer2.transform.position = teleportTarget2.transform.position;
         Cursor.lockState = CursorLockMode.Locked;
