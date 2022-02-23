@@ -21,6 +21,8 @@ public class NumberSelectionInteractable : Interactable
     //booleano per indicare la fine della risonanza
     bool finished;
 
+    int countError;
+
     public GameObject medico;
     public GameObject fpc;
     public Transform posMedico;
@@ -122,7 +124,8 @@ public class NumberSelectionInteractable : Interactable
                 else
                 {
                     FindObjectOfType<AudioManager>().Play("WrongCode");
-                    showNumbers_script.DisplayMessage("WRONG!");      
+                    showNumbers_script.DisplayMessage("WRONG!");  
+                    countError++;    
                 }
                 numberSequence.Clear();
             }
@@ -144,7 +147,7 @@ public class NumberSelectionInteractable : Interactable
         showNumbers_script = showNumbers.GetComponent<ShowNumbers>();
         show = false;
 
-
+        countError = 0;
         correctSequence = showNumbers_script.correctSequence;
 
         finished = false;
@@ -156,6 +159,16 @@ public class NumberSelectionInteractable : Interactable
     void Update()
     {
         //if (!audioSource.isPlaying)
+        if(countError == 3 && FindObjectOfType<AudioMedicoManager>().inPlay == false ){
+            countError = 0;
+            if (showNumbers_script.level == 1)
+                FindObjectOfType<AudioMedicoManager>().Play("Uno");
+            else if(showNumbers_script.level == 2)
+                FindObjectOfType<AudioMedicoManager>().Play("Due");
+            else
+                FindObjectOfType<AudioMedicoManager>().Play("Tre");
+        }
+
 
         numberSequence = showNumbers_script.numberSequence;
         if (Input.GetKeyDown(KeyCode.B))

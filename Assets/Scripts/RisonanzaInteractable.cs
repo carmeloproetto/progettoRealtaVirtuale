@@ -11,15 +11,21 @@ public class RisonanzaInteractable : Interactable
     private CambiaCameraRisonanza ScriptCambiaCamera;
     public GameObject cameraRisonanza;
 
+    [SerializeField] private PortaInteractable door;
+
     public override void Interact(GameObject caller)
     {
         
         ScriptCambiaCamera.camRisonanzaOn = true;
        
-
-
         FindObjectOfType<AudioManager>().Play("BipCard");
 
+        if(door.opened)
+            {
+                door.Close();
+                door.doorLocked = true; 
+                //FindObjectOfType<AudioMedicoManager>().Play("Freddo");
+            }
     }
 
     public void Start()
@@ -31,6 +37,8 @@ public class RisonanzaInteractable : Interactable
     void Update()
     {
      //   Debug.Log(bool_script.open);
+
+
     }
 
     public override string GetDescription()
