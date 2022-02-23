@@ -5,8 +5,12 @@ public class CassettoInteractable : Interactable
 {
     private Animator _animator;
 
+    public GameObject uiInteraction;
+
+
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER INTERAGIRE CON IL CASSETTO";
     }
 

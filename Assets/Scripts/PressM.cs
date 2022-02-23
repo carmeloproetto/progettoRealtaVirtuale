@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PressM : MonoBehaviour
 {
@@ -45,13 +46,15 @@ public class PressM : MonoBehaviour
 
     public void OnTriggerEnter()
     {
-        thePlayer.transform.position = teleportTarget.transform.position;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+        /*thePlayer.transform.position = teleportTarget.transform.position;
         thePlayer2.transform.position = teleportTarget2.transform.position;
         Cursor.lockState = CursorLockMode.Locked;
         MUI.SetActive(false);
         Time.timeScale = 1;
         AudioListener.pause = false;
-        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");*/
     }
 
    

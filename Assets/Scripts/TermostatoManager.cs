@@ -39,6 +39,8 @@ public class TermostatoManager : Interactable
 
     private bool taskCompletato = false; 
 
+    public GameObject uiInteraction;
+
     public void aumenta()
     {
         if( temperatura < TEMP_MAX && unlocked )
@@ -168,6 +170,7 @@ public class TermostatoManager : Interactable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER SBLOCCARE IL TERMOSTATO";
     }
 }

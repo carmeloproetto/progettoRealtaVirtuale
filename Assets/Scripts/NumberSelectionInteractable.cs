@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NumberSelectionInteractable : Interactable
 {
@@ -16,6 +17,7 @@ public class NumberSelectionInteractable : Interactable
 
     bool show;
 
+    
     //booleano per indicare la fine della risonanza
     bool finished;
 
@@ -28,6 +30,8 @@ public class NumberSelectionInteractable : Interactable
     public GameObject cameraRisonanza;
 
     public GameObject displayGioco;
+
+    public GameObject uiInteraction;
 
     public bool checkSequence()
     {
@@ -107,10 +111,11 @@ public class NumberSelectionInteractable : Interactable
                     }
                     else if (showNumbers_script.level == 3)
                     {
-                        FindObjectOfType<AudioMedicoManager>().Play("ComplimentiRisonanza");
                         FindObjectOfType<AudioManager>().StopPlaying("Risonanza");
+                        FindObjectOfType<AudioMedicoManager>().Play("ComplimentiRisonanza");
+                        
 
-                        finished = true;
+                        StartCoroutine(ExecuteAfterTime(5));
                     }
                    
                 }
@@ -172,16 +177,29 @@ public class NumberSelectionInteractable : Interactable
 
         if (finished == true && FindObjectOfType<AudioMedicoManager>().inPlay == false)
         {
-            fpc.transform.position = posFpc.transform.position;
+            /*fpc.transform.position = posFpc.transform.position;
             medico.transform.position = posMedico.transform.position;
             ScriptCambiaCamera.camRisonanzaOn = false;
-            displayGioco.SetActive(false);
+            displayGioco.SetActive(false);*/
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            FindObjectOfType<AudioManager>().Play("BottoneAscensore");
+            AudioListener.pause = false;
         }
 
     }
 
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+         yield return new WaitForSeconds(time);
+ 
+        // Code to execute after the delay
+        finished = true;
+    }
+
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER SCEGLIERE IL NUMERO";
     }
 }

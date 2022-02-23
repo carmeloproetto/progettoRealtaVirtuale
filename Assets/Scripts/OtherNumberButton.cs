@@ -22,6 +22,8 @@ public class OtherNumberButton : Interactable
 
     public TMPro.TextMeshProUGUI textOfDisplay;
 
+    public GameObject uiInteraction;
+
      public override void Interact(GameObject caller)
     {
         if(close_doors_script.firstClose == true){
@@ -127,6 +129,7 @@ public class OtherNumberButton : Interactable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER INTERAGIRE";
     }
 }

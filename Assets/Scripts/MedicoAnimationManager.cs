@@ -30,6 +30,10 @@ public class MedicoAnimationManager : Interactable
     private PortaInteractable script_doorCabinaMain;
 
 
+    public GameObject uiInteraction;
+
+
+
     bool firstDestination;
     bool secondDestination;
     bool firstWalkCompleted = false;
@@ -122,6 +126,13 @@ public class MedicoAnimationManager : Interactable
 
     public override string GetDescription()
     {
-        return "PER PARLARE CON IL MEDICO"; 
+        if(script_medico.isTalking == false){
+            uiInteraction.SetActive(true);
+            return "PER PARLARE CON IL MEDICO";
+        } 
+        else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

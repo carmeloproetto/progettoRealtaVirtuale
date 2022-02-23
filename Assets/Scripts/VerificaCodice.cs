@@ -23,6 +23,8 @@ public class VerificaCodice : Interactable
    private SalitaAscensore script_unlock;
    public GameObject unlock;
 
+    public GameObject uiInteraction;
+
     public override void Interact(GameObject caller)
     {
 
@@ -84,6 +86,12 @@ public class VerificaCodice : Interactable
 
     public override string GetDescription()
     {
-        return "PER VERIFICARE IL CODICE INSERITO";
+        if(script_assistenza.insert_combo_to_unlock == true){
+            uiInteraction.SetActive(true);
+            return "PER VERIFICARE IL CODICE INSERITO";
+        }else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

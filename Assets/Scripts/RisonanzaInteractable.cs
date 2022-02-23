@@ -7,7 +7,7 @@ using UnityEngine;
 public class RisonanzaInteractable : Interactable
 {
 
-
+    public GameObject uiInteraction;
     private CambiaCameraRisonanza ScriptCambiaCamera;
     public GameObject cameraRisonanza;
 
@@ -35,6 +35,7 @@ public class RisonanzaInteractable : Interactable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER INIZIARE IL TASK";
     }
 }

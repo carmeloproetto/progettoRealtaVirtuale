@@ -13,6 +13,8 @@ public class TorchGrabbable : Grabbable
 
     [SerializeField] private LightOut contatore; 
 
+    public GameObject uiInteraction;
+
     public override void Drop()
     {
        Destroy(gameObject);
@@ -36,6 +38,7 @@ public class TorchGrabbable : Grabbable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER AFFERRARE LA TORCIA";
     }
 }

@@ -5,9 +5,11 @@ using UnityEngine;
 public class PortaChiusaInteractable : Interactable
 {
     private Animator _animator;
+    public GameObject uiInteraction;
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER INTERAGIRE";
     }
 

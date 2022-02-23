@@ -6,6 +6,7 @@ public class LevettaInteractable : Interactable
 {
     private Animator _animator;
     private bool _isUp; 
+    public GameObject uiInteraction;
 
     public override void Interact(GameObject caller)
     {
@@ -47,6 +48,7 @@ public class LevettaInteractable : Interactable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER SOLLEVARE O ABBASSARE LA LEVETTA";
     }
 }

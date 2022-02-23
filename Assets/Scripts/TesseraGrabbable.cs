@@ -8,6 +8,8 @@ public class TesseraGrabbable : Grabbable
     private SmoothMovement _movement;
     public FPSInteractionManager interactionManager; 
 
+    public GameObject uiInteraction;
+
     public override void Drop()
     {
         Destroy(gameObject);
@@ -30,6 +32,7 @@ public class TesseraGrabbable : Grabbable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER AFFERRARE LA TESSERA";
     }
 }

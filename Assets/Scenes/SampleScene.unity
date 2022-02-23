@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1226,6 +1226,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &59647385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3789,6 +3790,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &255978338
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4114,6 +4116,7 @@ MonoBehaviour:
   insert_combo_to_unlock: 0
   unlockBtn: 0
   btn: 0
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &273030296
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4437,6 +4440,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &289891437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5045,6 +5049,7 @@ MonoBehaviour:
   posFpc: {fileID: 848724192}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 2006960375}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &306490013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5837,6 +5842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &339305813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6968,6 +6974,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1 &383592219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7087,6 +7094,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &383592225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7371,6 +7379,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (4)
@@ -7626,6 +7638,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1 &415017920
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,6 +8803,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 5589686945548074062, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9585,6 +9602,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1 &552857622
 GameObject:
   m_ObjectHideFlags: 0
@@ -10551,6 +10569,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1001 &617148023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11679,6 +11698,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &678572804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11798,6 +11818,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1001 &697219621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13300,6 +13321,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 5589686945548074062, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -13449,7 +13474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857787559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.593, y: 32.44, z: 37.2501}
+  m_LocalPosition: {x: -9.094, y: 32.44, z: 37.2501}
   m_LocalScale: {x: 1, y: 0.3498, z: 3.330472}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14019,6 +14044,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912405487495514, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 8178912406143340597, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -14027,6 +14056,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912406143340598, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
 --- !u!1001 &924625754
@@ -14498,6 +14531,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &965959891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15973,6 +16007,7 @@ MonoBehaviour:
   correctCode: 0
   textOfDisplay: {fileID: 402248746}
   unlock: {fileID: 1865332917}
+  uiInteraction: {fileID: 200153625}
 --- !u!1001 &1063340492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16338,6 +16373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &1069434147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17215,6 +17251,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (1)
@@ -17380,6 +17420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
   interactionManager: {fileID: 1809038250}
+  uiInteraction: {fileID: 200153625}
 --- !u!114 &1170493185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17755,6 +17796,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!1 &1212895037
 GameObject:
   m_ObjectHideFlags: 0
@@ -17863,6 +17905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &1229333358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18060,6 +18103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &1236259056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19049,6 +19093,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (5)
@@ -20405,6 +20453,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata
@@ -20964,6 +21016,7 @@ MonoBehaviour:
   doorMain: {fileID: 1112093929}
   doorCabina: {fileID: 1277503422}
   doorCabinaMain: {fileID: 66612581}
+  uiInteraction: {fileID: 200153625}
 --- !u!195 &1485344924
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20974,8 +21027,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.32
-  m_Speed: 2
-  m_Acceleration: 15
+  m_Speed: 1
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 1000
   m_StoppingDistance: 1
@@ -21324,6 +21377,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 5589686945548074062, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -21720,6 +21777,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &1543409380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21901,6 +21959,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (3)
@@ -22508,6 +22570,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (10)
@@ -23391,6 +23457,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &1662870228
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23478,6 +23545,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (2)
@@ -25963,6 +26034,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (7)
@@ -26630,10 +26705,18 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912405487495514, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 8178912406143340598, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912406143340598, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
 --- !u!1001 &1903379007
@@ -26647,6 +26730,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (6)
@@ -26799,6 +26886,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (9)
@@ -26979,6 +27070,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &1930015930
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27374,6 +27466,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &1947753514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28266,6 +28359,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &2046370379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28609,6 +28703,7 @@ MonoBehaviour:
   posFpc: {fileID: 0}
   cameraRisonanza: {fileID: 473986871}
   displayGioco: {fileID: 0}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &2067472259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29905,6 +30000,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_bloccata (8)
@@ -30088,6 +30187,7 @@ MonoBehaviour:
   verificaCodice: {fileID: 7415471011102789391}
   assistenza: {fileID: 1986680220612543739}
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &138836133115077241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31449,6 +31549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &863589675713507252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33020,6 +33121,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
     - target: {fileID: 1788272989556385608, guid: 4128a1c23abc3c54b92ec54bfe17425a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
+    - target: {fileID: 1788272989556385608, guid: 4128a1c23abc3c54b92ec54bfe17425a, type: 3}
       propertyPath: cameraRisonanza
       value: 
       objectReference: {fileID: 473986871}
@@ -33343,6 +33448,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 4832047374898868633, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 4832047374898868710, guid: 23df8619f5cdd4deea350dc63aca7786, type: 3}
       propertyPath: m_Name
       value: Porta_cabina_bloccata
@@ -34976,6 +35085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &2966649876780075513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35312,6 +35422,7 @@ MonoBehaviour:
   unlockedIcon: {fileID: 267378632}
   tessera: {fileID: 1170493184}
   contatore: {fileID: 3257675319866785257}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &3132412903951668300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36633,7 +36744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843716869521723596}
   m_LocalRotation: {x: -0, y: -0.29065716, z: -0, w: -0.95682734}
-  m_LocalPosition: {x: 3.31, y: 25.984, z: 44.41}
+  m_LocalPosition: {x: -8.328, y: 32.83, z: 36.607}
   m_LocalScale: {x: 0.80508, y: 0.80508, z: 0.80508}
   m_Children:
   - {fileID: 3843716868563002077}
@@ -38167,6 +38278,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
   ant: {fileID: 963859672}
   locked: 0
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &4317500411913737113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38845,6 +38957,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 5589686945548074062, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 9017590342505916142, guid: 846de8811c028496793eb97ff2bc6bd5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -41990,7 +42106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[2].clip
@@ -42155,10 +42271,14 @@ PrefabInstance:
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[21].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e224d300ad7f07e4f98f4295c2a09596, type: 3}
+      objectReference: {fileID: 8300000, guid: 236152df0019c004bacabd5353932a59, type: 3}
+    - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
+      propertyPath: sounds.Array.data[21].loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[21].name
-      value: FineConversazioneCentroMedico
+      value: Musica
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[22].clip
@@ -42390,7 +42510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[21].spatialBlend
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5921926665216882073, guid: 31aad11522d964f99b7f4d01dde9a6c8, type: 3}
       propertyPath: sounds.Array.data[22].spatialBlend
@@ -43320,6 +43440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!1 &6436151464934988124
 GameObject:
   m_ObjectHideFlags: 0
@@ -45270,6 +45391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+  uiInteraction: {fileID: 200153625}
 --- !u!65 &7609783008329460678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45834,6 +45956,7 @@ MonoBehaviour:
   interactionManager: {fileID: 1809038250}
   interactionUI: {fileID: 226741257}
   contatore: {fileID: 3257675319866785257}
+  uiInteraction: {fileID: 200153625}
 --- !u!114 &7984776982367862752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46170,10 +46293,18 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912405487495514, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     - target: {fileID: 8178912406143340598, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
       propertyPath: icon
       value: 
       objectReference: {fileID: 21300000, guid: 480e654f2698d4f23bc4efeef43e0c4e, type: 3}
+    - target: {fileID: 8178912406143340598, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
+      propertyPath: uiInteraction
+      value: 
+      objectReference: {fileID: 200153625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f286e400e5974a709c50d1e9f2c675a, type: 3}
 --- !u!4 &8183538210339708199
@@ -47594,6 +47725,7 @@ MonoBehaviour:
   chiamataSalita: 0
   blockOtherButton: 0
   textOfDisplay: {fileID: 402248746}
+  uiInteraction: {fileID: 200153625}
 --- !u!64 &9132214990033437565
 MeshCollider:
   m_ObjectHideFlags: 0

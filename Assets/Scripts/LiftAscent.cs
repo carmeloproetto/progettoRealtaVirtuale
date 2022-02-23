@@ -27,6 +27,8 @@ public class LiftAscent : Interactable
 
     bool aux;
 
+    public GameObject uiInteraction;
+
     public override void Interact(GameObject caller)
     {
         if(lift_script.chiamaAssistenza == false && aux != true){
@@ -91,6 +93,7 @@ public class LiftAscent : Interactable
 
     public override string GetDescription()
     {
+        uiInteraction.SetActive(true);
         return "PER SCEGLIERE IL PIANO";
     }
 }

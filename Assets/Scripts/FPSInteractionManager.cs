@@ -59,12 +59,14 @@ public class FPSInteractionManager : MonoBehaviour
             _pointingInteractable = hit.transform.GetComponent<Interactable>();
             if (_pointingInteractable)
             {
-                hitSomething = true; 
-                interactionText.text = _pointingInteractable.GetDescription();
-                icon.overrideSprite = _pointingInteractable.getImageIcon(); 
-                if (Input.GetMouseButtonDown(0))
-                {
-                    _pointingInteractable.Interact(gameObject);
+                if(_pointingInteractable.GetDescription() != null){
+                    hitSomething = true; 
+                    interactionText.text = _pointingInteractable.GetDescription();
+                    icon.overrideSprite = _pointingInteractable.getImageIcon(); 
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        _pointingInteractable.Interact(gameObject);
+                    }
                 }
             }
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();

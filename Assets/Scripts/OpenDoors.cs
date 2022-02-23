@@ -8,6 +8,7 @@ public class OpenDoors : Interactable
     public GameObject ant;
 
     public bool locked;
+    public GameObject uiInteraction;
 
     public override void Interact(GameObject caller)
     {
@@ -33,6 +34,13 @@ public class OpenDoors : Interactable
 
     public override string GetDescription()
     {
-        return "PER APRIRE LE PORTE DELL'ASCENSORE";
+        if(locked == false){
+            uiInteraction.SetActive(true);
+            return "PER APRIRE LE PORTE DELL'ASCENSORE";
+        }
+        else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

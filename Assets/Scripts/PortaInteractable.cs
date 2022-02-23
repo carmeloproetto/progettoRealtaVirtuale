@@ -12,6 +12,8 @@ public class PortaInteractable : Interactable
 
     public bool isTotalOpen;
 
+      public GameObject uiInteraction;
+
     public override void Interact(GameObject caller)
     {
 
@@ -69,6 +71,13 @@ public class PortaInteractable : Interactable
 
     public override string GetDescription()
     {
-        return "PER APRIRE LA PORTA";
+        if(doorLocked == false){
+            uiInteraction.SetActive(true);
+            return "PER APRIRE LA PORTA";
+        }
+        else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

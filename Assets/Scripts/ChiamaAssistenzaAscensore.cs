@@ -14,6 +14,8 @@ public class ChiamaAssistenzaAscensore : Interactable
     public bool unlockBtn;
     public bool btn;
 
+    public GameObject uiInteraction;
+
     public override void Interact(GameObject caller)
     {
         if (FindObjectOfType<AudioManager>().inPlay == false)
@@ -47,6 +49,12 @@ public class ChiamaAssistenzaAscensore : Interactable
 
     public override string GetDescription()
     {
-        return "PER CHIAMARE ASSISTENZA";
+        if(lift_script.chiamaAssistenza == true){
+            uiInteraction.SetActive(true);
+            return "PER CHIAMARE ASSISTENZA";
+        }else{
+            uiInteraction.SetActive(false);
+            return null;
+        }
     }
 }

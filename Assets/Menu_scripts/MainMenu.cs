@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().StopPlaying("Musica");
         Cursor.visible = false;
         Time.timeScale = 1;
+        
     }
 
     public void QuitGame()
