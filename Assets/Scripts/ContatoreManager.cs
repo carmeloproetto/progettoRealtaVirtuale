@@ -6,10 +6,13 @@ public class ContatoreManager : MonoBehaviour
 {
     private LevettaInteractable[] levette;
     private SchermoContManager schermoManager; 
-    public Light light;
+    public Light luceSoffitto;
+    public Light luceEmergenza;
+    public GameObject luceEmergenzaMesh;
+    public FPSInteractionManager interactionManager; 
     [SerializeField] private PrimoDialogoScript scriptDialogo; 
 
-    [SerializeField] private PortaInteractable porta; 
+    [SerializeField] private PortaInteractable porta;
     
     public bool completedRoom;
 
@@ -28,7 +31,17 @@ public class ContatoreManager : MonoBehaviour
     {
         if( !levette[0].isUp() && levette[1].isUp() && levette[2].isUp() && !levette[3].isUp() && aux == true)
         {
-            light.enabled = true;
+            interactionManager.setDuringTask(false);
+
+            //Material materiale = luceSoffittoMesh.GetComponent<Renderer>().material; 
+            //materiale.EnableKeyword("_EMISSION");
+            //materiale.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
+            //materiale.SetColor("_EmissionColor", Color.white);
+
+            luceEmergenza.enabled = false;
+            luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
+            luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.white);
+
             RenderSettings.ambientLight = new Color32(235, 235, 235, 0);
             schermoManager.On();
             completedRoom = true;

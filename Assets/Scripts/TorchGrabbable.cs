@@ -8,24 +8,27 @@ public class TorchGrabbable : Grabbable
     public Camera camera; 
     private Collider _collider;
     private SmoothMovement _movement;
+    public FPSInteractionManager interactionManager;
+
     [SerializeField] private LightOut contatore; 
 
     public override void Drop()
     {
-        Destroy(gameObject); 
+       Destroy(gameObject);
     }
 
     public override void Grab(GameObject grabber)
     {
+        interactionManager.setDuringTask(true);
         _collider.enabled = false;
         _movement.SetMoving();
-        contatore.UnlockInteraction(); 
+        contatore.UnlockInteraction();
         FindObjectOfType<AudioManager>().Play("Grab");
     }
 
     protected override void Start ()
     {
         _collider = GetComponent<Collider>();
-        _movement = GetComponent<SmoothMovement>(); 
+        _movement = GetComponent<SmoothMovement>();
     }
 }

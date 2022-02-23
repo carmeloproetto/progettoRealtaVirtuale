@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class LightOut : MonoBehaviour
 {
-    public Light light;
+    public Light luceSoffitto;
+    public Light luceEmergenza;
+    public GameObject luceEmergenzaMesh;
     private GameObject torch; 
 
     private float timer = 0;
@@ -31,7 +33,17 @@ public class LightOut : MonoBehaviour
             Debug.Log(timer); 
             if( timer >= timeInterval)
             {
-                light.enabled = false; // light off
+                luceSoffitto.enabled = false; // light off
+                //Material materiale = luceSoffittoMesh.GetComponent < Renderer>().material;
+                //materiale.DisableKeyword("_EMISSION");
+                //materiale.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                //materiale.SetColor("_EmissionColor", Color.black);
+
+                luceEmergenza.enabled = true; // accendo luce di emergenza rossa
+                luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+                luceEmergenzaMesh.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+
+
                 on = false; // disabilito il timer 
                 timer = 0;
                 torch.SetActive(true); // abilito l'interazione con la torcia 

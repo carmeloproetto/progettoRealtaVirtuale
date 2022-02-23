@@ -27,13 +27,17 @@ public class TermostatoManager : Interactable
     public Image lockedIcon;
     public Image unlockedIcon;
 
+    public TesseraGrabbable tessera;
+
     private bool lightTimerOn = false; 
 
     private Collider _externCollider;
 
     public LightOut contatore; 
 
-    private bool temperatura_corretta = false; 
+    private bool temperatura_corretta = false;
+
+    private bool taskCompletato = false; 
 
     public void aumenta()
     {
@@ -118,6 +122,12 @@ public class TermostatoManager : Interactable
         {
             // Display di colore verde
             schermo.SetColor("_Color", Color.green);
+            if (!taskCompletato)
+            {
+                interactionManager.setDuringTask(false);
+                taskCompletato = true; 
+            }
+
             //schermo.SetColor("_EmissionColor", emissionGreen * 0.4f );
             warningIcon.enabled = false;
             if( !lightTimerOn)

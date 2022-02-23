@@ -14,7 +14,9 @@ public class FPSInteractionManager : MonoBehaviour
     private Grabbable _pointingGrabbable;
     private Interactable _pointingInteractable;
 
-    private Grabbable _grabbedObject; 
+    private Grabbable _grabbedObject;
+    public bool duringTask;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class FPSInteractionManager : MonoBehaviour
     { 
         CheckInteraction(); 
 
-        if( _grabbedObject != null && Input.GetMouseButtonDown(1))
+        if( _grabbedObject != null && Input.GetMouseButtonDown(1) && !duringTask)
         {
             Drop(); 
         }
@@ -82,10 +84,9 @@ public class FPSInteractionManager : MonoBehaviour
         {
             return; 
         }
-
         _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
         _grabbedObject.Drop();
-        _grabbedObject = null; 
+        _grabbedObject = null;
     }
 
     private void UpdateUITarget()
@@ -101,6 +102,11 @@ public class FPSInteractionManager : MonoBehaviour
     public Grabbable grabbedObject()
     {
         return _grabbedObject; 
+    }
+
+    public void setDuringTask(bool value)
+    {
+        duringTask = value; 
     }
 
 }

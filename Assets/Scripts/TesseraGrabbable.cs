@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class TesseraGrabbable : Grabbable
 {
-    public Camera camera;
     private Collider _collider;
-    private SmoothMovement _movement; 
+    private SmoothMovement _movement;
+    public FPSInteractionManager interactionManager; 
 
     public override void Drop()
     {
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 
     public override void Grab(GameObject grabber)
     {
         _collider.enabled = false;
         _movement.SetMoving();
+        interactionManager.setDuringTask(true);
 
         FindObjectOfType<AudioManager>().Play("Grab");
     }
@@ -24,6 +25,6 @@ public class TesseraGrabbable : Grabbable
     protected override void Start()
     {
         _collider = GetComponent<Collider>();
-        _movement = GetComponent<SmoothMovement>(); 
+        _movement = GetComponent<SmoothMovement>();
     }
 }
