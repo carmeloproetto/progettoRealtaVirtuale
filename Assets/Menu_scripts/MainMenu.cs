@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void Start()
+    void Update()
     {
         Cursor.visible = true;
-        FindObjectOfType<AudioManager>().Play("Musica");
+        AudioListener.pause = false;
     }
 
     public void PlayGame()

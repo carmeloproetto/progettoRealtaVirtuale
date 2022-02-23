@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PauseBehaviour : MonoBehaviour
 {
     //public GameObject GameUI;
     public GameObject PauseUI;
+    public AudioMixer audioMixer;
 
     void Start() 
     {
@@ -27,6 +29,13 @@ public class PauseBehaviour : MonoBehaviour
         Time.timeScale = 0f;
         AudioListener.pause = true;
         Cursor.visible = true;
+    }
+   
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+        FindObjectOfType<AudioManager>().Play("BottoneAscensore");
     }
 
     public void ResumeGame() {

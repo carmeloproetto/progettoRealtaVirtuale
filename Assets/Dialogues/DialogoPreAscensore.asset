@@ -17,7 +17,7 @@ MonoBehaviour:
   - Sei stato bravo. Te la senti di continuare la simulazione?
   - Va bene, ci vediamo al settimo piano allora e non dimenticare, per qualsiasi
     problema premi il pulsante con la campanella!
-  - Va bene, non preoccuparti, premi il tasto M e verrai riportato al centro medico.
+  - "Va bene, non preoccuparti, premi il tasto M e verrai riportato al men\xF9 iniziale."
   playerDialogue:
   - Si
   - No
